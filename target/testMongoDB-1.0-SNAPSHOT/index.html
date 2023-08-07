@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grant Test Access</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/switchery/dist/switchery.min.css">
+</head>
+<body>
+    <h1>Grant Test Access</h1>
+    <form action="update-access" method="post">
+        <input type="hidden" name="teacherId" value="${teacherId}">
+        
+            <h3>${skill.name}</h3>
+            <input type="checkbox" class="switchery" name="skillIds" value="${skill._id}" ${skill.accessGranted ? 'checked' : ''}>
+            <label>Grant Access</label>
+       
+        
+        <button type="submit">Save</button>
+    </form>
+    
+    <script src="https://cdn.jsdelivr.net/npm/switchery/dist/switchery.min.js"></script>
+    <script>
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.switchery'));
+        elems.forEach(function(elem) {
+            new Switchery(elem);
+        });
+    </script>
+</body>
+</html>

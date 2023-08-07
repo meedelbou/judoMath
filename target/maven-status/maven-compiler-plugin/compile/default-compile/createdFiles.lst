@@ -1,0 +1,3 @@
+Models\Exercise.class
+Models\Lesson.class
+com\mycompany\testmongodb\catalogue.class
