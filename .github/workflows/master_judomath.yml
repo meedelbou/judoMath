@@ -50,4 +50,4 @@ jobs:
           app-name: 'judomath'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3453B3B7426349A5A70FA24716BB90F9 }}
-          package: '*.war'
+          package: './target/testMongoDB-1.0-SNAPSHOT.war'
