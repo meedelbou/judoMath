@@ -216,7 +216,7 @@ public class choisirComp extends HttpServlet {
 
         List<QuerySolution> solutions = new ArrayList<QuerySolution>();
 
-        String tdbDirectory = "C:\\Users\\medel\\Documents\\NetBeansProjects\\testMongoDB\\tripleStoreDataBase";
+        String tdbDirectory = getClass().getClassLoader().getResource("tripleStoreDataBase").getPath();
 
         // Create a TDB dataset
         Dataset dataset = TDBFactory.createDataset(tdbDirectory);
