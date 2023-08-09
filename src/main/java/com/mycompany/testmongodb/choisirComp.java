@@ -69,7 +69,7 @@ public class choisirComp extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        MongoClient mongoClient = MongoClients.create(settings);
+        MongoClient mongoClient = MongoClients.create(connectionString);
         MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
         MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
 
@@ -200,9 +200,13 @@ public class choisirComp extends HttpServlet {
 
                 session.setAttribute("c", nextSkillName);
                 session.setAttribute("nextSkill", nextSkill);
+                
                 request.getRequestDispatcher("preApprentissageAdaptatif.jsp").forward(request, response);
             }
+           mongoClient.close(); 
+            
         } else {
+            mongoClient.close();
             request.getRequestDispatcher("preApprentissageAdaptatif.jsp").forward(request, response);
         }
 
@@ -212,7 +216,7 @@ public class choisirComp extends HttpServlet {
 
         List<QuerySolution> solutions = new ArrayList<QuerySolution>();
 
-        String tdbDirectory = "tripleStoreDataBase";
+        String tdbDirectory = "C:\\Users\\medel\\Documents\\NetBeansProjects\\testMongoDB\\tripleStoreDataBase";
 
         // Create a TDB dataset
         Dataset dataset = TDBFactory.createDataset(tdbDirectory);

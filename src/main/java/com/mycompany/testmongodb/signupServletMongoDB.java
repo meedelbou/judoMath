@@ -143,6 +143,8 @@ public class signupServletMongoDB extends HttpServlet {
             }
 
             userCollection.insertOne(userDocument);
+            
+            mongoClient.close();
 
             return true;
 

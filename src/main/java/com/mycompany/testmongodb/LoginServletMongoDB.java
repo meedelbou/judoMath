@@ -90,8 +90,10 @@ public class LoginServletMongoDB extends HttpServlet {
 
                 }
                 long loginTime = System.currentTimeMillis();
+                mongoClient.close();
                 session.setAttribute("loginTime", loginTime);
                 session.setAttribute("user", student);
+                
                 request.getRequestDispatcher("/choisirComp").forward(request, response);
             } else {
                 Teacher teacher = (Teacher) user;
@@ -134,6 +136,7 @@ public class LoginServletMongoDB extends HttpServlet {
 
                         etudiants.add(student);
                     }
+                    mongoClient.close();
                 }
 
                 session.setAttribute("etudiants", etudiants);
@@ -200,6 +203,7 @@ public class LoginServletMongoDB extends HttpServlet {
 
                         etudiants.add(student);
                     }
+                    mongoClient.close();
                 }
 
                 session.setAttribute("etudiants", etudiants);
@@ -250,7 +254,7 @@ public class LoginServletMongoDB extends HttpServlet {
 
                         Student student = new Student(email, password, nom, prenom, role, imageBytes, enseignantEmail,
                                 dateOfSignup, competencesValides, experiencePoints, lastLogin, numberOfVisits, accesToTest, status);
-
+mongoClient.close();
                         return student;
                     }
 
@@ -261,7 +265,7 @@ public class LoginServletMongoDB extends HttpServlet {
                     byte[] imageBytes = imageInputStream.readAllBytes();
                     Teacher teacher = new Teacher(email, password, nom, prenom, role, imageBytes);
                     teacher.setEtudiants(students);
-
+mongoClient.close();
                     return teacher;
                 } else {
                     // Handle the case when the imageId is not present in the user document
@@ -289,8 +293,9 @@ public class LoginServletMongoDB extends HttpServlet {
                     List<String> students = userDocument.getList("students", String.class);
                     Teacher teacher = new Teacher(email, password, nom, prenom, role, null);
                     teacher.setEtudiants(students);
-
+mongoClient.close();
                     return teacher;
+                    
                 }
             } else {
                 return null;
