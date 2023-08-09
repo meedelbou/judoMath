@@ -49,7 +49,7 @@ public class choisirComp extends HttpServlet {
     private static final String DATABASE_NAME = "my_test_db";
     private static final String COLLECTION_NAME = "Users";
 
-    String connectionString = "mongodb+srv://judomath:O1Tgj61O0EiDP0Wb@cluster0.elpqgfo.mongodb.net/?retryWrites=true&w=majority";
+    String connectionString = "mongodb://judomathdb:b1ooszXJgLWa6TIuVyMusgjONqpQit6IIALmoQ956oKGOwEl1gcsUQm9yNYybdfa7E27EO0305MpACDbdQPaqg==@judomathdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@judomathdb@";
     ServerApi serverApi = ServerApi.builder()
             .version(ServerApiVersion.V1)
             .build();
@@ -69,7 +69,7 @@ public class choisirComp extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+        MongoClient mongoClient = MongoClients.create(settings);
         MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
         MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
 
@@ -212,7 +212,7 @@ public class choisirComp extends HttpServlet {
 
         List<QuerySolution> solutions = new ArrayList<QuerySolution>();
 
-        String tdbDirectory = "C:\\Users\\medel\\Documents\\NetBeansProjects\\testMongoDB\\tripleStoreDataBase";
+        String tdbDirectory = "tripleStoreDataBase";
 
         // Create a TDB dataset
         Dataset dataset = TDBFactory.createDataset(tdbDirectory);

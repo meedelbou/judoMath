@@ -1,6 +1,5 @@
 package com.mycompany.testmongodb;
 
-
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoException;
@@ -12,9 +11,10 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 public class MongoClientConnectionExample {
-    public static void main(String[] args) {
-        String connectionString = "mongodb+srv://judomath:O1Tgj61O0EiDP0Wb@cluster0.elpqgfo.mongodb.net/?retryWrites=true&w=majority";
 
+    public static void main(String[] args) {
+
+        String connectionString = "mongodb://judomathdb:b1ooszXJgLWa6TIuVyMusgjONqpQit6IIALmoQ956oKGOwEl1gcsUQm9yNYybdfa7E27EO0305MpACDbdQPaqg==@judomathdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@judomathdb@";
         ServerApi serverApi = ServerApi.builder()
                 .version(ServerApiVersion.V1)
                 .build();
@@ -25,15 +25,12 @@ public class MongoClientConnectionExample {
                 .build();
 
         // Create a new client and connect to the server
-        try (MongoClient mongoClient = MongoClients.create(settings)) {
-            try {
-                // Send a ping to confirm a successful connection
-                MongoDatabase database = mongoClient.getDatabase("admin");
-                database.runCommand(new Document("ping", 1));
-                System.out.println("Pinged your deployment. You successfully connected to MongoDB!");
-            } catch (MongoException e) {
-                e.printStackTrace();
-            }
-        }
+       
+            MongoClient mongoClient = MongoClients.create(connectionString) ;// Send a ping to confirm a successful connection
+            MongoDatabase database = mongoClient.getDatabase("judomathdatabase");
+            database.runCommand(new Document("ping", 1));
+            System.out.println("Pinged your deployment. You successfully connected to MongoDB!");
+     
+
     }
 }

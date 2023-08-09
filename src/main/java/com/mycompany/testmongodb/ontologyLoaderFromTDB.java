@@ -24,7 +24,7 @@ public class ontologyLoaderFromTDB {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        String tdbDirectory = "C:\\Users\\medel\\Documents\\NetBeansProjects\\testMongoDB\\tripleStoreDataBase";
+        String tdbDirectory = "tripleStoreDataBase";
 
         // Create a TDB dataset
         Dataset dataset = TDBFactory.createDataset(tdbDirectory);
@@ -163,7 +163,7 @@ public class ontologyLoaderFromTDB {
                     + "  ?recommendedSkill rdfs:label ?name .\n"
                     + "}";
 
-            QueryExecution qExec = QueryExecutionFactory.create(AoGR, dataset);
+            QueryExecution qExec = QueryExecutionFactory.create(queryString, dataset);
 
             // Execute the query and get the result set
             ResultSet rs = qExec.execSelect();

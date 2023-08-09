@@ -43,7 +43,7 @@ public class LoginServletMongoDB extends HttpServlet {
     private static final String DATABASE_NAME = "my_test_db";
     private static final String COLLECTION_NAME = "Users";
     private static final String IMAGE_COLLECTION_NAME = "Images";
-    String connectionString = "mongodb+srv://judomath:O1Tgj61O0EiDP0Wb@cluster0.elpqgfo.mongodb.net/?retryWrites=true&w=majority";
+    String connectionString = "mongodb://judomathdb:b1ooszXJgLWa6TIuVyMusgjONqpQit6IIALmoQ956oKGOwEl1gcsUQm9yNYybdfa7E27EO0305MpACDbdQPaqg==@judomathdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@judomathdb@";
     ServerApi serverApi = ServerApi.builder()
             .version(ServerApiVersion.V1)
             .build();
@@ -74,7 +74,7 @@ public class LoginServletMongoDB extends HttpServlet {
 
             if (user.getRole().equals("Apprenant")) {
                 Student student = (Student) user;
-                MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+                MongoClient mongoClient = MongoClients.create(connectionString);
                 MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
                 MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
 
@@ -97,7 +97,7 @@ public class LoginServletMongoDB extends HttpServlet {
                 Teacher teacher = (Teacher) user;
                 List<Student> etudiants = new ArrayList<>();
 
-                try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
+                try (MongoClient mongoClient = MongoClients.create(connectionString)) {
                     MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
                     MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
                     GridFSBucket imageBucket = GridFSBuckets.create(database, IMAGE_COLLECTION_NAME);
@@ -163,7 +163,7 @@ public class LoginServletMongoDB extends HttpServlet {
                 Teacher teacher = (Teacher) user;
                 List<Student> etudiants = new ArrayList<>();
 
-                try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
+                try (MongoClient mongoClient = MongoClients.create(connectionString)) {
                     MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
                     MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
                     GridFSBucket imageBucket = GridFSBuckets.create(database, IMAGE_COLLECTION_NAME);
@@ -213,7 +213,7 @@ public class LoginServletMongoDB extends HttpServlet {
     }
 
     private User authenticateUser(String email, String password) {
-        try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
+        try (MongoClient mongoClient = MongoClients.create(connectionString)) {
             MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
             MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
             GridFSBucket imageBucket = GridFSBuckets.create(database, IMAGE_COLLECTION_NAME);
