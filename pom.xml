@@ -4,8 +4,8 @@
 
 
     <groupId>com.mycompany</groupId>
-    <artifactId>testMongoDB</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>ROOT</artifactId>
+    <version></version>
     <packaging>war</packaging>
 
     <name>testMongoDB</name>
