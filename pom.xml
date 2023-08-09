@@ -5,7 +5,7 @@
 
     <groupId>com.mycompany</groupId>
     <artifactId>ROOT</artifactId>
-    <version></version>
+
     <packaging>war</packaging>
 
     <name>testMongoDB</name>
