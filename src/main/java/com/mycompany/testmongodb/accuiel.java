@@ -43,7 +43,7 @@ public class accuiel extends HttpServlet {
     private static final String USERS_COLLECTION_NAME = "Users";
     private static final String IMAGES_COLLECTION_NAME = "Images";
 
-    String connectionString = "mongodb+srv://judomath:O1Tgj61O0EiDP0Wb@cluster0.elpqgfo.mongodb.net/?retryWrites=true&w=majority";
+    String connectionString = "mongodb://judomathdb:b1ooszXJgLWa6TIuVyMusgjONqpQit6IIALmoQ956oKGOwEl1gcsUQm9yNYybdfa7E27EO0305MpACDbdQPaqg==@judomathdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@judomathdb@";
     ServerApi serverApi = ServerApi.builder()
             .version(ServerApiVersion.V1)
             .build();
@@ -66,7 +66,7 @@ public class accuiel extends HttpServlet {
             Teacher teacher = (Teacher) user;
             List<Student> etudiants = new ArrayList<>();
 
-            try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
+            try (MongoClient mongoClient = MongoClients.create(connectionString)) {
                 MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
                 MongoCollection<Document> collection = database.getCollection(USERS_COLLECTION_NAME);
                 GridFSBucket imageBucket = GridFSBuckets.create(database, IMAGES_COLLECTION_NAME);
@@ -124,7 +124,7 @@ public class accuiel extends HttpServlet {
             Teacher teacher = (Teacher) user;
             List<Student> etudiants = new ArrayList<>();
 
-            try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
+            try (MongoClient mongoClient = MongoClients.create(connectionString)) {
                 MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
                 MongoCollection<Document> collection = database.getCollection(USERS_COLLECTION_NAME);
                 GridFSBucket imageBucket = GridFSBuckets.create(database, IMAGES_COLLECTION_NAME);

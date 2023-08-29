@@ -41,14 +41,7 @@ public class logout extends HttpServlet {
     private static final String Users_COLLECTION_NAME = "Users";
     private static final String TimeSpent_COLLECTION_NAME = "TimeTracking";
 
-    String connectionString = "mongodb+srv://judomath:O1Tgj61O0EiDP0Wb@cluster0.elpqgfo.mongodb.net/?retryWrites=true&w=majority";
-    ServerApi serverApi = ServerApi.builder()
-            .version(ServerApiVersion.V1)
-            .build();
-    MongoClientSettings settings = MongoClientSettings.builder()
-            .applyConnectionString(new ConnectionString(connectionString))
-            .serverApi(serverApi)
-            .build();
+    String connectionString = "mongodb://judomathdb:b1ooszXJgLWa6TIuVyMusgjONqpQit6IIALmoQ956oKGOwEl1gcsUQm9yNYybdfa7E27EO0305MpACDbdQPaqg==@judomathdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@judomathdb@";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -66,7 +59,7 @@ public class logout extends HttpServlet {
             LocalDate currentDate = LocalDate.now();
             String dateString = currentDate.toString();
 
-            MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+            MongoClient mongoClient = MongoClients.create(connectionString);
             MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
             MongoCollection<Document> Users_collection = database.getCollection(Users_COLLECTION_NAME);
 
