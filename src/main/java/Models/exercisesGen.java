@@ -245,7 +245,7 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Additionner un entier à un autre pour obtenir 10")) {
-            cours = "Test 111111";
+            cours = "Test cours 10";
             Random random = new Random();
             switch (palier) {
                 case 1:
