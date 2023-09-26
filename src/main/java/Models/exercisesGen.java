@@ -320,6 +320,7 @@ public class exercisesGen {
 
         } else if (name.equals("Additionner un entier à un autre pour obtenir 100")) {
             Random random = new Random();
+            cours = "Cours sur le complément à 100";
             switch (palier) {
                 case 1:
                     for (int i = 0; i < 7; i++) {
