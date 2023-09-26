@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'judomath'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A349B46A4F8942489D2644D6978CE340 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FA99619006874FC194DE45E18ACB1C43 }}
           package: '*.war'
