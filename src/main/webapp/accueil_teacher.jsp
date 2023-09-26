@@ -272,7 +272,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="">
-                                                        Acces
+                                                    
                                                         <div class="form-check custom-checkbox ms-0" >
                                                             <input type="checkbox" class="form-check-input" id="checkAll" required="">
                                                             <label class="form-check-label" for="checkAll"></label>
