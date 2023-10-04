@@ -32,10 +32,10 @@
         <meta name="format-detection" content="telephone=no">
 
         <!-- PAGE TITLE HERE -->
-        <title>W3CRM Customer Relationship Management</title>
+        <title>JudoTrain</title>
 
         <!-- FAVICONS ICON -->
-        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="images/JM_icon.png">
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
         <link href="./vendor/jquery-smartwizard/dist/css/smart_wizard.min.css" rel="stylesheet">
         <link href="./vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
@@ -150,19 +150,8 @@
                 Nav header start
             ***********************************-->
             <div class="nav-header">
-                <a href="index.html" class="brand-logo">
-                    <svg class="logo-abbr" width="39" height="23" viewBox="0 0 39 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="w3" d="M32.0362 22H19.0466L20.7071 18.7372C20.9559 18.2484 21.455 17.9378 22.0034 17.9305L31.1036 17.8093C33.0753 17.6497 33.6571 15.9246 33.7015 15.0821C33.7015 13.2196 32.1916 12.5765 31.4367 12.4878H23.7095L25.9744 8.49673H30.4375C31.8763 8.3903 32.236 7.03332 32.236 6.36814C32.3426 4.93133 30.9482 4.61648 30.2376 4.63865H28.6955C28.2646 4.63865 27.9788 4.19212 28.1592 3.8008L29.7047 0.44798C31.0903 0.394765 32.8577 0.780573 33.5683 0.980129C38.6309 3.42801 37.0988 7.98676 35.6999 9.96014C38.1513 11.9291 38.4976 14.3282 38.3644 15.2816C38.098 20.1774 34.0346 21.8005 32.0362 22Z" fill="var(--primary)"/>
-                    <path class="react-w" d="M9.89261 21.4094L0 2.80536H4.86354C5.41354 2.80536 5.91795 3.11106 6.17246 3.59864L12.4032 15.5355C12.6333 15.9762 12.6261 16.5031 12.3842 16.9374L9.89261 21.4094Z" fill="white"/>
-                    <path class="react-w" d="M17.5705 21.4094L7.67786 2.80536H12.5372C13.0894 2.80536 13.5954 3.11351 13.8489 3.60412L20.302 16.0939L17.5705 21.4094Z" fill="white"/>
-                    <path class="react-w" d="M17.6443 21.4094L28.2751 0H23.4513C22.8806 0 22.361 0.328884 22.1168 0.844686L14.8271 16.2416L17.6443 21.4094Z" fill="white"/>
-                    <path class="react-w" d="M9.89261 21.4094L0 2.80536H4.86354C5.41354 2.80536 5.91795 3.11106 6.17246 3.59864L12.4032 15.5355C12.6333 15.9762 12.6261 16.5031 12.3842 16.9374L9.89261 21.4094Z" stroke="white"/>
-                    <path class="react-w" d="M17.5705 21.4094L7.67786 2.80536H12.5372C13.0894 2.80536 13.5954 3.11351 13.8489 3.60412L20.302 16.0939L17.5705 21.4094Z" stroke="white"/>
-                    <path class="react-w" d="M17.6443 21.4094L28.2751 0H23.4513C22.8806 0 22.361 0.328884 22.1168 0.844686L14.8271 16.2416L17.6443 21.4094Z" stroke="white"/>
-                    </svg>
-                    <svg class="brand-title" width="47" height="16" viewBox="0 0 47 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.36 15.2C7.2933 15.2 6.3 15.0267 5.38 14.68C4.4733 14.32 3.68 13.82 3 13.18C2.3333 12.5267 1.8133 11.76 1.44 10.88C1.0667 9.99999 0.880005 9.03999 0.880005 7.99999C0.880005 6.95999 1.0667 5.99999 1.44 5.11999C1.8133 4.23999 2.34 3.47999 3.02 2.83999C3.7 2.18666 4.49331 1.68666 5.40001 1.33999C6.30671 0.979988 7.3 0.799988 8.38 0.799988C9.5267 0.799988 10.5733 0.999988 11.52 1.39999C12.4667 1.78666 13.2667 2.36666 13.92 3.13999L12.24 4.71999C11.7333 4.17332 11.1667 3.76666 10.54 3.49999C9.9133 3.21999 9.2333 3.07999 8.5 3.07999C7.7667 3.07999 7.0933 3.19999 6.48 3.43999C5.88 3.67999 5.35331 4.01999 4.90001 4.45999C4.46001 4.89999 4.1133 5.41999 3.86 6.01999C3.62 6.61999 3.5 7.27999 3.5 7.99999C3.5 8.71999 3.62 9.37999 3.86 9.97999C4.1133 10.58 4.46001 11.1 4.90001 11.54C5.35331 11.98 5.88 12.32 6.48 12.56C7.0933 12.8 7.7667 12.92 8.5 12.92C9.2333 12.92 9.9133 12.7867 10.54 12.52C11.1667 12.24 11.7333 11.82 12.24 11.26L13.92 12.86C13.2667 13.62 12.4667 14.2 11.52 14.6C10.5733 15 9.52 15.2 8.36 15.2ZM16.4113 15V0.999988H22.1713C23.4113 0.999988 24.4713 1.19999 25.3513 1.59999C26.2446 1.99999 26.9313 2.57332 27.4113 3.31999C27.8913 4.06666 28.1313 4.95332 28.1313 5.97999C28.1313 7.00669 27.8913 7.89329 27.4113 8.63999C26.9313 9.37329 26.2446 9.93999 25.3513 10.34C24.4713 10.7267 23.4113 10.92 22.1713 10.92H17.8513L19.0113 9.73999V15H16.4113ZM25.5713 15L22.0313 9.91999H24.8112L28.3713 15H25.5713ZM19.0113 10.02L17.8513 8.77999H22.0513C23.1979 8.77999 24.0579 8.53329 24.6312 8.03999C25.2179 7.54669 25.5113 6.85999 25.5113 5.97999C25.5113 5.08666 25.2179 4.39999 24.6312 3.91999C24.0579 3.43999 23.1979 3.19999 22.0513 3.19999H17.8513L19.0113 1.91999V10.02ZM31.0402 15V0.999988H33.1802L39.3002 11.22H38.1802L44.2002 0.999988H46.3402L46.3602 15H43.9002L43.8802 4.85999H44.4002L39.2802 13.4H38.1202L32.9202 4.85999H33.5202V15H31.0402Z" fill="black"/>
-                    </svg>
+                <a href="choisirComp" class="brand-logo">
+                    <img src="images/logo/JM_Full2.png" alt="" style="width : 50%">
                 </a>
                 <div class="nav-control">
                     <div class="hamburger">
@@ -189,28 +178,10 @@
                     <nav class="navbar navbar-expand">
                         <div class="collapse navbar-collapse justify-content-between">
                             <div class="header-left">
-                                <div class="input-group search-area">
-                                    <span class="input-group-text"><a href="javascript:void(0)">
-                                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="8.78605" cy="8.78605" r="8.23951" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M14.5168 14.9447L17.7471 18.1667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-
-                                        </a></span>
-                                    <input type="text" class="form-control" placeholder="Search">
-                                </div>
+                                
                             </div>
                             <ul class="navbar-nav header-right">
-
-                                <li class="nav-item dropdown notification_dropdown">
-                                    <a class="nav-link bell-link" href="javascript:void(0);">
-                                        <svg width="20" height="22" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.9026 6.85114L12.4593 10.4642C11.6198 11.1302 10.4387 11.1302 9.59922 10.4642L5.11844 6.85114" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9089 19C18.9502 19.0084 21 16.5095 21 13.4384V6.57001C21 3.49883 18.9502 1 15.9089 1H6.09114C3.04979 1 1 3.49883 1 6.57001V13.4384C1 16.5095 3.04979 19.0084 6.09114 19H15.9089Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-
-                                    </a>
-                                </li>	
+	
                                 <li class="nav-item align-items-center header-border"><a href="logout" class="btn btn-primary btn-sm">Logout</a></li>	
                                 <li class="nav-item ps-3">
                                     <div class="dropdown header-profile2">
@@ -246,18 +217,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="card-body px-0 py-2">
-                                                    <a href="app-profile.html" class="dropdown-item ai-icon ">
+                                                    <a href="javascript:void(0);" class="dropdown-item ai-icon ">
                                                         <svg  width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9848 15.3462C8.11714 15.3462 4.81429 15.931 4.81429 18.2729C4.81429 20.6148 8.09619 21.2205 11.9848 21.2205C15.8524 21.2205 19.1543 20.6348 19.1543 18.2938C19.1543 15.9529 15.8733 15.3462 11.9848 15.3462Z" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9848 12.0059C14.5229 12.0059 16.58 9.94779 16.58 7.40969C16.58 4.8716 14.5229 2.81445 11.9848 2.81445C9.44667 2.81445 7.38857 4.8716 7.38857 7.40969C7.38 9.93922 9.42381 11.9973 11.9524 12.0059H11.9848Z" stroke="var(--primary)" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
                                                         </svg>
 
-                                                        <span class="ms-2">Profile </span>
-                                                    </a>
-                                                    <a href="app-profile.html" class="dropdown-item ai-icon ">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-
-                                                        <span class="ms-2">My Project</span><span class="badge badge-sm badge-secondary light rounded-circle text-white ms-2">4</span>
+                                                        <span class="ms-2">Profil </span>
                                                     </a>
                                                     <a href="javascript:void(0);" class="dropdown-item ai-icon ">
                                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -265,15 +231,15 @@
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                         </svg>
 
-                                                        <span class="ms-2">Message </span>
+                                                        <span class="ms-2">Messagerie </span>
                                                     </a>
-                                                    <a href="email-inbox.html" class="dropdown-item ai-icon ">
+                                                    <a href="javascript:void(0);" class="dropdown-item ai-icon ">
                                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.8476C17.6392 17.8476 20.2481 17.1242 20.5 14.2205C20.5 11.3188 18.6812 11.5054 18.6812 7.94511C18.6812 5.16414 16.0452 2 12 2C7.95477 2 5.31885 5.16414 5.31885 7.94511C5.31885 11.5054 3.5 11.3188 3.5 14.2205C3.75295 17.1352 6.36177 17.8476 12 17.8476Z" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                         <path d="M14.3888 20.8572C13.0247 22.372 10.8967 22.3899 9.51947 20.8572" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                         </svg>
 
-                                                        <span class="ms-2">Notification </span>
+                                                        <span class="ms-2">Notifications </span>
                                                     </a>
                                                 </div>
                                                 <div class="card-footer px-0 py-2">
@@ -283,7 +249,7 @@
                                                         <circle cx="12.175" cy="11.889" r="2.63616" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                         </svg>
 
-                                                        <span class="ms-2">Settings </span>
+                                                        <span class="ms-2">Options </span>
                                                     </a>
                                                     <a href="logout" class="dropdown-item ai-icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
@@ -311,54 +277,42 @@
             <div class="deznav">
                 <div class="deznav-scroll">
                     <ul class="metismenu" id="menu">
-                        <li class="menu-title">E-learning Maths</li>
-                        <li><a href="accuiel">
+                        <li class="menu-title">JudoMath</li>
+                        <li><a href="catalogue">
                                 <div class="menu-icon">
                                     <i class="fa-solid fa-graduation-cap"></i>  
                                 </div>	&nbsp;&nbsp;
-                                <span class="nav-text">Catalogue</span>
+                                <span class="nav-text">Liste des compétences</span>
                             </a>
-
                         </li>
 
                         <li>
-
-                            <a href="ApprentissageAdaptatif"  aria-expanded="false">
-
+                            <a href="choisirComp"  aria-expanded="false">
                                 <div class="menu-icon">
                                     <i class="fa-solid fa-person-chalkboard" ></i>
                                 </div>	&nbsp;&nbsp;
-                                <span class="nav-text">Apprentissage adaptatif</span>
+                                <span class="nav-text">S'entraîner</span>
                             </a>
-
                         </li>
 
-
-                        <li><a  href="test" aria-expanded="false">
+                        <li>
+                            <a  href="test" aria-expanded="false">
                                 <div class="menu-icon">
                                     <i class="fa-solid fa-list-check"></i>
                                 </div>	&nbsp;&nbsp;
                                 <span class="nav-text">Test de validation</span>
                             </a>
                         </li>
-                  
-                        <li><a  href="challenges" aria-expanded="false">
+                        
+                        <li>
+                            <a  href="challenges" aria-expanded="false">
                                 <div class="menu-icon">
                                     <i class="fa fa-bolt" aria-hidden="true"></i>
                                 </div>	&nbsp;&nbsp;
                                 <span class="nav-text">Challenges</span>
                             </a>
                         </li>
-
-
-
-
-
-
                     </ul>
-                    <div class="help-desk" style="position:fixed; bottom: 20px ">
-                        <a href="javascript:void(0)" class="btn btn-primary">Help Desk</a>
-                    </div>	
                 </div>
             </div>
             <!--**********************************
@@ -371,19 +325,19 @@
             <div class="content-body">
                 <div class="page-titles">
                     <ol class="breadcrumb">
-                        <li><h5 class="bc-title">Apprentissage Adaptatif</h5></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">
+                        <li><h5 class="bc-title">Entraînement</h5></li>
+                        <li class="breadcrumb-item"><a href="choisirComp">
                                 <i class="fa-solid fa-person-chalkboard" ></i>
-                                Apprentissage Adaptatif </a>
+                                Judomath </a>
                         </li>    
-                        <li class="breadcrumb-item "><a href="choisirComp">Tableau de bord</a></li>
+                        <li class="breadcrumb-item "><a href="choisirComp">S'entraîner</a></li>
 
 
 
-                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Espace d'apprentissage</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Entraînement</a></li>
                     </ol>
 
-                    <span id="xpPoints">${user.experiencePoints}</span>
+                    <span id="xpPoints">XP : ${user.experiencePoints}</span>
 
                 </div>
                 <!-- row -->
@@ -416,7 +370,7 @@
                                     <div class="card-header">
                                         <h3><svg style="margin-right:8px;" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
                                             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M40,40c-6.9,0 -16,4 -16,4v-22c0,0 9,-4 18,-4z" fill="#339af0"></path><path d="M8,40c6.9,0 16,4 16,4v-22c0,0 -9,-4 -18,-4z" fill="#339af0"></path><path d="M24,4c-4.41828,0 -8,3.58172 -8,8c0,4.41828 3.58172,8 8,8c4.41828,0 8,-3.58172 8,-8c0,-4.41828 -3.58172,-8 -8,-8zM41,32h1c0.6,0 1,-0.4 1,-1v-4c0,-0.6 -0.4,-1 -1,-1h-1c-1.7,0 -3,1.3 -3,3v0c0,1.7 1.3,3 3,3zM7,26h-1c-0.6,0 -1,0.4 -1,1v4c0,0.6 0.4,1 1,1h1c1.7,0 3,-1.3 3,-3v0c0,-1.7 -1.3,-3 -3,-3z" fill="#20c997"></path></g></g>
-                                            </svg> Apprendre </h3>
+                                            </svg> Les notions à retenir </h3>
                                     </div>
                                     <div class="card-body">
 
@@ -443,7 +397,7 @@
                                                                                                         <path fill="#839cb2" d="M-8.379 38.5H88.37899999999999V41.5H-8.379z" transform="rotate(134.999 40 40)"></path><path fill="#66798f" d="M73.148,5.438l1.414,1.414L6.852,74.562l-1.414-1.414L73.148,5.438 M73.148,4.023L4.023,73.148 l2.828,2.828L75.977,6.852L73.148,4.023L73.148,4.023z"></path><path fill="#99c99e" d="M61.257 4.186H68.742V25.814H61.257z" transform="rotate(134.999 65 15)"></path><path fill="#5e9c76" d="M60,5.414L74.586,20L70,24.586L55.414,10L60,5.414 M60,4l-6,6l16,16l6-6L60,4L60,4z"></path><path fill="#ffeea3" d="M52.429 1.701H65.571V40.299H52.429z" transform="rotate(134.999 59 21)"></path><path fill="#ba9b48" d="M50,3.414L76.586,30L68,38.586L41.414,12L50,3.414 M50,2L40,12l28,28l10-10L50,2L50,2z"></path><path fill="#8bb7f0" d="M36.701 19.964H76.299V27.034999999999997H36.701z" transform="rotate(45.001 56.5 23.5)"></path><path fill="#4e7ab5" d="M68 38.586L41.414 12 45 8.414 45.707 7.707 45 7 40 12 68 40 73 35 72.293 34.293z"></path><path fill="#99c99e" d="M11.257 54.186H18.742V75.814H11.257z" transform="rotate(134.999 15 65)"></path><path fill="#5e9c76" d="M10,55.414L24.586,70L20,74.586L5.414,60L10,55.414 M10,54l-6,6l16,16l6-6L10,54L10,54z"></path><g><path fill="#ffeea3" d="M14.429 39.701H27.570999999999998V78.299H14.429z" transform="rotate(134.999 21 59)"></path><path fill="#ba9b48" d="M12,41.414L38.586,68L30,76.586L3.414,50L12,41.414 M12,40L2,50l28,28l10-10L12,40L12,40z"></path></g><path fill="#8bb7f0" d="M3.701 52.964H43.299V60.035H3.701z" transform="rotate(45.001 23.5 56.5)"></path><path fill="#4e7ab5" d="M40 68L12 40 7 45 7.707 45.707 12 41.414 38.586 68 34.293 72.293 35 73z"></path>
                                                                                                         </svg>-->
 
-                                                    Entrainement&nbsp;&nbsp;
+                                                    Entraînement&nbsp;&nbsp;
                                                     <p class="mb-0" id="attempt" style="display:inline-block" ></p>
 
                                                 </div>
@@ -539,7 +493,7 @@
                                                     }%>
                                                 <div id="wizard_Finish" class="tab-pane" role="tabpanel">
                                                     <div class="row emial-setup" style="text-align: center">
-                                                        <p>Bravo, vous avez terminé l'entrainement du competence ${c}</p>
+                                                        <p>Bravo, tu as terminé l'entrainement du competence ${c}</p>
 
 
                                                         <div class="sweetalert">
@@ -619,17 +573,17 @@
 
                                                                     <% }%>
                                                                     <div  id ="verify_<%=countE%>" style='text-align:right'>
-                                                                        <button type="button" onclick="verifyAnswer(this,<%=countE%>)" class="btn tp-btn-light btn-primary">Vérifier votre réponse</button>
+                                                                        <button type="button" onclick="verifyAnswer(this,<%=countE%>)" class="btn tp-btn-light btn-primary">Vérifier la réponse</button>
 
                                                                     </div>
                                                                     <%                                                          } else {%>
                                                                     <br><br>
                                                                     <div class="input-group mb-3">
 
-                                                                        <input type="text" class="form-control" id="customRadioBox<%=countE%>" name="Ex<%=countE%>" placeholder="Votre réponse Ici"  required>
+                                                                        <input type="text" class="form-control" id="customRadioBox<%=countE%>" name="Ex<%=countE%>" placeholder="Mettre la réponse Ici"  required>
 
                                                                         <div id="verify_<%=countE%>">
-                                                                            <button type="button" onclick="verifyAnswer(this,<%=countE%>)" class="btn tp-btn-light btn-primary">Vérifier votre réponse</button>
+                                                                            <button type="button" onclick="verifyAnswer(this,<%=countE%>)" class="btn tp-btn-light btn-primary">Vérifier la réponse</button>
 
                                                                         </div>
                                                                     </div>
@@ -648,7 +602,7 @@
                                                 </form>
                                                 <div id="wizard_Finish" class="tab-pane" role="tabpanel">
                                                     <div class="row emial-setup" style="text-align: center">
-                                                        <p>Bravo, vous avez terminé les exercises du competence ${c}</p>
+                                                        <p>Bravo, tu as terminé les exercices de la compétence : ${c}</p>
                                                         <%if (e >= 2) {%>
                                                         <div>
                                                             <div class="sweetalert"  >
@@ -656,7 +610,7 @@
                                                             </div>
 
                                                             <form method="post" action="ApprentissageAdaptatif" >
-                                                                <button class="btn tp-btn-light btn-primary"> S'entrainer à nouveau</button>
+                                                                <button class="btn tp-btn-light btn-primary"> S'entraîner à nouveau</button>
                                                             </form>
                                                             <form method="get" action="test">
                                                                 <button class="btn tp-btn-light btn-primary" > Passer le test</button>
@@ -666,7 +620,7 @@
                                                         <%} else {%>
                                                         <div>
 
-                                                            <a href="ApprentissageAdaptatif" class="btn tp-btn-light btn-primary"> S'entrainer à nouveau</a>
+                                                            <a href="ApprentissageAdaptatif" class="btn tp-btn-light btn-primary"> S'entraîner à nouveau</a>
                                                         </div>
 
 
@@ -733,7 +687,7 @@
             ***********************************-->
             <div class="footer out-footer">
                 <div class="copyright">
-                    <p>Copyright © Developed by <a href="https://dexignzone.com/" target="_blank">DexignZone</a> 2023</p>
+                    <p>© ELLIADD, Mohamed & Clément. All rights reserved.</p>
                 </div>
             </div>
             <!--**********************************
@@ -925,10 +879,10 @@
 
 
                                                                                     // Toolbar extra buttons
-                                                                                    var btnFinish = $('<button onclick="window.location.href="https://w3docs.com""></button>').text('Valider Votre Réponses')
+                                                                                    var btnFinish = $('<button onclick="window.location.href="https://w3docs.com""></button>').text('Valider les réponses')
                                                                                             .addClass('btn btn-info').addClass('finishLine')
                                                                                             .on('click', function () {
-                                                                                                swal("Bravooo!!", "Tu peux passer les tests maintenant !!", "success");
+                                                                                                swal("Bravo !", "Tu peux désormais t'essayer au test ;)", "success");
                                                                                             });
                                                                                     // Step show event
                                                                                     $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
@@ -1120,14 +1074,14 @@
                                 var isCorrect = (selectedValue.value.trim() === correctAnswer1);
                                 if (isCorrect) {
 
-                                    buttonDiv.innerHTML = "  &nbsp;  ✅ Cette Réponse est Correcte <br> ";
+                                    buttonDiv.innerHTML = "  &nbsp;  ✅ Réponse correcte <br> ";
                                     $(".sw-btn-next").show();
 
                                     return;
                                 } else {
 
 
-                                    buttonDiv.innerHTML = "  &nbsp;  ❌ Cette Réponse est incorrecte" + "<br>La reponse correcte est " + correctAnswer1;
+                                    buttonDiv.innerHTML = "  &nbsp;  ❌ Réponse incorrecte" + "<br>La réponse correcte est : " + correctAnswer1;
                                     $(".sw-btn-next").show();
                                     return;
                                 }
