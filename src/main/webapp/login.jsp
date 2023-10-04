@@ -23,10 +23,10 @@
         <meta name="format-detection" content="telephone=no">
 
         <!-- PAGE TITLE HERE -->
-        <title>W3CRM Customer Relationship Management</title>
+        <title>JudoMath</title>
 
         <!-- FAVICONS ICON -->
-        <!--<link rel="shortcut icon" type="image/png" href="images/favicon.png">-->
+        <link rel="shortcut icon" type="image/png" href="images/JM_icon.png">
         <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
         <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
         <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
@@ -83,9 +83,8 @@
 
                                         <div class="card-body">
                                             <div class="logo-header">
-                                                <!--                                                <a href="index.html" class="logo"><img src="images/logo/logo-full.png" alt="" class="width-230 light-logo"></a>-->
+                                                <a href="login" class="logo"><img src="images/logo/JM_Full.png" alt="" class="width-230 light-logo"></a>
                                                 <!--<a href="index.html" class="logo"><img src="images/logo/logofull-white.png" alt="" class="width-230 dark-logo"></a>-->
-                                                <a href="login.jsp" class="logo">LOGO</a>
                                             </div>
 
                                             <nav>
@@ -101,9 +100,8 @@
                                                                 <div class="dz-separator-outer m-b5">
                                                                     <div class="dz-separator bg-primary style-liner"></div>
                                                                 </div>
-                                                                <p>Saisissez votre adresse email et votre mot de passe. </p>
                                                                 <div class="form-group mb-3">
-                                                                    <input type="email" class="form-control"  name="email" Placeholder="hello@example.com">
+                                                                    <input type="text" class="form-control"  name="email" Placeholder="Identifiant">
                                                                 </div>
                                                                 <div class="form-group mb-3">
                                                                     <input type="password" class="form-control" name ="password" Placeholder="Mot de passe">
@@ -113,54 +111,27 @@
                                                                     <span class="form-check d-inline-block">
                                                                         <input type="checkbox" class="form-check-input" id="check1" name="example1">
                                                                         <label class="form-check-label" for="check1">Se souvenir</label>
-                                                                    </span>
-                                                                    <button class="nav-link m-auto btn tp-btn-light btn-primary forget-tab " id="nav-forget-tab" data-bs-toggle="tab" data-bs-target="#nav-forget" type="button" role="tab" aria-controls="nav-forget" aria-selected="false">Mot de Passe Oublié ?</button> 	
-                                                                </div>
-                                                                <div class="dz-social ">
-                                                                    <h5 class="form-title fs-20">Se connecter avec</h5>
-                                                                    <ul class="dz-social-icon dz-border dz-social-icon-lg text-white">
-                                                                        <li><a target="_blank" href="https://www.facebook.com/" class="fab fa-facebook-f btn-facebook"></a></li>
-                                                                        <li><a target="_blank" href="https://www.google.com/" class="fab fa-google-plus-g btn-google-plus"></a></li>
-                                                                        <li><a target="_blank" href="https://www.linkedin.com/" class="fab fa-linkedin-in btn-linkedin"></a></li>
-                                                                        <li><a target="_blank" href="https://twitter.com/" class="fab fa-twitter btn-twitter"></a></li>
-                                                                    </ul>
+                                                                    </span>	
                                                                 </div>
                                                             </form>
                                                             <div class="text-center bottom"> 
                                                                 <button class="btn btn-primary button-md btn-block" id="nav-sign-tab" data-bs-toggle="tab" data-bs-target="#nav-sign" type="button" role="tab" aria-controls="nav-sign" aria-selected="false">Créer un compte</button> 
-
                                                             </div>
                                                         </div>
 
-                                                        <div class="tab-pane fade" id="nav-forget"  role="tabpanel" aria-labelledby="nav-forget-tab">
-                                                            <form class="dz-form">
-                                                                <h3 class="form-title m-t0">Mot de passe oublié ?</h3>
-                                                                <div class="dz-separator-outer m-b5">
-                                                                    <div class="dz-separator bg-primary style-liner"></div>
-                                                                </div>
-                                                                <p>Saisissez votre adresse e-mail ci-dessous pour réinitialiser votre mot de passe.. </p>
-                                                                <div class="form-group mb-4">
-                                                                    <input name="dzName" required="" class="form-control" placeholder="Email Address" type="text">
-                                                                </div>
-                                                                <div class="form-group clearfix text-left"> 
-                                                                    <button class=" active btn btn-primary" id="nav-personal-tab" data-bs-toggle="tab" data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal" aria-selected="true">Back</button>
-                                                                    <button class="btn btn-primary float-end">Envoyer</button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
+
 
                                                         <div class="tab-pane fade" id="nav-sign" role="tabpanel" aria-labelledby="nav-sign-tab">
                                                             <c:if test="${not empty error}">
                                                                 <span style="color: red;">${error}</span>
                                                             </c:if>
                                                             <form action="signup" method="post"  class="dz-form py-2" enctype="multipart/form-data" >
+                                                            </hr>
                                                                 <h3 class="form-title">S'inscrire</h3>
                                                                 <div class="dz-separator-outer m-b5">
                                                                     <div class="dz-separator bg-primary style-liner"></div>
                                                                 </div>
-                                                                <p>Saisissez vos données personnelles ci-dessous : </p>
-
-                                                                <div class="card card-bx profile-card author-profile m-b30">
+                                                                <div class="card card-bx profile-card author-profile m-b30" style="display : none;"> <!-- Div de la photo de profil, non fonctionnel -->
                                                                     <div class="card-body">
 
                                                                         <div class="p-5">
@@ -180,8 +151,9 @@
                                                                 </div>
                                                                 <div class="form-group mt-3">
                                                                     <select name="role" id="role" onchange="toggleTeacherInput()" class="default-select form-control wide form-control-sm ">
+
+                                                                        <option value="Apprenant">Élève</option>
                                                                         <option value="Enseignant">Enseignant</option>
-                                                                        <option value="Apprenant">Apprenant</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group mt-3">
@@ -191,26 +163,28 @@
                                                                     <input name="prenom" required class="form-control" placeholder="Prénom" type="text">
                                                                 </div>
                                                                 <div class="form-group mt-3">
-                                                                    <input name="email" required class="form-control" placeholder=" Adresse Email" type="email">
+                                                                    <input name="email" required class="form-control" placeholder=" Identifiant'" type="text">
                                                                 </div>
 
                                                                 <div class="form-group mt-3">
                                                                     <input name="password" required class="form-control" placeholder="Mot de Passe" type="password">
                                                                 </div>
-                                                                <div class="form-group mt-3 mb-3">
-                                                                    <input name="passwordV" required class="form-control" placeholder="Retapez votre mot de passe" type="password">
-                                                                </div>
+                                                                
                                                                 <div class="form-group mt-3" id="teacherInput" style="display: none;">
-                                                                    <input name="emailEnseignant" class="form-control" placeholder="Adresse Email de votre enseignant" type="email">
+                                                                    <input name="emailEnseignant" class="form-control" placeholder="Identifiant de votre enseignant" type="email">
                                                                 </div>
-
+                                                                
+                                                                </br>
+                                                                
                                                                 <div class="mb-3">
                                                                     <span class="form-check float-start me-2 ">
-                                                                        <input type="checkbox" class="form-check-input" id="check2" name="example1">
-                                                                        <label class="form-check-label d-unset" for="check2">J'accepte les</label>
+                                                                        <input type="checkbox" class="form-check-input" id="check2" name="example1" checked>
+                                                                        <label class="form-check-label d-unset" for="check2">J'accepte la politique de confidentialité</label>
                                                                     </span>
-                                                                    <label ><a href="#">Terms of Service </a>&amp; <a href="#">Politique de confidentialité</a></label>
-                                                                </div>
+                                                                </div>                                                              
+                                                                
+                                                                </br>
+                                                                
                                                                 <div class="form-group clearfix text-left">
                                                                     <button class="btn btn-primary outline gray" data-bs-toggle="tab" data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal" aria-selected="true">Retour</button>
                                                                     <button type="submit" class="btn btn-primary float-end">S'inscrire</button>
@@ -227,8 +201,7 @@
                                         <div class="card-footer">
                                             <div class=" bottom-footer clearfix m-t10 m-b20 row text-center">
                                                 <div class="col-lg-12 text-center">
-                                                    <span> © Copyright by <span class="heart"></span>
-                                                        <a href="javascript:void(0);">Mohamed at ELLIAD </a> All rights reserved.</span> 
+                                                    <span>© ELLIADD, Mohamed & Clément. All rights reserved.</span> 
                                                 </div>
                                             </div>
                                         </div>	
@@ -257,35 +230,33 @@
         <script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
         <script src="js/deznav-init.js"></script>
         <script src="./js/custom.js"></script>
-        <script>
-                                                                        function toggleTeacherInput() {
-                                                                            var roleSelect = document.getElementById("role");
-                                                                            var teacherInput = document.getElementById("teacherInput");
-                                                                            var teacherEmailInput = teacherInput.querySelector('input[name="emailEnseignant"]');
+        <script>           
+            function toggleTeacherInput() {
+                var roleSelect = document.getElementById("role");
+                var teacherInput = document.getElementById("teacherInput");
+                var teacherEmailInput = teacherInput.querySelector('input[name="emailEnseignant"]');
 
-                                                                            if (roleSelect.value === "Apprenant") {
-                                                                                teacherInput.style.display = "block";
-                                                                                teacherEmailInput.required = true;
-                                                                            } else {
-                                                                                teacherInput.style.display = "none";
-                                                                                teacherEmailInput.required = false;
-                                                                            }
-                                                                        }
+                if (roleSelect.value === "Apprenant") {
+                    teacherInput.style.display = "block";
+                    teacherEmailInput.required = true;
+                } else {
+                    teacherInput.style.display = "none";
+                    teacherEmailInput.required = false;
+                }
+            }
 
-                                                                        function readURL(input) {
-                                                                            if (input.files && input.files[0]) {
-                                                                                var reader = new FileReader();
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
 
-                                                                                reader.onload = function (e) {
-                                                                                    $('#blah').attr('src', e.target.result).width(150).height(200);
-                                                                                };
+                    reader.onload = function (e) {
+                        $('#blah').attr('src', e.target.result).width(150).height(200);
+                    };
 
-                                                                                reader.readAsDataURL(input.files[0]);
-                                                                            }
-                                                                        }
-
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
         </script>
-
-
+        <script> toggleTeacherInput(); </script>
     </body>
 </html>
