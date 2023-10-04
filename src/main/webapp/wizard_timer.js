@@ -22,7 +22,7 @@ $(document).ready(function () {
         }
     };
 
-    const TIME_LIMIT = 15;
+    const TIME_LIMIT = 45;
     let timePassed = 0;
     let timeLeft = TIME_LIMIT;
     let timerInterval = null;
