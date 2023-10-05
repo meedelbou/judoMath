@@ -33,7 +33,7 @@
         <meta name="format-detection" content="telephone=no">
 
         <!-- PAGE TITLE HERE -->
-        <title>Judo'riginel</title>
+        <title>JudoMath</title>
 
         <!-- FAVICONS ICON -->
         <link rel="shortcut icon" type="image/png" href="images/JM_icon.png">
