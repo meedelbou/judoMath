@@ -643,7 +643,7 @@
                                                                         </svg>
                                                                         <h4 class="my-2">Questions chronométrées</h4>
 
-                                                                        <p style="color:black"> Résoudre une série de défis chronométrés <strong>(30 secondes)</strong> avant que le chronomètre ne s'épuise. En général, cela prend environ <strong><%= (int) (exercises.size() * 0.5)%></strong> minutes.</p>
+                                                                        <p style="color:black"> Résoudre une série de défis chronométrés avant que le chronomètre ne s'épuise. En général, cela prend environ <strong><%= (int) (exercises.size() * 0.5)%></strong> minutes.</p>
 
                                                                     </div>
                                                                 </div>
