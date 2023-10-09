@@ -1493,8 +1493,6 @@ public class exercisesGen {
                     break;
                 default:
                     break;
-                default:
-                    break;
             }
 
         }
