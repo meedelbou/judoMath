@@ -400,7 +400,7 @@ public class exercisesGen {
                     break;
             }
 
-        } else if (name.equals("Additionner deux entiers") && palier == 1) {
+        } else if (name.equals("Additionner deux entiers")) {
             cours = "L'**addition** est une opération qui permet de calculer la somme de deux nombres ou plus. Pour additionner deux entiers, on commence généralement par additionner les chiffres de droite (les unités) puis on continue vers la gauche, en reportant si nécessaire."
                     + "\n**Exemple :** Pour additionner 47 et 29, on commence par additionner 7 (unités de 47) et 9 (unités de 29) pour obtenir 16. On écrit 6 et on reporte 1. Ensuite, on additionne 4 (dizaines de 47), 2 (dizaines de 29) et le 1 reporté pour obtenir 7. Le résultat est donc **76**.";
             Random random = new Random();
@@ -2303,9 +2303,6 @@ public class exercisesGen {
                 "Arion le centaure adore s'entraîner à l'arc. Il a tiré X flèches lors de la première manche, et Y lors de la seconde manche. Combien de flèches Arion a t'il tirées en tout ?");
 
         for (int i = 0; i < 7; i++) {
-
-            x = random.nextInt(80) + 1;
-            y = random.nextInt(20) + 1;
 
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
