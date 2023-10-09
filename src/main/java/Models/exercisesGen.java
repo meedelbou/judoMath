@@ -1093,16 +1093,6 @@ public class exercisesGen {
                         // Choix 2 (answer 1 -> op1 > op2) : "Plus grande"
                         Exercise exercise = new Exercise();
                         exercise.setContent("La comparaison "+operand1 + " < " + operand2 + " est-elle correcte ?");
-                        
-                        if (operand1 < operand2) {
-                            answer = "Vrai";
-                            otherChoice = "Faux";
-
-                        } else  {
-                            answer = "Faux";
-                            otherChoice = "Vrai";
-                        }
-                        
                         exercise.setAnswer(answer);
                         exercise.setOptions(options);
                         // AJOUTER LE TEXTE DES REPONSES POSSIBLES
