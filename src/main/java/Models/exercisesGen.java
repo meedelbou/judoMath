@@ -1543,7 +1543,7 @@ public class exercisesGen {
                         int limB = (int) (operand1 - 0.1 * operand1);
                         int limH = (int) (operand1 + 0.1 * operand1);
                         int operand2 = random.nextInt(limH - limB);
-                        int operand3 = (int) operand1 + 0.12 * operand1;
+                        int operand3 = (int) (operand1 + 0.12 * operand1);
                         String answer;
                         String otherChoice;
 
@@ -1580,7 +1580,7 @@ public class exercisesGen {
                         int limB = (int) (operand1 - 0.001 * operand1);
                         int limH = (int) (operand1 + 0.001 * operand1);
                         int operand2 = random.nextInt(limH - limB);
-                        int operand3 = (int) operand1 + 0.002 * operand1;
+                        int operand3 = (int) (operand1 + 0.002 * operand1);
                         String answer;
                         String otherChoice;
 
@@ -1654,7 +1654,7 @@ public class exercisesGen {
                         int limB = (int) (operand1 - 0.1 * operand1);
                         int limH = (int) (operand1 + 0.1 * operand1);
                         int operand2 = random.nextInt(limH - limB);
-                        int operand3 = (int) operand1 + 0.12 * operand1;
+                        int operand3 = (int) (operand1 + 0.12 * operand1);
                         String answer;
                         String otherChoice;
 
@@ -1691,7 +1691,7 @@ public class exercisesGen {
                         int limB = (int) (operand1 - 0.001 * operand1);
                         int limH = (int) (operand1 + 0.001 * operand1);
                         int operand2 = random.nextInt(limH - limB);
-                        int operand3 = (int) operand1 + 0.002 * operand1;
+                        int operand3 = (int) (operand1 + 0.002 * operand1);
                         String answer;
                         String otherChoice;
 
