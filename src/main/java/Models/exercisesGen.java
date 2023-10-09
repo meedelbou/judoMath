@@ -1485,4 +1485,164 @@ public class exercisesGen {
         return exercises;
     }
 
+    List<Exercise> addition(int x, int y) {
+        Random random = new Random();
+        List<Exercise> exercises = new ArrayList();
+
+        List<String> problems = Arrays.asList(
+                "Farle le boulanger s'occupe de fournir son village en pain. Il en a déjà fait X, et en refait cuire Y. Combien de pains Farle a t'il fabriqué en tout ?",
+                "Dans la forêt magique de Sleepwood, une licorne adore manger des fraises enchantées et des papillons féériques. Elle en a déjà mangé X, et elle en a mangé Y aujourd'hui. Combien de ressources la licorne a t'elle mangé aujourd'hui ?",
+                "Valens adore jouer avec ses boites de légos. Il en a déjà X, et il en a récupéré Y lors de la fête de l'école. Combien de boites Valens a t'il dans sa collection ?",
+                "Lila la fée adore collectionner les papillons magiques. Elle en a déjà X, et elle en a récupéré Y avec son filet enchanté. Combien de papillons Lila a t'elle dans sa collection ?",
+                "Harold le dragon adore amasser des pièces d'or. Il en a déjà X dans son antre, et il en a trouvé Y dans un trésor. Combien de pièces Harold a t'il dans sa collection ?",
+                "Chaque jour, le petit prince du royaume aquatique adore donner des perles. Il en donne X à la princesse des mers, et Y à la reine des mers. Combien de perles le prince donne-t'il en tout chaque jour ?",
+                "Perla la pieuvre adore collectionner les coquillages colorés. Elle en a trouvé X dans le sable, et elle en a trouvé Y dans les algues. Combien de coquillages Perla a t'elle dans sa collection ?",
+                "Pour célébrer l'arrivée du printemps, Bella la nymphe adore planter des fleurs. Elle a planté X tulipes, et elle a ajouté Y roses des vents. Combien de fleurs Bella a t'elle planté au total ?",
+                "La maman du petit elfe Orion adore offrir des étoiles filantes. Elle lui en a offert X pour son anniversaire, et son papa lui en a offert Y. Combien d'étoiles filantes Orion a t'il reçues pour son anniversaire ?",
+                "Dans le ciel nocturne, Castor le petit astronome adore compter les étoiles. Il en a compté X dans la Grande Ourse, et Y dans la Petite Ourse. Combien d'étoiles Castor a t'il compté en tout ?",
+                "La sorcière Morgana adore préparer des potions. Elle a préparé X potions d'invisibilité, et Y potions de vol. Combien de potions Morgana a t'elle préparé au total ?",
+                "La famille de lutins adore manger des pommes dorées. Ils en ont mangé X pour le déjeuner, et Y pour le dîner. Combien de pommes dorées ont-ils mangé au total ce jour-là ?",
+                "Arion le centaure adore s'entraîner à l'arc. Il a tiré X flèches lors de la première manche, et Y lors de la seconde manche. Combien de flèches Arion a t'il tirées en tout ?");
+
+        for (int i = 0; i < 7; i++) {
+
+            String problem = problems.get(random.nextInt(problems.size()));
+            problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
+
+            Exercise exercise = new Exercise();
+            exercise.setContent(problem);
+            exercise.setAnswer(Integer.toString(x + y));
+            exercise.setOptions(generateOptions(x + y));
+            exercise.setTimer(true);
+            exercise.setPrompt(true);
+
+            exercises.add(exercise);
+        }
+        return exercises;
+    }
+
+    List<Exercise> soustraire(int x, int y) {
+        Random random = new Random();
+        List<Exercise> exercises = new ArrayList();
+
+        List<String> problems = Arrays.asList(
+                "Evariste le magicien a X étoiles magiques, mais il en donne Y à son apprenti. Combien d'étoiles magiques lui reste-t-il ?",
+                "Le forgeron nain Burin possède X lingots d'or, mais il en utilise Y pour fabriquer une couronne royale. Combien de lingots d'or lui restent-ils ?",
+                "Mélusine la sirène a cueilli X coquillages mais en perd Y sur le chemin de retour. Combien de coquillages lui restent-ils ?",
+                "Papyrus le hibou sage a commencé l'année avec X livres dans sa bibliothèque, mais en a prêté Y à ses amis. Combien de livres lui restent-ils ?",
+                "Clémentine la fée a X fioles de poussière d'étoile. Elle en utilise Y pour enchanter des rêves. Combien de fioles lui restent-ils ?",
+                "Le petit troll Gaston a X bonbons, mais en mange Y en regardant son dessin animé préféré. Combien de bonbons lui restent-ils ?",
+                "Le pirate Barbe-Grise compte X pièces dans son coffre au trésor, mais doit en donner Y à son équipage. Combien de pièces lui restent-ils ?",
+                "Mirette la géante a X fleurs dans son jardin, mais un vent fort en emporte Y. Combien de fleurs lui restent-ils ?",
+                "L'archer elfe Lorian a commencé la journée avec X flèches, mais en a utilisé Y pour la chasse. Combien de flèches lui restent-ils ?",
+                "Azur la licorne a X cristaux magiques, mais en offre Y à sa meilleure amie, l'elfe Luna. Combien de cristaux lui restent-ils ?",
+                "Le dragon Drako a X pierres précieuses dans sa caverne, mais en perd Y en volant trop vite. Combien de pierres précieuses lui restent-ils ?",
+                "Grizelda la sorcière a X ingrédients pour ses potions, mais en utilise Y pour une potion de sommeil. Combien d'ingrédients lui restent-ils ?",
+                "L'épouvantail Émile a commencé l'automne avec X feuilles sur sa tête, mais le vent en a emporté Y. Combien de feuilles lui restent-ils ?",
+                "Le chevalier Roland a X pommes à partager avec ses amis, mais en donne Y à son cheval. Combien de pommes lui restent-ils ?",
+                "Le nain Minus a X pépites de diamant, mais doit en donner Y au roi pour payer ses taxes. Combien de pépites de diamant lui restent-ils ?");
+
+        for (int i = 0; i < 7; i++) {
+
+            String problem = problems.get(random.nextInt(problems.size()));
+            problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
+
+            Exercise exercise = new Exercise();
+            exercise.setContent(problem);
+            exercise.setAnswer(Integer.toString(x - y));
+            exercise.setOptions(generateOptions(x - y));
+            exercise.setTimer(true);
+            exercise.setPrompt(true);
+
+            exercises.add(exercise);
+        }
+        return exercises;
+    }
+
+
+    List<Exercise> division(int x, int y) {
+        Random random = new Random();
+        List<Exercise> exercises = new ArrayList();
+
+        List<String> problems = Arrays.asList(
+                "Alphonse le magicien a X cartes de tarot et veut faire des piles de Y cartes chacune pour ses tours. Combien de piles peut-il faire ?",
+                "Lilly l'abeille a X grains de pollen et veut les répartir équitablement entre ses Y amies. Combien de grains de pollen chaque amie recevra-t-elle ?",
+                "Le gnome Fredo a X pommes et veut les partager entre Y paniers pour les vendre au marché. Combien de pommes mettra-t-il dans chaque panier ?",
+                "Le dragon Torrid a X trésors et veut les répartir équitablement entre ses Y cavernes. Combien de trésors chaque caverne recevra-t-elle ?",
+                "La fée Lumina a X lucioles et veut les répartir entre Y lanternes pour éclairer sa maison. Combien de lucioles chaque lanterne recevra-t-elle ?",
+                "Le géant Bigor a X rochers à disposer en Y lignes pour délimiter son territoire. Combien de rochers doit-il mettre sur chaque ligne ?",
+                "Le nain Dardo a X gemmes et veut les répartir équitablement entre ses Y coffres. Combien de gemmes chaque coffre recevra-t-il ?",
+                "La sirène Perle a X perles et veut les répartir en Y colliers pour les offrir à ses amies. Combien de perles chaque collier aura-t-il ?",
+                "Le boulanger Gastro a X baguettes à répartir entre Y sacs pour la livraison. Combien de baguettes chaque sac contiendra-t-il ?",
+                "Le chevalier Lancelot a X pièces d'or à partager entre ses Y écuyers. Combien de pièces chaque écuyer recevra-t-il ?",
+                "Le sorcier Merlin a X potions à diviser entre ses Y étagères. Combien de potions chaque étagère recevra-t-elle ?",
+                "La licorne Iris a X arcs-en-ciel à répartir entre Y nuages. Combien d'arcs-en-ciel chaque nuage recevra-t-il ?",
+                "Le pirate Barbe Noire a X bouteilles de rhum à partager entre ses Y matelots. Combien de bouteilles chaque matelot recevra-t-il ?",
+                "La fée Chloris a X fleurs à disposer en Y bouquets pour la fête des fleurs. Combien de fleurs chaque bouquet aura-t-il ?",
+                "L'elfe Sylver a X flèches à diviser entre ses Y carquois. Combien de flèches chaque carquois recevra-t-il ?");
+
+
+        for (int i = 0; i < 7; i++) {
+            int x = random.nextInt(end) + start;
+
+            String problem = problems.get(random.nextInt(problems.size()));
+            problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
+
+            Exercise exercise = new Exercise();
+            exercise.setContent(problem);
+            exercise.setAnswer(Integer.toString(x / y));
+            exercise.setOptions(generateOptions(x / y));
+            exercise.setTimer(true);
+            exercise.setPrompt(true);
+
+            exercises.add(exercise);
+        }
+        return exercises;
+    }
+
+    List<Exercise> priorite(int niveau, int x, int y, int z) {
+        Random random = new Random();
+        List<Exercise> exercises = new ArrayList();
+
+        // SWITCH AVEC NIVEAU
+        // AJOUT DES 3 TABLEAUX DE PROBLEMES
+        // MODIFICATION DU Z (en plus du x et y) DANS LE REPLACE
+        // MODIFS setAnswer et setOptions
+
+        List<String> problems = Arrays.asList(
+                "Alphonse le magicien a X cartes de tarot et veut faire des piles de Y cartes chacune pour ses tours. Combien de piles peut-il faire ?",
+                "Lilly l'abeille a X grains de pollen et veut les répartir équitablement entre ses Y amies. Combien de grains de pollen chaque amie recevra-t-elle ?",
+                "Le gnome Fredo a X pommes et veut les partager entre Y paniers pour les vendre au marché. Combien de pommes mettra-t-il dans chaque panier ?",
+                "Le dragon Torrid a X trésors et veut les répartir équitablement entre ses Y cavernes. Combien de trésors chaque caverne recevra-t-elle ?",
+                "La fée Lumina a X lucioles et veut les répartir entre Y lanternes pour éclairer sa maison. Combien de lucioles chaque lanterne recevra-t-elle ?",
+                "Le géant Bigor a X rochers à disposer en Y lignes pour délimiter son territoire. Combien de rochers doit-il mettre sur chaque ligne ?",
+                "Le nain Dardo a X gemmes et veut les répartir équitablement entre ses Y coffres. Combien de gemmes chaque coffre recevra-t-il ?",
+                "La sirène Perle a X perles et veut les répartir en Y colliers pour les offrir à ses amies. Combien de perles chaque collier aura-t-il ?",
+                "Le boulanger Gastro a X baguettes à répartir entre Y sacs pour la livraison. Combien de baguettes chaque sac contiendra-t-il ?",
+                "Le chevalier Lancelot a X pièces d'or à partager entre ses Y écuyers. Combien de pièces chaque écuyer recevra-t-il ?",
+                "Le sorcier Merlin a X potions à diviser entre ses Y étagères. Combien de potions chaque étagère recevra-t-elle ?",
+                "La licorne Iris a X arcs-en-ciel à répartir entre Y nuages. Combien d'arcs-en-ciel chaque nuage recevra-t-il ?",
+                "Le pirate Barbe Noire a X bouteilles de rhum à partager entre ses Y matelots. Combien de bouteilles chaque matelot recevra-t-il ?",
+                "La fée Chloris a X fleurs à disposer en Y bouquets pour la fête des fleurs. Combien de fleurs chaque bouquet aura-t-il ?",
+                "L'elfe Sylver a X flèches à diviser entre ses Y carquois. Combien de flèches chaque carquois recevra-t-il ?");
+
+
+        for (int i = 0; i < 7; i++) {
+            int x = random.nextInt(end) + start;
+
+            String problem = problems.get(random.nextInt(problems.size()));
+            problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
+
+            Exercise exercise = new Exercise();
+            exercise.setContent(problem);
+            exercise.setAnswer(Integer.toString(x / y));
+            exercise.setOptions(generateOptions(x / y));
+            exercise.setTimer(true);
+            exercise.setPrompt(true);
+
+            exercises.add(exercise);
+        }
+        return exercises;
+    }
+
 }
