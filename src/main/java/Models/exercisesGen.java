@@ -347,11 +347,11 @@ public class exercisesGen {
                 case 2:
                     for (int i = 0; i < 7; i++) {
                         int operand1 = random.nextInt(100) + 1;
-                        int operand2 = 10 - operand1;
+                        int operand2 = 100 - operand1;
                         int answer = operand2;
 
                         Exercise exercise = new Exercise();
-                        exercise.setContent("Combien faut-il ajouter à " + operand1 + " pour obtenir 10?");
+                        exercise.setContent("Combien faut-il ajouter à " + operand1 + " pour obtenir 100?");
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setTimer(true);
