@@ -2304,6 +2304,9 @@ public class exercisesGen {
 
         for (int i = 0; i < 7; i++) {
 
+            x = random.nextInt(80) + 1;
+            y = random.nextInt(20) + 1;
+
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
 
