@@ -1365,10 +1365,137 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(40) + 20;
+                        int operand2 = random.nextInt(10) + 1;
+                        int operand3 = random.nextInt(10) + 1;
+                        int operand4 = random.nextInt(9) + 2;
+                        int answer = 0;
+
+                        String consigne = "";
+
+                        switch (random.nextInt(4)){
+                            case 0:
+                                // op1 + op2 x op4
+                                answer = op1 + op2 * op4;
+                                consigne = "Combien fait " + op1 + " + " + op2 + " x " + op4 + " ?";
+                                break;
+                            case 1:
+                                // op1 x op4 - op3
+                                answer = op1 * op4 - op3;
+                                consigne = "Combien fait " + op1 + " x " + op4 + " - " + op3 + " ?";
+                                break;
+                            case 2:
+                                // op3 - op2 x op4
+                                answer = op3 - op3 * op4;
+                                consigne = "Combien fait " + op3 + " - " + op2 + " x " + op4 + " ?";
+                                break;
+                            case 3:
+                                // op2 x op4 + op1
+                                answer = op2 * op4 + op1;
+                                consigne = "Combien fait " + op2 + " x " + op4 + " + " + op1 + " ?";
+                                break;
+                        }
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(consigne);
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10) + 1;
+                        int operand2 = random.nextInt(10) + 1;
+                        int operand3 = random.nextInt(10) + 1;
+                        int operand4 = random.nextInt(9) + 2;
+                        int answer = 0;
+
+                        String consigne = "";
+
+                        switch (random.nextInt(6)){
+                            case 0:
+                                // 1 - 2 + 3 * 4
+                                answer = op1 - op2 + op3 * op4;
+                                consigne = "Combien fait " + op1 + " - " + op2 + " + " + op3 + " x " + op4 + " ?";
+                                break;
+                            case 1:
+                                // (1 - 2) + 3 * 4
+                                answer = (op1 - op2) + op3 * op4;
+                                consigne = "Combien fait (" + op1 + " - " + op2 + ") + " + op3 + " x " + op4 + " ?";
+                                break;
+                            case 2:
+                                // 3 + (1 - 2) * 4
+                                answer = op1 + (op2 - op3) * op4;
+                                consigne = "Combien fait " + op1 + " + (" + op2 + " - " + op3 + ") x " + op4 + " ?";
+                                break;
+                            case 3:
+                                // (3 + 1 - 2) * 4
+                                answer = (op1 + op2 - op3) * op4;
+                                consigne = "Combien fait (" + op1 + " + " + op2 + " - " + op3 + ") x " + op4 + " ?";
+                                break;
+                            case 4:
+                                // 3 + (4 * 1 - 2)
+                                answer = op1 + (op2 * op3 - op4);
+                                consigne = "Combien fait " + op1 + " + (" + op2 + " x " + op3 + " - " + op4 + ") ?";
+                                break;
+                            case 5:
+                                // 4 * 3 - (1 + 2)
+                                answer = op1 * op2 - (op3 + op4);
+                                consigne = "Combien fait " + op1 + " x " + op2 + " - (" + op3 + " + " + op4 + ") ?";
+                                break;
+                        }
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(consigne);
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+                        exercise.setPrompt(true);
+                        exercise.setTimer(true);
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    int operand1 = random.nextInt(10) + 1;
+                    int operand2 = random.nextInt(10) + 1;
+                    int operand3 = random.nextInt(10) + 1;
+                    int answerTemp = 0;
+                    int niveau = 0;
+
+                    switch (random.nextInt(3)){
+                        case 0:
+                            niveau = 0;
+                            // ((X - Y + Z) / 2)
+                            do {
+                                operand2 = random.nextInt(10) + 1;
+                                operand3 = random.nextInt(10) + 1;
+                                answerTemp = operand1 - operand2 + operand3;
+                            } while (answerTemp < 0 || answerTemp%2 != 0);
+                            break;
+                        case 1:
+                            niveau = 1;
+                            // ((X / 2 + Y) - Z)
+                            do {
+                                operand1 = random.nextInt(10) + 1;
+                                operand2 = random.nextInt(10) + 1;
+                                operand3 = random.nextInt(10) + 1;
+                                answerTemp = operand1 / 2;
+                            } while (answerTemp + operand2 - operand3 < 0 || answerTemp%2 != 0);
+                            break;
+                        case 2:
+                            niveau = 2;
+                            // ((2 * X - Y) + Z)
+                            do {
+                                operand1 = random.nextInt(10) + 1;
+                                operand2 = random.nextInt(10) + 1;
+                                answerTemp = 2 * operand1 - operand2;
+                            } while (answerTemp < 0);
+                            break;
+                    }
+                    exercises = priorite(niveau, operand1, operand2, operand3);
                     break;
                 default:
                     break;
@@ -1378,10 +1505,108 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(50) + 1;
+                        int operand2 = random.nextInt(50) + 50;
+                        int operandAnswer = random.nextInt(100) + 1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operandAnswer && operandAnswer < operand2) {
+                            answer = operandAnswer + " est compris entre " + operand1 + " et " + operand2;
+                            otherChoice = operandAnswer + " n'est pas compris entre " + operand1 + " et " + operand2;
+
+                        } else {
+                            answer = operandAnswer + " n'est pas compris entre " + operand1 + " et " + operand2;
+                            otherChoice = operandAnswer + " est compris entre " + operand1 + " et " + operand2;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(operandAnswer + " est-il compris entre " + operand1 + " et " + operand2 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10000 - 100) + 100;
+                        int limB = (int) (operand1 - 0.1 * operand1);
+                        int limH = (int) (operand1 + 0.1 * operand1);
+                        int operand2 = random.nextInt(limH - limB);
+                        int operand3 = operand1 + 0.12 * operand1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operand2 && operand2 < operand3) {
+                            answer = operand2 + " est compris entre " + operand1 + " et " + operand3;
+                            otherChoice = operand2 + " n'est pas compris entre " + operand1 + " et " + operand3;
+
+                        } else {
+                            answer = operand2 + " n'est pas compris entre " + operand1 + " et " + operand3;
+                            otherChoice = operand2 + " est compris entre " + operand1 + " et " + operand3;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        // Réponses du QCM
+                        // Choix 1 (answer 0 -> op1 < op2) : "Plus petit"
+                        // Choix 2 (answer 1 -> op1 > op2) : "Plus grande"
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(100000 - 10000) + 10000;
+                        int limB = (int) (operand1 - 0.001 * operand1);
+                        int limH = (int) (operand1 + 0.001 * operand1);
+                        int operand2 = random.nextInt(limH - limB);
+                        int operand3 = operand1 + 0.002 * operand1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operand2 && operand2 < operand3) {
+                            answer = operand1 + " < " + operand2 + " et " + operand2 + " < " + operand3;
+                            otherChoice = operand1 + " > " + operand2 + " ou " + operand2 + " > " + operand3;
+
+                        } else {
+                            answer = operand1 + " > " + operand2 + " ou " + operand2 + " > " + operand3;
+                            otherChoice = operand1 + " < " + operand2 + " et " + operand2 + " < " + operand3;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
+
                     break;
                 default:
                     break;
@@ -1391,10 +1616,108 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10000000 - 10000) + 10000;
+                        int operand2 = random.nextInt(10000000 - 10000) + 10000;
+                        int operandAnswer = random.nextInt(100) + 1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operandAnswer && operandAnswer < operand2) {
+                            answer = operandAnswer + " est compris entre " + operand1 + " et " + operand2;
+                            otherChoice = operandAnswer + " n'est pas compris entre " + operand1 + " et " + operand2;
+
+                        } else {
+                            answer = operandAnswer + " n'est pas compris entre " + operand1 + " et " + operand2;
+                            otherChoice = operandAnswer + " est compris entre " + operand1 + " et " + operand2;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(operandAnswer + " est-il compris entre " + operand1 + " et " + operand2 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(100000000 - 100000) + 100000;
+                        int limB = (int) (operand1 - 0.1 * operand1);
+                        int limH = (int) (operand1 + 0.1 * operand1);
+                        int operand2 = random.nextInt(limH - limB);
+                        int operand3 = operand1 + 0.12 * operand1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operand2 && operand2 < operand3) {
+                            answer = operand2 + " est compris entre " + operand1 + " et " + operand3;
+                            otherChoice = operand2 + " n'est pas compris entre " + operand1 + " et " + operand3;
+
+                        } else {
+                            answer = operand2 + " n'est pas compris entre " + operand1 + " et " + operand3;
+                            otherChoice = operand2 + " est compris entre " + operand1 + " et " + operand3;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        // Réponses du QCM
+                        // Choix 1 (answer 0 -> op1 < op2) : "Plus petit"
+                        // Choix 2 (answer 1 -> op1 > op2) : "Plus grande"
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(100000000 - 100000) + 100000;
+                        int limB = (int) (operand1 - 0.001 * operand1);
+                        int limH = (int) (operand1 + 0.001 * operand1);
+                        int operand2 = random.nextInt(limH - limB);
+                        int operand3 = operand1 + 0.002 * operand1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operand2 && operand2 < operand3) {
+                            answer = operand1 + " < " + operand2 + " et " + operand2 + " < " + operand3;
+                            otherChoice = operand1 + " > " + operand2 + " ou " + operand2 + " > " + operand3;
+
+                        } else {
+                            answer = operand1 + " > " + operand2 + " ou " + operand2 + " > " + operand3;
+                            otherChoice = operand1 + " < " + operand2 + " et " + operand2 + " < " + operand3;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
+
                     break;
                 default:
                     break;
