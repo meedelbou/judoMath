@@ -1583,7 +1583,6 @@ public class exercisesGen {
 
 
         for (int i = 0; i < 7; i++) {
-            int x = random.nextInt(end) + start;
 
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
@@ -1628,7 +1627,6 @@ public class exercisesGen {
 
 
         for (int i = 0; i < 7; i++) {
-            int x = random.nextInt(end) + start;
 
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
