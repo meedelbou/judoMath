@@ -1599,6 +1599,7 @@ public class exercisesGen {
                         options.add(otherChoice);
                         Collections.shuffle(options);
 
+                        Exercise exercise = new Exercise();
                         exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
                         exercise.setAnswer(answer);
                         exercise.setOptions(options);
@@ -1710,6 +1711,7 @@ public class exercisesGen {
                         options.add(otherChoice);
                         Collections.shuffle(options);
 
+                        Exercise exercise = new Exercise();
                         exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
                         exercise.setAnswer(answer);
                         exercise.setOptions(options);
