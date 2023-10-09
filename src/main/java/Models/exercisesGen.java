@@ -1385,6 +1385,7 @@ public class exercisesGen {
                 case 3:
                     int operand1 = random.nextInt(50) + 50;
                     int operand2 = random.nextInt(9) + 2;
+                    int answer = operand1 / operand2;
                     do {
                         operand1 = random.nextInt(50) + 1;
                         operand2 = random.nextInt(9) + 2;
@@ -1445,6 +1446,7 @@ public class exercisesGen {
                 case 3:
                     int operand1 = random.nextInt(50) + 10;
                     int operand2 = 2;
+                    int answer = operand1 / operand2;
                     do {
                         operand1 = random.nextInt(50) + 10;
                         operand2 = 2;
@@ -1505,6 +1507,7 @@ public class exercisesGen {
                 case 3:
                     int operand1 = random.nextInt(1000) + 100;
                     int operand2 = 10;
+                    int answer = operand1 / operand2;
                     do {
                         operand1 = random.nextInt(1000) + 100;
                         operand2 = 10;
@@ -1571,7 +1574,8 @@ public class exercisesGen {
                     int operand2 = 10;
                     int rand10 = random.nextInt(1);
                     if (rand10 == 0) {operand2 = 100;} else {operand2 = 1000;}
-
+                    int answer = operand1 / operand2;
+                    
                     do {
                         operand1 = random.nextInt(100000) + 1000;
                         answer = operand1 / operand2;
