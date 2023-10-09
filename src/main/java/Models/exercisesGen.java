@@ -29,7 +29,8 @@ public class exercisesGen {
         String cours = "Affichage par défaut";
 
         if (name.equals("Connaitre les critères de division par 2")) {
-
+            cours = "Un nombre est divisible par **2** si son **dernier chiffre** est **pair** (0, 2, 4, 6 ou 8)."
+                    + "\n**Exemple :** Les nombres 42, 68, 120 sont divisibles par 2 car ils se terminent respectivement par 2, 8 et 0.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -83,7 +84,7 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Connaitre les critères de division par 3")) {
-            cours = "Un nombre est divisible par **3** si la **somme de ses chiffres** est un multiple de 3. <br>\n"
+            cours = "Un nombre est divisible par **3** si la **somme de ses chiffres** est un **multiple de 3**."
                     + "\n"
                     + "**Exemple : <br>** Prenons le nombre 381. La somme de ses chiffres est 3 + 8 + 1 = 12. Comme 12 est un multiple de 3 (3*4 = 12), alors le nombre 381 est divisible par 3.";
             Random random = new Random();
@@ -139,6 +140,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Connaitre les critères de division par 9")) {
+            cours = "Un nombre est divisible par **9** si la **somme de ses chiffres** est un **multiple de 9**."
+                    + "\n**Exemple :** Prenons le nombre 729. La somme de ses chiffres est 7 + 2 + 9 = 18. Comme 18 est un multiple de 9 (9*2 = 18), alors le nombre 729 est divisible par 9.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -192,6 +195,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Connaitre les critères de division par 5")) {
+            cours = "\n\nUn nombre est divisible par **5** si son **dernier chiffre** est **0 ou 5**."
+                    + "\n**Exemple :** Les nombres 45, 70, 125 sont divisibles par 5 car ils se terminent respectivement par 5, 0 et 5.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -245,7 +250,9 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Additionner un entier à un autre pour obtenir 10")) {
-            cours = "Test cours 10";
+            cours = "Le **complément à 10** d'un nombre entier est la différence entre 10 et ce nombre."
+                    + "\n**Exemple :** Pour le nombre 7, le complément à 10 est 10 - 7 = **3**.";
+
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -320,7 +327,8 @@ public class exercisesGen {
 
         } else if (name.equals("Additionner un entier à un autre pour obtenir 100")) {
             Random random = new Random();
-            cours = "Cours sur le complément à 100";
+            cours = "Le **complément à 100** d'un nombre entier est la différence entre 100 et ce nombre."
+                    + "\n**Exemple :** Pour le nombre 75, le complément à 100 est 100 - 75 = **25**.";
             switch (palier) {
                 case 1:
                     for (int i = 0; i < 7; i++) {
@@ -393,7 +401,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Additionner deux entiers") && palier == 1) {
-
+            cours = "L'**addition** est une opération qui permet de calculer la somme de deux nombres ou plus. Pour additionner deux entiers, on commence généralement par additionner les chiffres de droite (les unités) puis on continue vers la gauche, en reportant si nécessaire."
+                    + "\n**Exemple :** Pour additionner 47 et 29, on commence par additionner 7 (unités de 47) et 9 (unités de 29) pour obtenir 16. On écrit 6 et on reporte 1. Ensuite, on additionne 4 (dizaines de 47), 2 (dizaines de 29) et le 1 reporté pour obtenir 7. Le résultat est donc **76**.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -436,7 +445,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Soustraire un entier à un autre entier")) {
-
+            cours = "La **soustraction** est une opération qui permet de déterminer la différence entre deux nombres. Pour soustraire deux entiers, on commence généralement par soustraire les chiffres de droite (les unités) puis on continue vers la gauche. Si le chiffre du haut est plus petit que celui du bas, on emprunte 1 à la colonne de gauche."
+                    + "\n**Exemple :** Pour soustraire 29 de 47, on commence par soustraire 9 (unités de 29) de 7 (unités de 47). Comme 7 est plus petit que 9, on emprunte 1 à la colonne des dizaines. 17 (7 + 10) moins 9 égale 8. Ensuite, on soustrait 2 (dizaines de 29) de 3 (dizaines de 47, après avoir emprunté) pour obtenir 1. Le résultat est donc 18.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -499,6 +509,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Connaitre la table des 2")) {
+            cours = "La table de multiplication par 2 est l'une des premières tables que nous apprenons. Elle consiste à doubler un nombre."
+                    + "\n**Exemple :** 3 x 2 = 6";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -541,6 +553,8 @@ public class exercisesGen {
                     break;
             }
         } else if (name.equals("Connaitre la table des 3")) {
+            cours = "La table de multiplication par 3 consiste à tripler un nombre."
+                    + "\n**Exemple :** 3 x 3 = 9";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -583,6 +597,8 @@ public class exercisesGen {
                     break;
             }
         } else if (name.equals("Connaitre la table des 4")) {
+            cours = "La table de multiplication par 4 consiste à quadrupler un nombre."
+                    + "\n**Exemple :** 3 x 4 = 12";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -625,6 +641,8 @@ public class exercisesGen {
                     break;
             }
         } else if (name.equals("Connaitre la table des 5")) {
+            cours = "La table de multiplication par 5 est facile à mémoriser car elle se termine toujours par 0 ou 5."
+                    + "\n**Exemple :** 3 x 5 = 15, 6 x 5 = 30";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -667,6 +685,8 @@ public class exercisesGen {
                     break;
             }
         } else if (name.equals("Connaitre la table des 6")) {
+            cours = "La table de multiplication par 6."
+                    + "**Exemple :** 3 x 6 = 18";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -709,6 +729,8 @@ public class exercisesGen {
                     break;
             }
         } else if (name.equals("Connaitre la table des 7")) {
+            cours = "La table de multiplication par 7."
+                    + "\n**Exemple :** 3 x 7 = 21";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -751,6 +773,8 @@ public class exercisesGen {
                     break;
             }
         } else if (name.equals("Connaitre la table des 8")) {
+            cours = "La table de multiplication par 8."
+                    + "\n**Exemple :** 3 x 8 = 24";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -793,6 +817,8 @@ public class exercisesGen {
                     break;
             }
         } else if (name.equals("Connaitre la table des 9")) {
+            cours = "La table de multiplication par 9 a une astuce intéressante : les chiffres des produits s'additionnent toujours à 9."
+                    + "\n**Exemple :** 3 x 9 = 27 (Vérification : 2 + 7 = 9)";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -835,6 +861,8 @@ public class exercisesGen {
                     break;
             }
         } else if (name.equals("Multiplier un entier par 10")) {
+            cours = "Multiplier un nombre par **10** est simple. Il suffit d'ajouter un zéro à la fin du nombre."
+                    + "\n**Exemple :** Si on multiplie 5 par 10, on obtient 50.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -875,6 +903,9 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Multiplier un entier par 20")) {
+            cours = "Multiplier un nombre par **20** revient à le multiplier d'abord par 10, puis à doubler le résultat."
+                    + "\n**Exemple :** Si on multiplie 5 par 20, on obtient d'abord 50 (5 multiplié par 10) puis 100 (50 doublé).";
+
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -916,6 +947,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Multiplier un entier par 100 et par 1000")) {
+            cours = "Multiplier un nombre par **100** ou **1000** est similaire à la multiplication par 10, mais on ajoute deux zéros à la fin pour 100 et trois zéros pour 1000."
+                    + "\n**Exemple :** 5 multiplié par 100 donne 500 et 5 multiplié par 1000 donne 5000.";
             Random random = new Random();
             List<Integer> centOuMille = Arrays.asList(100, 1000);
             switch (palier) {
@@ -958,6 +991,9 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Comparer deux entiers")) {
+            cours = "Comparer deux nombres signifie déterminer lequel est le plus grand, le plus petit ou s'ils sont égaux."
+                    + "\n**Exemple :** Entre 5 et 7, 7 est le plus grand et 5 est le plus petit. Si on compare 8 et 8, ils sont égaux.";
+
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1080,6 +1116,19 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Décomposer un entier")) {
+            cours = "Décomposer de très grands nombres fonctionne de la même manière que pour les petits nombres, mais avec plus de catégories."
+                    + "\n**Exemple :** Prenons le nombre 1,234,567,890. Il se décompose en :"
+                    + "\n- 0 unités"
+                    + "\n- 9 dizaines (soit 90)"
+                    + "\n- 8 centaines (soit 800)"
+                    + "\n- 7 milliers (soit 7,000)"
+                    + "\n- 6 dizaines de milliers (soit 60,000)"
+                    + "\n- 5 centaines de milliers (soit 500,000)"
+                    + "\n- 4 millions (soit 4,000,000)"
+                    + "\n- 3 dizaines de millions (soit 30,000,000)"
+                    + "\n- 2 centaines de millions (soit 200,000,000)"
+                    + "\n- 1 milliard (soit 1,000,000,000)"
+                    + "\nAinsi, 1,234,567,890 = 1,000,000,000 + 200,000,000 + 30,000,000 + 4,000,000 + 500,000 + 60,000 + 7,000 + 800 + 90.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1175,6 +1224,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Soustraire un entier à un entier particulier")) {
+            cours = "La **soustraction** est une opération qui permet de déterminer la différence entre deux nombres. Pour soustraire deux entiers, on commence généralement par soustraire les chiffres de droite (les unités) puis on continue vers la gauche. Si le chiffre du haut est plus petit que celui du bas, on emprunte 1 à la colonne de gauche."
+                    + "\n**Exemple :** Pour soustraire 29 de 47, on commence par soustraire 9 (unités de 29) de 7 (unités de 47). Comme 7 est plus petit que 9, on emprunte 1 à la colonne des dizaines. 17 (7 + 10) moins 9 égale 8. Ensuite, on soustrait 2 (dizaines de 29) de 3 (dizaines de 47, après avoir emprunté) pour obtenir 1. Le résultat est donc 18.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1236,6 +1287,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Soustraire deux entiers")) {
+            cours = "La **soustraction** est une opération qui permet de déterminer la différence entre deux nombres. Pour soustraire deux entiers, on commence généralement par soustraire les chiffres de droite (les unités) puis on continue vers la gauche. Si le chiffre du haut est plus petit que celui du bas, on emprunte 1 à la colonne de gauche."
+                    + "\n**Exemple :** Pour soustraire 29 de 47, on commence par soustraire 9 (unités de 29) de 7 (unités de 47). Comme 7 est plus petit que 9, on emprunte 1 à la colonne des dizaines. 17 (7 + 10) moins 9 égale 8. Ensuite, on soustrait 2 (dizaines de 29) de 3 (dizaines de 47, après avoir emprunté) pour obtenir 1. Le résultat est donc 18.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1297,6 +1350,9 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Multiplier deux entiers")) {
+            cours = "La **multiplication** est une opération qui permet d'ajouter un nombre à lui-même plusieurs fois. Pour multiplier deux entiers, on multiplie les chiffres de droite (les unités) puis on continue vers la gauche, en reportant si nécessaire."
+                    + "\n**Exemple :** Pour multiplier 4 par 3, on fait comme si on ajoutait le nombre 4 trois fois : 4 + 4 + 4 = 12. Donc, 4 multiplié par 3 donne 12.";
+
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1338,6 +1394,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Diviser deux entiers")) {
+            cours = "La **division** est une opération qui permet de partager un nombre en plusieurs parties égales. La division est l'inverse de la multiplication."
+                    + "\n**Exemple :** Si on a 12 pommes et qu'on veut les partager équitablement entre 4 amis, chaque ami recevra 3 pommes (car 3 x 4 = 12). Donc, 12 divisé par 4 donne 3.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1399,6 +1457,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Diviser un entier par 2")) {
+            cours = "Diviser un nombre par **2** signifie le partager en deux parties égales. C'est comme si on coupait quelque chose en deux morceaux identiques."
+                    + "\n**Exemple :** Si on a 8 gâteaux et qu'on les partage en deux, chaque part aura 4 gâteaux. Donc, 8 divisé par 2 donne 4.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1460,6 +1520,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Diviser un entier par 10")) {
+            cours = "Diviser un nombre par **10** est simple. Il suffit de déplacer la virgule d'un cran vers la gauche. Si le nombre est un entier, cela revient à retirer le dernier chiffre."
+                    + "\n**Exemple :** 250 divisé par 10 donne 25.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1521,6 +1583,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Diviser un entier par 100 et par 1000")) {
+            cours = "Diviser un nombre par **100** ou **1000** est similaire à la division par 10, mais on déplace la virgule de 2 crans vers la gauche pour 100 et de 3 crans pour 1000. Si le nombre est un entier, cela revient à retirer les deux ou trois derniers chiffres respectivement."
+                    + "\n**Exemple :** 5400 divisé par 100 donne 54 et 5400 divisé par 1000 donne 5.4.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1588,6 +1652,14 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Maitriser les priorités opératoires")) {
+            cours = "Lorsque nous effectuons des calculs avec plusieurs opérations, il est important de connaître l'ordre dans lequel elles doivent être effectuées. Cet ordre est appelé les priorités opératoires."
+                    + "\nVoici l'ordre des opérations, de la plus haute priorité à la plus basse :"
+                    + "\n1. **Parenthèses ()** : Tout ce qui est à l'intérieur des parenthèses doit être calculé en premier."
+                    + "\n2. **Multiplication (*) et Division (/)** : Ces opérations ont la même priorité et sont effectuées avant l'addition et la soustraction. Si elles apparaissent ensemble, elles sont effectuées de gauche à droite."
+                    + "\n3. **Addition (+) et Soustraction (-)** : Ces opérations ont la même priorité et sont effectuées après la multiplication et la division. Si elles apparaissent ensemble, elles sont effectuées de gauche à droite."
+                    + "\n**Exemple :** Pour le calcul 3 + 5 x 2, nous effectuons d'abord la multiplication pour obtenir 10, puis nous ajoutons 3 pour obtenir 13."
+                    + "\nPour le calcul (3 + 5) x 2, nous effectuons d'abord l'addition à l'intérieur des parenthèses pour obtenir 8, puis nous multiplions par 2 pour obtenir 16.";
+
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1728,6 +1800,11 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Encadrer un entier entre deux entiers")) {
+            cours = "Encadrer un nombre signifie trouver deux autres nombres, l'un juste en dessous et l'autre juste au-dessus, généralement des nombres ronds ou faciles à manipuler."
+                    + "\n**Exemple :** Prenons le nombre 5,432. Pour l'encadrer entre deux grands entiers, nous pourrions choisir 5,000 comme le nombre juste en dessous et 6,000 comme le nombre juste au-dessus."
+                    + "\nAinsi, nous pouvons dire que 5,000 < 5,432 < 6,000."
+                    + "\nCela nous aide à avoir une idée rapide de la position du nombre par rapport à des valeurs plus familières ou plus faciles à manipuler.";
+
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1840,6 +1917,11 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Encadrer un grand entier entre deux entiers")) {
+            cours = "Encadrer un nombre signifie trouver deux autres nombres, l'un juste en dessous et l'autre juste au-dessus, généralement des nombres ronds ou faciles à manipuler."
+                    + "\n**Exemple :** Prenons le nombre 5,432,109. Pour l'encadrer entre deux grands entiers, nous pourrions choisir 5,000,000 comme le nombre juste en dessous et 6,000,000 comme le nombre juste au-dessus."
+                    + "\nAinsi, nous pouvons dire que 5,000,000 < 5,432,109 < 6,000,000."
+                    + "\nCela nous aide à avoir une idée rapide de la position du nombre par rapport à des valeurs plus familières ou plus faciles à manipuler.";
+
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1952,6 +2034,8 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Additionner deux entiers simples")) {
+            cours = "L'**addition** est une opération qui permet de calculer la somme de deux nombres ou plus. Pour additionner deux entiers, on commence généralement par additionner les chiffres de droite (les unités) puis on continue vers la gauche, en reportant si nécessaire."
+                    + "\n**Exemple :** Pour additionner 14 et 27, on commence par additionner 4 (unités de 14) et 7 (unités de 27) pour obtenir 11. On écrit 1 et on reporte 1. Ensuite, on additionne 1 (dizaine de 14), 2 (dizaines de 27) et le 1 reporté pour obtenir 3. Le résultat est donc 31.";
             Random random = new Random();
             switch (palier) {
                 case 1:
@@ -1994,6 +2078,9 @@ public class exercisesGen {
             }
 
         } else if (name.equals("Additionner un entier à un entier particulier")) {
+            cours = "L'**addition** est une opération qui permet de calculer la somme de deux nombres ou plus. Pour additionner deux entiers, on commence généralement par additionner les chiffres de droite (les unités) puis on continue vers la gauche, en reportant si nécessaire."
+                    + "\n**Exemple :** Pour additionner 14 et 27, on commence par additionner 4 (unités de 14) et 7 (unités de 27) pour obtenir 11. On écrit 1 et on reporte 1. Ensuite, on additionne 1 (dizaine de 14), 2 (dizaines de 27) et le 1 reporté pour obtenir 3. Le résultat est donc 31.";
+
             Random random = new Random();
             switch (palier) {
                 case 1:
