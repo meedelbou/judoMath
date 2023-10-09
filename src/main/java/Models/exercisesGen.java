@@ -339,7 +339,7 @@ public class exercisesGen {
                 case 2:
                     for (int i = 0; i < 7; i++) {
                         int operand1 = random.nextInt(100) + 1;
-                        int operand2 = 10 - operand1;
+                        int operand2 = 100 - operand1;
                         int answer = operand2;
 
                         Exercise exercise = new Exercise();
@@ -1116,12 +1116,12 @@ public class exercisesGen {
                         long upperBound = 100000000000L;
 
                         long x = random.nextInt((int) (upperBound - lowerBound + 1)) + lowerBound;
-                        List<String> questions = Arrays.asList("Ecrire en lettres le nombre X .", "Ecrire en chiffre le nombre X .");
+                        List<String> questions = Arrays.asList("Ecrire en lettres le nombre : X", "Ecrire en chiffres le nombre : X");
                         int questIndex = random.nextInt(questions.size());
 
                         String question = questions.get(questIndex);
 
-                        if (question.equals("Ecrire en lettres le nombre X .")) {
+                        if (question.equals("Ecrire en lettres le nombre : X")) {
                             exercise.setContent(question.replace("X", String.valueOf(x)));
                             exercise.setAnswer(numbersToLetters.convert(x));
                             exercise.setOptions(generateOptionsDE((int) x));
@@ -1147,11 +1147,12 @@ public class exercisesGen {
 
                         Map<String, Integer> questions = new HashMap<>();
 
-                        questions.put("dizaine", x / 10);
-                        questions.put("centaine", x / 100);
-                        questions.put("milliers", x / 1000);
-                        questions.put("dizaine de milliers", x / 10000);
-                        questions.put("centaine de millions", x / 100000000);
+                        questions.put("dizaine(s)", x / 10);
+                        questions.put("centaine(s)", x / 100);
+                        questions.put("millier(s)", x / 1000);
+                        questions.put("dizaine(s) de milliers", x / 10000);
+                        questions.put("million(s)", x / 1000000);
+                        questions.put("centaine(s) de millions", x / 100000000);
                         questions.put("milliards", x / 1000000000);
 
                         List<Map.Entry<String, Integer>> entryList = new ArrayList<>(questions.entrySet());
@@ -1300,10 +1301,38 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10) + 1;
+                        int operand2 = random.nextInt(10) + 2;
+                        int answer = operand1 * operand2;
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " x " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10) + 1;
+                        int operand2 = random.nextInt(10) + 2;
+                        int answer = operand1 * operand2;
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " x " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+                        exercise.setPrompt(true);
+                        exercise.setTimer(true);
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    int operand2 = random.nextInt(10) + 2;
+                    exercises = table(operand2);
                     break;
                 default:
                     break;
@@ -1313,10 +1342,57 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(20) + 1;
+                        int operand2 = random.nextInt(9) + 2;
+                        int answer = operand1 / operand2;
+
+                        do {
+                            operand1 = random.nextInt(20) + 1;
+                            operand2 = random.nextInt(9) + 2;
+                            answer = operand1 / operand2;
+                        } while (operand1 % operand2 != 0);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " ÷ " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(50) + 50;
+                        int operand2 = random.nextInt(9) + 2;
+                        int answer = operand1 / operand2;
+
+                        do {
+                            operand1 = random.nextInt(50) + 50;
+                            operand2 = random.nextInt(9) + 2;
+                            answer = operand1 / operand2;
+                        } while (operand1 % operand2 != 0);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " ÷ " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+                        exercise.setPrompt(true);
+                        exercise.setTimer(true);
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    int operand1 = random.nextInt(50) + 50;
+                    int operand2 = random.nextInt(9) + 2;
+                    do {
+                        operand1 = random.nextInt(50) + 1;
+                        operand2 = random.nextInt(9) + 2;
+                        answer = operand1 / operand2;
+                    } while (operand1 % operand2 != 0);
+
+                    exercises = division(operand1, operand2);
                     break;
                 default:
                     break;
@@ -1326,10 +1402,57 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(20) + 1;
+                        int operand2 = 2;
+                        int answer = operand1 / operand2;
+
+                        do {
+                            operand1 = random.nextInt(20) + 1;
+                            operand2 = 2;
+                            answer = operand1 / operand2;
+                        } while (operand1 % operand2 != 0);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " ÷ " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(50) + 10;
+                        int operand2 = 2;
+                        int answer = operand1 / operand2;
+
+                        do {
+                            operand1 = random.nextInt(50) + 10;
+                            operand2 = 2;
+                            answer = operand1 / operand2;
+                        } while (operand1 % operand2 != 0);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " ÷ " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+                        exercise.setPrompt(true);
+                        exercise.setTimer(true);
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    int operand1 = random.nextInt(50) + 10;
+                    int operand2 = 2;
+                    do {
+                        operand1 = random.nextInt(50) + 10;
+                        operand2 = 2;
+                        answer = operand1 / operand2;
+                    } while (operand1 % operand2 != 0);
+
+                    exercises = division(operand1, operand2);
                     break;
                 default:
                     break;
@@ -1339,10 +1462,57 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(100) + 1;
+                        int operand2 = 10;
+                        int answer = operand1 / operand2;
+
+                        do {
+                            operand1 = random.nextInt(100) + 1;
+                            operand2 = 10;
+                            answer = operand1 / operand2;
+                        } while (operand1 % operand2 != 0);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " ÷ " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(1000) + 100;
+                        int operand2 = 10;
+                        int answer = operand1 / operand2;
+
+                        do {
+                            operand1 = random.nextInt(1000) + 100;
+                            operand2 = 10;
+                            answer = operand1 / operand2;
+                        } while (operand1 % operand2 != 0);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " ÷ " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+                        exercise.setPrompt(true);
+                        exercise.setTimer(true);
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    int operand1 = random.nextInt(1000) + 100;
+                    int operand2 = 10;
+                    do {
+                        operand1 = random.nextInt(1000) + 100;
+                        operand2 = 10;
+                        answer = operand1 / operand2;
+                    } while (operand1 % operand2 != 0);
+
+                    exercises = division(operand1, operand2);
                     break;
                 default:
                     break;
@@ -1352,10 +1522,63 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10000) + 1000;
+                        int operand2 = 10;
+
+                        int rand10 = random.nextInt(1);
+                        if (rand10 == 0) {operand2 = 100;} else {operand2 = 1000;}
+
+                        int answer = operand1 / operand2;
+
+                        do {
+                            operand1 = random.nextInt(10000) + 1000;
+                            answer = operand1 / operand2;
+                        } while (operand1 % operand2 != 0);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " ÷ " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(100000) + 1000;
+                        int operand2 = 10;
+                        int rand10 = random.nextInt(1);
+                        if (rand10 == 0) {operand2 = 100;} else {operand2 = 1000;}
+                        int answer = operand1 / operand2;
+
+                        do {
+                            operand1 = random.nextInt(100000) + 1000;
+                            answer = operand1 / operand2;
+                        } while (operand1 % operand2 != 0);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent("Combien fait " + operand1 + " ÷ " + operand2 + " ?");
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+                        exercise.setPrompt(true);
+                        exercise.setTimer(true);
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    int operand1 = random.nextInt(100000) + 1000;
+                    int operand2 = 10;
+                    int rand10 = random.nextInt(1);
+                    if (rand10 == 0) {operand2 = 100;} else {operand2 = 1000;}
+
+                    do {
+                        operand1 = random.nextInt(100000) + 1000;
+                        answer = operand1 / operand2;
+                    } while (operand1 % operand2 != 0);
+
+                    exercises = division(operand1, operand2);
                     break;
                 default:
                     break;
@@ -1365,10 +1588,137 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(40) + 20;
+                        int operand2 = random.nextInt(10) + 1;
+                        int operand3 = random.nextInt(10) + 1;
+                        int operand4 = random.nextInt(9) + 2;
+                        int answer = 0;
+
+                        String consigne = "";
+
+                        switch (random.nextInt(4)){
+                            case 0:
+                                // op1 + op2 x op4
+                                answer = op1 + op2 * op4;
+                                consigne = "Combien fait " + op1 + " + " + op2 + " x " + op4 + " ?";
+                                break;
+                            case 1:
+                                // op1 x op4 - op3
+                                answer = op1 * op4 - op3;
+                                consigne = "Combien fait " + op1 + " x " + op4 + " - " + op3 + " ?";
+                                break;
+                            case 2:
+                                // op3 - op2 x op4
+                                answer = op3 - op3 * op4;
+                                consigne = "Combien fait " + op3 + " - " + op2 + " x " + op4 + " ?";
+                                break;
+                            case 3:
+                                // op2 x op4 + op1
+                                answer = op2 * op4 + op1;
+                                consigne = "Combien fait " + op2 + " x " + op4 + " + " + op1 + " ?";
+                                break;
+                        }
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(consigne);
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10) + 1;
+                        int operand2 = random.nextInt(10) + 1;
+                        int operand3 = random.nextInt(10) + 1;
+                        int operand4 = random.nextInt(9) + 2;
+                        int answer = 0;
+
+                        String consigne = "";
+
+                        switch (random.nextInt(6)){
+                            case 0:
+                                // 1 - 2 + 3 * 4
+                                answer = op1 - op2 + op3 * op4;
+                                consigne = "Combien fait " + op1 + " - " + op2 + " + " + op3 + " x " + op4 + " ?";
+                                break;
+                            case 1:
+                                // (1 - 2) + 3 * 4
+                                answer = (op1 - op2) + op3 * op4;
+                                consigne = "Combien fait (" + op1 + " - " + op2 + ") + " + op3 + " x " + op4 + " ?";
+                                break;
+                            case 2:
+                                // 3 + (1 - 2) * 4
+                                answer = op1 + (op2 - op3) * op4;
+                                consigne = "Combien fait " + op1 + " + (" + op2 + " - " + op3 + ") x " + op4 + " ?";
+                                break;
+                            case 3:
+                                // (3 + 1 - 2) * 4
+                                answer = (op1 + op2 - op3) * op4;
+                                consigne = "Combien fait (" + op1 + " + " + op2 + " - " + op3 + ") x " + op4 + " ?";
+                                break;
+                            case 4:
+                                // 3 + (4 * 1 - 2)
+                                answer = op1 + (op2 * op3 - op4);
+                                consigne = "Combien fait " + op1 + " + (" + op2 + " x " + op3 + " - " + op4 + ") ?";
+                                break;
+                            case 5:
+                                // 4 * 3 - (1 + 2)
+                                answer = op1 * op2 - (op3 + op4);
+                                consigne = "Combien fait " + op1 + " x " + op2 + " - (" + op3 + " + " + op4 + ") ?";
+                                break;
+                        }
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(consigne);
+                        exercise.setAnswer(Integer.toString(answer));
+                        exercise.setOptions(generateOptions(answer));
+                        exercise.setPrompt(true);
+                        exercise.setTimer(true);
+
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    int operand1 = random.nextInt(10) + 1;
+                    int operand2 = random.nextInt(10) + 1;
+                    int operand3 = random.nextInt(10) + 1;
+                    int answerTemp = 0;
+                    int niveau = 0;
+
+                    switch (random.nextInt(3)){
+                        case 0:
+                            niveau = 0;
+                            // ((X - Y + Z) / 2)
+                            do {
+                                operand2 = random.nextInt(10) + 1;
+                                operand3 = random.nextInt(10) + 1;
+                                answerTemp = operand1 - operand2 + operand3;
+                            } while (answerTemp < 0 || answerTemp%2 != 0);
+                            break;
+                        case 1:
+                            niveau = 1;
+                            // ((X / 2 + Y) - Z)
+                            do {
+                                operand1 = random.nextInt(10) + 1;
+                                operand2 = random.nextInt(10) + 1;
+                                operand3 = random.nextInt(10) + 1;
+                                answerTemp = operand1 / 2;
+                            } while (answerTemp + operand2 - operand3 < 0 || answerTemp%2 != 0);
+                            break;
+                        case 2:
+                            niveau = 2;
+                            // ((2 * X - Y) + Z)
+                            do {
+                                operand1 = random.nextInt(10) + 1;
+                                operand2 = random.nextInt(10) + 1;
+                                answerTemp = 2 * operand1 - operand2;
+                            } while (answerTemp < 0);
+                            break;
+                    }
+                    exercises = priorite(niveau, operand1, operand2, operand3);
                     break;
                 default:
                     break;
@@ -1378,10 +1728,108 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(50) + 1;
+                        int operand2 = random.nextInt(50) + 50;
+                        int operandAnswer = random.nextInt(100) + 1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operandAnswer && operandAnswer < operand2) {
+                            answer = operandAnswer + " est compris entre " + operand1 + " et " + operand2;
+                            otherChoice = operandAnswer + " n'est pas compris entre " + operand1 + " et " + operand2;
+
+                        } else {
+                            answer = operandAnswer + " n'est pas compris entre " + operand1 + " et " + operand2;
+                            otherChoice = operandAnswer + " est compris entre " + operand1 + " et " + operand2;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(operandAnswer + " est-il compris entre " + operand1 + " et " + operand2 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10000 - 100) + 100;
+                        int limB = (int) (operand1 - 0.1 * operand1);
+                        int limH = (int) (operand1 + 0.1 * operand1);
+                        int operand2 = random.nextInt(limH - limB);
+                        int operand3 = operand1 + 0.12 * operand1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operand2 && operand2 < operand3) {
+                            answer = operand2 + " est compris entre " + operand1 + " et " + operand3;
+                            otherChoice = operand2 + " n'est pas compris entre " + operand1 + " et " + operand3;
+
+                        } else {
+                            answer = operand2 + " n'est pas compris entre " + operand1 + " et " + operand3;
+                            otherChoice = operand2 + " est compris entre " + operand1 + " et " + operand3;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        // Réponses du QCM
+                        // Choix 1 (answer 0 -> op1 < op2) : "Plus petit"
+                        // Choix 2 (answer 1 -> op1 > op2) : "Plus grande"
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(100000 - 10000) + 10000;
+                        int limB = (int) (operand1 - 0.001 * operand1);
+                        int limH = (int) (operand1 + 0.001 * operand1);
+                        int operand2 = random.nextInt(limH - limB);
+                        int operand3 = operand1 + 0.002 * operand1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operand2 && operand2 < operand3) {
+                            answer = operand1 + " < " + operand2 + " et " + operand2 + " < " + operand3;
+                            otherChoice = operand1 + " > " + operand2 + " ou " + operand2 + " > " + operand3;
+
+                        } else {
+                            answer = operand1 + " > " + operand2 + " ou " + operand2 + " > " + operand3;
+                            otherChoice = operand1 + " < " + operand2 + " et " + operand2 + " < " + operand3;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
+
                     break;
                 default:
                     break;
@@ -1391,10 +1839,108 @@ public class exercisesGen {
             Random random = new Random();
             switch (palier) {
                 case 1:
+
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(10000000 - 10000) + 10000;
+                        int operand2 = random.nextInt(10000000 - 10000) + 10000;
+                        int operandAnswer = random.nextInt(100) + 1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operandAnswer && operandAnswer < operand2) {
+                            answer = operandAnswer + " est compris entre " + operand1 + " et " + operand2;
+                            otherChoice = operandAnswer + " n'est pas compris entre " + operand1 + " et " + operand2;
+
+                        } else {
+                            answer = operandAnswer + " n'est pas compris entre " + operand1 + " et " + operand2;
+                            otherChoice = operandAnswer + " est compris entre " + operand1 + " et " + operand2;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(operandAnswer + " est-il compris entre " + operand1 + " et " + operand2 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
                     break;
                 case 2:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(100000000 - 100000) + 100000;
+                        int limB = (int) (operand1 - 0.1 * operand1);
+                        int limH = (int) (operand1 + 0.1 * operand1);
+                        int operand2 = random.nextInt(limH - limB);
+                        int operand3 = operand1 + 0.12 * operand1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operand2 && operand2 < operand3) {
+                            answer = operand2 + " est compris entre " + operand1 + " et " + operand3;
+                            otherChoice = operand2 + " n'est pas compris entre " + operand1 + " et " + operand3;
+
+                        } else {
+                            answer = operand2 + " n'est pas compris entre " + operand1 + " et " + operand3;
+                            otherChoice = operand2 + " est compris entre " + operand1 + " et " + operand3;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        // Réponses du QCM
+                        // Choix 1 (answer 0 -> op1 < op2) : "Plus petit"
+                        // Choix 2 (answer 1 -> op1 > op2) : "Plus grande"
+                        Exercise exercise = new Exercise();
+                        exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
                     break;
                 case 3:
+                    for (int i = 0; i < 7; i++) {
+                        int operand1 = random.nextInt(100000000 - 100000) + 100000;
+                        int limB = (int) (operand1 - 0.001 * operand1);
+                        int limH = (int) (operand1 + 0.001 * operand1);
+                        int operand2 = random.nextInt(limH - limB);
+                        int operand3 = operand1 + 0.002 * operand1;
+                        String answer;
+                        String otherChoice;
+
+                        // QCM, 2 choix, une réponse possible
+                        if (operand1 < operand2 && operand2 < operand3) {
+                            answer = operand1 + " < " + operand2 + " et " + operand2 + " < " + operand3;
+                            otherChoice = operand1 + " > " + operand2 + " ou " + operand2 + " > " + operand3;
+
+                        } else {
+                            answer = operand1 + " > " + operand2 + " ou " + operand2 + " > " + operand3;
+                            otherChoice = operand1 + " < " + operand2 + " et " + operand2 + " < " + operand3;
+                        }
+
+                        List<String> options = new ArrayList();
+                        options.add(answer);
+                        options.add(otherChoice);
+                        Collections.shuffle(options);
+
+                        exercise.setContent(operand2 + " est-il compris entre " + operand1 + " et " + operand3 + " ?");
+                        exercise.setAnswer(answer);
+                        exercise.setOptions(options);
+                        // AJOUTER LE TEXTE DES REPONSES POSSIBLES
+                        // AJOUTER LES FONCTIONS LIEES AU QCM VRAI/FAUX
+                        exercises.add(exercise);
+                    }
+
                     break;
                 default:
                     break;
@@ -1751,6 +2297,7 @@ public class exercisesGen {
 
 
         for (int i = 0; i < 7; i++) {
+            int x = random.nextInt(end) + start;
 
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
@@ -1767,48 +2314,49 @@ public class exercisesGen {
         return exercises;
     }
 
-    List<Exercise> priorite(int niveau, int x, int y, int z) {
-        Random random = new Random();
-        List<Exercise> exercises = new ArrayList();
+        List<Exercise> priorite(int niveau, int x, int y, int z) {
+            Random random = new Random();
+            List<Exercise> exercises = new ArrayList();
 
-        // SWITCH AVEC NIVEAU
-        // AJOUT DES 3 TABLEAUX DE PROBLEMES
-        // MODIFICATION DU Z (en plus du x et y) DANS LE REPLACE
-        // MODIFS setAnswer et setOptions
+            // SWITCH AVEC NIVEAU
+            // AJOUT DES 3 TABLEAUX DE PROBLEMES
+            // MODIFICATION DU Z (en plus du x et y) DANS LE REPLACE
+            // MODIFS setAnswer et setOptions
 
-        List<String> problems = Arrays.asList(
-                "Alphonse le magicien a X cartes de tarot et veut faire des piles de Y cartes chacune pour ses tours. Combien de piles peut-il faire ?",
-                "Lilly l'abeille a X grains de pollen et veut les répartir équitablement entre ses Y amies. Combien de grains de pollen chaque amie recevra-t-elle ?",
-                "Le gnome Fredo a X pommes et veut les partager entre Y paniers pour les vendre au marché. Combien de pommes mettra-t-il dans chaque panier ?",
-                "Le dragon Torrid a X trésors et veut les répartir équitablement entre ses Y cavernes. Combien de trésors chaque caverne recevra-t-elle ?",
-                "La fée Lumina a X lucioles et veut les répartir entre Y lanternes pour éclairer sa maison. Combien de lucioles chaque lanterne recevra-t-elle ?",
-                "Le géant Bigor a X rochers à disposer en Y lignes pour délimiter son territoire. Combien de rochers doit-il mettre sur chaque ligne ?",
-                "Le nain Dardo a X gemmes et veut les répartir équitablement entre ses Y coffres. Combien de gemmes chaque coffre recevra-t-il ?",
-                "La sirène Perle a X perles et veut les répartir en Y colliers pour les offrir à ses amies. Combien de perles chaque collier aura-t-il ?",
-                "Le boulanger Gastro a X baguettes à répartir entre Y sacs pour la livraison. Combien de baguettes chaque sac contiendra-t-il ?",
-                "Le chevalier Lancelot a X pièces d'or à partager entre ses Y écuyers. Combien de pièces chaque écuyer recevra-t-il ?",
-                "Le sorcier Merlin a X potions à diviser entre ses Y étagères. Combien de potions chaque étagère recevra-t-elle ?",
-                "La licorne Iris a X arcs-en-ciel à répartir entre Y nuages. Combien d'arcs-en-ciel chaque nuage recevra-t-il ?",
-                "Le pirate Barbe Noire a X bouteilles de rhum à partager entre ses Y matelots. Combien de bouteilles chaque matelot recevra-t-il ?",
-                "La fée Chloris a X fleurs à disposer en Y bouquets pour la fête des fleurs. Combien de fleurs chaque bouquet aura-t-il ?",
-                "L'elfe Sylver a X flèches à diviser entre ses Y carquois. Combien de flèches chaque carquois recevra-t-il ?");
+            List<String> problems = Arrays.asList(
+                    "Alphonse le magicien a X cartes de tarot et veut faire des piles de Y cartes chacune pour ses tours. Combien de piles peut-il faire ?",
+                    "Lilly l'abeille a X grains de pollen et veut les répartir équitablement entre ses Y amies. Combien de grains de pollen chaque amie recevra-t-elle ?",
+                    "Le gnome Fredo a X pommes et veut les partager entre Y paniers pour les vendre au marché. Combien de pommes mettra-t-il dans chaque panier ?",
+                    "Le dragon Torrid a X trésors et veut les répartir équitablement entre ses Y cavernes. Combien de trésors chaque caverne recevra-t-elle ?",
+                    "La fée Lumina a X lucioles et veut les répartir entre Y lanternes pour éclairer sa maison. Combien de lucioles chaque lanterne recevra-t-elle ?",
+                    "Le géant Bigor a X rochers à disposer en Y lignes pour délimiter son territoire. Combien de rochers doit-il mettre sur chaque ligne ?",
+                    "Le nain Dardo a X gemmes et veut les répartir équitablement entre ses Y coffres. Combien de gemmes chaque coffre recevra-t-il ?",
+                    "La sirène Perle a X perles et veut les répartir en Y colliers pour les offrir à ses amies. Combien de perles chaque collier aura-t-il ?",
+                    "Le boulanger Gastro a X baguettes à répartir entre Y sacs pour la livraison. Combien de baguettes chaque sac contiendra-t-il ?",
+                    "Le chevalier Lancelot a X pièces d'or à partager entre ses Y écuyers. Combien de pièces chaque écuyer recevra-t-il ?",
+                    "Le sorcier Merlin a X potions à diviser entre ses Y étagères. Combien de potions chaque étagère recevra-t-elle ?",
+                    "La licorne Iris a X arcs-en-ciel à répartir entre Y nuages. Combien d'arcs-en-ciel chaque nuage recevra-t-il ?",
+                    "Le pirate Barbe Noire a X bouteilles de rhum à partager entre ses Y matelots. Combien de bouteilles chaque matelot recevra-t-il ?",
+                    "La fée Chloris a X fleurs à disposer en Y bouquets pour la fête des fleurs. Combien de fleurs chaque bouquet aura-t-il ?",
+                    "L'elfe Sylver a X flèches à diviser entre ses Y carquois. Combien de flèches chaque carquois recevra-t-il ?");
 
 
-        for (int i = 0; i < 7; i++) {
+            for (int i = 0; i < 7; i++) {
+                int x = random.nextInt(end) + start;
 
-            String problem = problems.get(random.nextInt(problems.size()));
-            problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
+                String problem = problems.get(random.nextInt(problems.size()));
+                problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
 
-            Exercise exercise = new Exercise();
-            exercise.setContent(problem);
-            exercise.setAnswer(Integer.toString(x / y));
-            exercise.setOptions(generateOptions(x / y));
-            exercise.setTimer(true);
-            exercise.setPrompt(true);
+                Exercise exercise = new Exercise();
+                exercise.setContent(problem);
+                exercise.setAnswer(Integer.toString(x / y));
+                exercise.setOptions(generateOptions(x / y));
+                exercise.setTimer(true);
+                exercise.setPrompt(true);
 
-            exercises.add(exercise);
+                exercises.add(exercise);
+            }
+            return exercises;
         }
-        return exercises;
-    }
 
 }
