@@ -1732,7 +1732,7 @@ public class exercisesGen {
                     for (int i = 0; i < 7; i++) {
                         int operand1 = random.nextInt(50) + 1;
                         int operand2 = random.nextInt(50) + 50;
-                        int operandAnswer = random.nextInt(100) + 1
+                        int operandAnswer = random.nextInt(100) + 1;
                         String answer;
                         String otherChoice;
 
@@ -1843,7 +1843,7 @@ public class exercisesGen {
                     for (int i = 0; i < 7; i++) {
                         int operand1 = random.nextInt(10000000 - 10000) + 10000;
                         int operand2 = random.nextInt(10000000 - 10000) + 10000;
-                        int operandAnswer = random.nextInt(100) + 1
+                        int operandAnswer = random.nextInt(100) + 1;
                         String answer;
                         String otherChoice;
 
