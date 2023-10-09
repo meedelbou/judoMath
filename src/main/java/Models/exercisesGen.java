@@ -1366,10 +1366,10 @@ public class exercisesGen {
             switch (palier) {
                 case 1:
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(40) + 20;
-                        int operand2 = random.nextInt(10) + 1;
-                        int operand3 = random.nextInt(10) + 1;
-                        int operand4 = random.nextInt(9) + 2;
+                        int op1 = random.nextInt(40) + 20;
+                        int op2 = random.nextInt(10) + 1;
+                        int op3 = random.nextInt(10) + 1;
+                        int op4 = random.nextInt(9) + 2;
                         int answer = 0;
 
                         String consigne = "";
@@ -1407,10 +1407,10 @@ public class exercisesGen {
                     break;
                 case 2:
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10) + 1;
-                        int operand2 = random.nextInt(10) + 1;
-                        int operand3 = random.nextInt(10) + 1;
-                        int operand4 = random.nextInt(9) + 2;
+                        int op1 = random.nextInt(10) + 1;
+                        int op2 = random.nextInt(10) + 1;
+                        int op3 = random.nextInt(10) + 1;
+                        int op4 = random.nextInt(9) + 2;
                         int answer = 0;
 
                         String consigne = "";
@@ -1543,7 +1543,7 @@ public class exercisesGen {
                         int limB = (int) (operand1 - 0.1 * operand1);
                         int limH = (int) (operand1 + 0.1 * operand1);
                         int operand2 = random.nextInt(limH - limB);
-                        int operand3 = operand1 + 0.12 * operand1;
+                        int operand3 = (int) operand1 + 0.12 * operand1;
                         String answer;
                         String otherChoice;
 
@@ -1580,7 +1580,7 @@ public class exercisesGen {
                         int limB = (int) (operand1 - 0.001 * operand1);
                         int limH = (int) (operand1 + 0.001 * operand1);
                         int operand2 = random.nextInt(limH - limB);
-                        int operand3 = operand1 + 0.002 * operand1;
+                        int operand3 = (int) operand1 + 0.002 * operand1;
                         String answer;
                         String otherChoice;
 
@@ -1654,7 +1654,7 @@ public class exercisesGen {
                         int limB = (int) (operand1 - 0.1 * operand1);
                         int limH = (int) (operand1 + 0.1 * operand1);
                         int operand2 = random.nextInt(limH - limB);
-                        int operand3 = operand1 + 0.12 * operand1;
+                        int operand3 = (int) operand1 + 0.12 * operand1;
                         String answer;
                         String otherChoice;
 
@@ -1691,7 +1691,7 @@ public class exercisesGen {
                         int limB = (int) (operand1 - 0.001 * operand1);
                         int limH = (int) (operand1 + 0.001 * operand1);
                         int operand2 = random.nextInt(limH - limB);
-                        int operand3 = operand1 + 0.002 * operand1;
+                        int operand3 = (int) operand1 + 0.002 * operand1;
                         String answer;
                         String otherChoice;
 
