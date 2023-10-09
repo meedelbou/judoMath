@@ -493,7 +493,7 @@
                                                     }%>
                                                 <div id="wizard_Finish" class="tab-pane" role="tabpanel">
                                                     <div class="row emial-setup" style="text-align: center">
-                                                        <p>Bravo, tu as terminé l'entrainement du competence ${c}</p>
+                                                        <p>Bravo, tu as terminé l'entrainement de la compétence : ${c}</p>
 
 
                                                         <div class="sweetalert">
@@ -1028,7 +1028,7 @@
                     "use strict";
 
                     document.querySelector(".sweet-success").onclick = function () {
-                        swal("Saluuut, Bravooo!!", "Tu peux passer les tests maintenant !!", "success");
+                        swal("Bravo !!", "Tu peux maintenant t'essayer au test ;)", "success");
                     };
 
                 })(jQuery);
@@ -1074,7 +1074,7 @@
                                 var isCorrect = (selectedValue.value.trim() === correctAnswer1);
                                 if (isCorrect) {
 
-                                    buttonDiv.innerHTML = "  &nbsp;  ✅ Réponse correcte <br> ";
+                                    buttonDiv.innerHTML = "  &nbsp;  ✅ ";
                                     $(".sw-btn-next").show();
 
                                     return;
@@ -1116,7 +1116,7 @@
                             correctRadioButtonParent.classList.remove("badge-primary");
                             correctRadioButtonParent.classList.add("badge-rounded", "light", "badge-success");
                             // Display the "Correct" message
-                            label.innerHTML = label.innerHTML + "  &nbsp;  ✅ Cette Réponse est Correcte";
+                            label.innerHTML = label.innerHTML + "  &nbsp;  ✅";
 
                             xpIncrement(<%=palier%>, true, true);
                         } else {
@@ -1134,7 +1134,7 @@
                                 // Add the "incorrect" class to the parent container of the correct radio button
                                 correctRadioButtonContainer.classList.add("badge-rounded", "light", "badge-success");
                                 // Display the "Correct" message beside the correct answer
-                                label2.innerHTML = label2.innerHTML + " &nbsp;&nbsp;  ✅ Cette Réponse est Correcte";
+                                label2.innerHTML = label2.innerHTML + " &nbsp;&nbsp;  ✅";
                             }
                             xpIncrement(<%=palier%>, true, false);
 
@@ -1142,7 +1142,7 @@
 
 
                             // Display the "Incorrect" message beside the selected answer
-                            label1.innerHTML = label1.innerHTML + "      &nbsp;&nbsp;  ❌ Cette Réponse est Incorrecte";
+                            label1.innerHTML = label1.innerHTML + "      &nbsp;&nbsp;  ❌";
                         }
 
                     }
