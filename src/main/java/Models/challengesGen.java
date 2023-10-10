@@ -56,17 +56,18 @@ public class challengesGen {
         List<String> options = new ArrayList<>();
         options.add(Integer.toString(answer));
         Random random = new Random();
+        int option = 0;
 
         while (options.size() < 4) {
             switch (ID){
                 case 0:
-                    int option = answer + random.nextInt(20) - 5;
+                    option = answer + random.nextInt(20) - 5;
                     do {
                         option = answer + random.nextInt(20) - 5;
-                    } while (option < 0 || option%2 == 0)
+                    } while (option < 0 || option%2 == 0);
                     break;
                 default:
-                    int option = answer + random.nextInt(5) - 200;
+                    option = answer + random.nextInt(5) - 200;
                     break;
             }
             if (!options.contains(Integer.toString(option))) {
