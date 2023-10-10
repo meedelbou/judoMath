@@ -74,7 +74,7 @@ public class exercisesGen {
                         exercise.setContent("Quel nombre est divisible par 2?");
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptionsCD(answer, 2));
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -130,7 +130,7 @@ public class exercisesGen {
                         exercise.setContent("Quel nombre est divisible par 3?");
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptionsCD(answer, 3));
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -185,7 +185,7 @@ public class exercisesGen {
                         exercise.setContent("Quel nombre est divisible par 9?");
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptionsCD(answer, 9));
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -240,7 +240,7 @@ public class exercisesGen {
                         exercise.setContent("Quel nombre est divisible par 5?");
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptionsCD(answer, 5));
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -279,7 +279,7 @@ public class exercisesGen {
                         exercise.setContent("Combien faut-il ajouter à " + operand1 + " pour obtenir 10?");
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -315,7 +315,7 @@ public class exercisesGen {
                         exercise.setContent(problem);
                         exercise.setAnswer(Integer.toString(10 - x));
                         exercise.setOptions(generateOptions(10 - x));
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
                         exercise.setPrompt(true);
 
                         exercises.add(exercise);
@@ -354,7 +354,7 @@ public class exercisesGen {
                         exercise.setContent("Combien faut-il ajouter à " + operand1 + " pour obtenir 100?");
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -390,7 +390,7 @@ public class exercisesGen {
                         exercise.setContent(problem);
                         exercise.setAnswer(Integer.toString(100 - x));
                         exercise.setOptions(generateOptions(10 - x));
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
                         exercise.setPrompt(true);
 
                         exercises.add(exercise);
@@ -430,7 +430,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -484,7 +484,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -529,7 +529,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -573,7 +573,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -617,7 +617,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -661,7 +661,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -705,7 +705,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -749,7 +749,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -793,7 +793,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -837,7 +837,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -878,7 +878,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -921,7 +921,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -965,7 +965,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1243,7 +1243,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1297,7 +1297,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1340,7 +1340,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1395,7 +1395,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1449,7 +1449,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1503,7 +1503,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1561,7 +1561,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1673,7 +1673,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1949,7 +1949,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -1999,7 +1999,7 @@ public class exercisesGen {
                         exercise.setAnswer(Integer.toString(answer));
                         exercise.setOptions(generateOptions(answer));
                         exercise.setPrompt(true);
-                        exercise.setTimer(true);
+                        // exercise.setTimer(true);
 
                         exercises.add(exercise);
                     }
@@ -2120,7 +2120,7 @@ public class exercisesGen {
             exercise.setContent(problem);
             exercise.setAnswer(Integer.toString(x * y));
             exercise.setOptions(generateOptions(x * y));
-            exercise.setTimer(true);
+            // exercise.setTimer(true);
             exercise.setPrompt(true);
 
             exercises.add(exercise);
@@ -2163,7 +2163,7 @@ public class exercisesGen {
             exercise.setContent(problem);
             exercise.setAnswer(Integer.toString(x * y));
             exercise.setOptions(generateOptions(x * y));
-            exercise.setTimer(true);
+            // exercise.setTimer(true);
             exercise.setPrompt(true);
 
             exercises.add(exercise);
@@ -2220,7 +2220,7 @@ public class exercisesGen {
             exercise.setContent(problem);
             exercise.setAnswer(Integer.toString(x + y));
             exercise.setOptions(generateOptions(x + y));
-            exercise.setTimer(true);
+            // exercise.setTimer(true);
             exercise.setPrompt(true);
 
             exercises.add(exercise);
@@ -2296,7 +2296,7 @@ public class exercisesGen {
             exercise.setContent(problem);
             exercise.setAnswer(Integer.toString(x - y));
             exercise.setOptions(generateOptions(x - y));
-            exercise.setTimer(true);
+            // exercise.setTimer(true);
             exercise.setPrompt(true);
 
             exercises.add(exercise);
@@ -2346,7 +2346,7 @@ public class exercisesGen {
                 case 1: // Div 10
                     x = random.nextInt(1000) + 100;
                     y = 10;
-                    int answer = x / y;
+                    answer = x / y;
                     do {
                         x = random.nextInt(1000) + 100;
                         answer = x / y;
@@ -2357,16 +2357,16 @@ public class exercisesGen {
                     y = 100;
                     int rand10 = random.nextInt(1);
                     if (rand10 == 0) {y = 100;} else {y = 1000;}
-                    int answer = x / y;
+                    answer = x / y;
                     do {
                         x = random.nextInt(100000) + 1000;
-                        answer = operand1 / operand2;
+                        answer = x / y;
                     } while (x % y != 0);
                     break;
                 case 3: // Div entier
                     x = random.nextInt(50) + 50;
                     y = random.nextInt(9) + 2;
-                    int answer = x / y;
+                    answer = x / y;
                     do {
                         x = random.nextInt(50) + 1;
                         y = random.nextInt(9) + 2;
@@ -2382,7 +2382,7 @@ public class exercisesGen {
             exercise.setContent(problem);
             exercise.setAnswer(Integer.toString(x / y));
             exercise.setOptions(generateOptions(x / y));
-            exercise.setTimer(true);
+            // exercise.setTimer(true);
             exercise.setPrompt(true);
 
             exercises.add(exercise);
@@ -2498,7 +2498,7 @@ public class exercisesGen {
             exercise.setContent(problem);
             exercise.setAnswer(Integer.toString(answer));
             exercise.setOptions(generateOptions(answer));
-            exercise.setTimer(true);
+            // exercise.setTimer(true);
             exercise.setPrompt(true);
 
             exercises.add(exercise);
