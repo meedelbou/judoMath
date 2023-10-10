@@ -24,18 +24,26 @@ public class challengesGen {
 
     public List<Exercise> genChallenge(String skill) {
         List<Exercise> exercises = new ArrayList();
-
         Random random = new Random();
-        for (int i = 0; i < 7; i++) {
-            int answer;
-            do {
-                answer = random.nextInt(80) + 1;
-            } while (answer % 2 != 0);
 
+        for (int i = 0; i < 7; i++) {
             Exercise exercise = new Exercise();
-            exercise.setContent("Quel nombre est divisible par 2?");
+            int answer = 0;
+
+            switch (skill){
+                case "Additionner un entier à un autre pour obtenir 10" :
+                    do {
+                        answer = random.nextInt(80) + 20;
+                    } while (answer % 2 != 0);
+                    exercise.setContent("Quel nombre est divisible par 2?");
+                    break;
+                default:
+                    exercise.setContent("Default");
+                    break;
+            }
+
             exercise.setAnswer(Integer.toString(answer));
-            exercise.setOptions(generateOptions(answer));
+            exercise.setOptions(generateOptions(answer, 0));
 
             exercises.add(exercise);
         }
@@ -44,13 +52,23 @@ public class challengesGen {
 
     }
 
-    List<String> generateOptions(int answer) {
+    List<String> generateOptions(int answer, int ID) {
         List<String> options = new ArrayList<>();
         options.add(Integer.toString(answer));
-
         Random random = new Random();
+
         while (options.size() < 4) {
-            int option = answer + random.nextInt(5) - 2;
+            switch (ID){
+                case 0:
+                    int option = answer + random.nextInt(20) - 5;
+                    do {
+                        option = answer + random.nextInt(20) - 5;
+                    } while (option < 0 || option%2 == 0)
+                    break;
+                default:
+                    int option = answer + random.nextInt(5) - 200;
+                    break;
+            }
             if (!options.contains(Integer.toString(option))) {
                 options.add(Integer.toString(option));
             }
