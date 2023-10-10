@@ -436,15 +436,13 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(100000) + 1;
-                    int operand2 = random.nextInt(100000) + 1;
-                    exercises = addition(operand1, operand2);
+                    exercises = addition(2);
                     break;
                 default:
                     break;
             }
 
-        } else if (name.equals("Soustraire un entier à un autre entier")) {
+        } else if (name.equals("Soustraire deux entiers simple")) {
             cours = "La **soustraction** est une opération qui permet de déterminer la différence entre deux nombres. Pour soustraire deux entiers, on commence généralement par soustraire les chiffres de droite (les unités) puis on continue vers la gauche. Si le chiffre du haut est plus petit que celui du bas, on emprunte 1 à la colonne de gauche."
                     + "\n**Exemple :** Pour soustraire 29 de 47, on commence par soustraire 9 (unités de 29) de 7 (unités de 47). Comme 7 est plus petit que 9, on emprunte 1 à la colonne des dizaines. 17 (7 + 10) moins 9 égale 8. Ensuite, on soustrait 2 (dizaines de 29) de 3 (dizaines de 47, après avoir emprunté) pour obtenir 1. Le résultat est donc 18.";
             Random random = new Random();
@@ -492,17 +490,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(80) + 1;
-                    int operand2 = random.nextInt(20) + 1;
-                    int answer = operand1 - operand2;
-
-                    do {
-                        operand1 = random.nextInt(80) + 1;
-                        operand2 = random.nextInt(20) + 1;
-                        answer = operand1 - operand2;
-                    } while (answer < 0);
-
-                    exercises = soustraire(operand1, operand2);
+                   exercises = soustraire(0);
                     break;
                 default:
                     break;
@@ -1261,16 +1249,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(100000) + 1;
-                    int operand2 = random.nextInt(100000) + 1;
-                    int answer = operand1 - operand2;
-                    do {
-                        operand1 = random.nextInt(100000) + 1;
-                        operand2 = random.nextInt(100000) + 1;
-                        answer = operand1 - operand2;
-                    } while (answer < 0 || operand2 % 2 == 0 || operand2 % 5 == 0);
-
-                    exercises = soustraire(operand1, operand2);
+                exercises = soustraire(1);
                     break;
                 default:
                     break;
@@ -1324,16 +1303,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(100000) + 1;
-                    int operand2 = random.nextInt(100000) + 1;
-                    int answer = operand1 - operand2;
-                    do {
-                        operand1 = random.nextInt(100000) + 1;
-                        operand2 = random.nextInt(100000) + 1;
-                        answer = operand1 - operand2;
-                    } while (answer < 0);
-
-                    exercises = soustraire(operand1, operand2);
+                   exercises = soustraire(2);
                     break;
                 default:
                     break;
@@ -1431,16 +1401,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(50) + 50;
-                    int operand2 = random.nextInt(9) + 2;
-                    int answer = operand1 / operand2;
-                    do {
-                        operand1 = random.nextInt(50) + 1;
-                        operand2 = random.nextInt(9) + 2;
-                        answer = operand1 / operand2;
-                    } while (operand1 % operand2 != 0);
-
-                    exercises = division(operand1, operand2);
+                  exercises = division(3);
                     break;
                 default:
                     break;
@@ -1494,16 +1455,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(50) + 10;
-                    int operand2 = 2;
-                    int answer = operand1 / operand2;
-                    do {
-                        operand1 = random.nextInt(50) + 10;
-                        operand2 = 2;
-                        answer = operand1 / operand2;
-                    } while (operand1 % operand2 != 0);
-
-                    exercises = division(operand1, operand2);
+                    exercises = division(0);
                     break;
                 default:
                     break;
@@ -1557,16 +1509,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(1000) + 100;
-                    int operand2 = 10;
-                    int answer = operand1 / operand2;
-                    do {
-                        operand1 = random.nextInt(1000) + 100;
-                        operand2 = 10;
-                        answer = operand1 / operand2;
-                    } while (operand1 % operand2 != 0);
-
-                    exercises = division(operand1, operand2);
+                    exercises = division(1);
                     break;
                 default:
                     break;
@@ -1624,18 +1567,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(100000) + 1000;
-                    int operand2 = 10;
-                    int rand10 = random.nextInt(1);
-                    if (rand10 == 0) {operand2 = 100;} else {operand2 = 1000;}
-                    int answer = operand1 / operand2;
-                    
-                    do {
-                        operand1 = random.nextInt(100000) + 1000;
-                        answer = operand1 / operand2;
-                    } while (operand1 % operand2 != 0);
-
-                    exercises = division(operand1, operand2);
+                    exercises = division(2);
                     break;
                 default:
                     break;
@@ -1747,43 +1679,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(10) + 1;
-                    int operand2 = random.nextInt(10) + 1;
-                    int operand3 = random.nextInt(10) + 1;
-                    int answerTemp = 0;
-                    int niveau = 0;
-
-                    switch (random.nextInt(3)){
-                        case 0:
-                            niveau = 0;
-                            // ((X - Y + Z) / 2)
-                            do {
-                                operand2 = random.nextInt(10) + 1;
-                                operand3 = random.nextInt(10) + 1;
-                                answerTemp = operand1 - operand2 + operand3;
-                            } while (answerTemp < 0 || answerTemp%2 != 0);
-                            break;
-                        case 1:
-                            niveau = 1;
-                            // ((X / 2 + Y) - Z)
-                            do {
-                                operand1 = random.nextInt(10) + 1;
-                                operand2 = random.nextInt(10) + 1;
-                                operand3 = random.nextInt(10) + 1;
-                                answerTemp = operand1 / 2;
-                            } while (answerTemp + operand2 - operand3 < 0 || answerTemp%2 != 0);
-                            break;
-                        case 2:
-                            niveau = 2;
-                            // ((2 * X - Y) + Z)
-                            do {
-                                operand1 = random.nextInt(10) + 1;
-                                operand2 = random.nextInt(10) + 1;
-                                answerTemp = 2 * operand1 - operand2;
-                            } while (answerTemp < 0);
-                            break;
-                    }
-                    exercises = priorite(niveau, operand1, operand2, operand3);
+                    exercises = priorite();
                     break;
                 default:
                     break;
@@ -2059,9 +1955,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(80) + 1;
-                    int operand2 = random.nextInt(20) + 1;
-                    exercises = addition(operand1, operand2);
+                    exercises = addition(0);
                     break;
                 default:
                     break;
@@ -2111,13 +2005,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int operand1 = random.nextInt(10000) + 1;
-                    int operand2 = random.nextInt(10000) + 1;
-                    do {
-                        operand2 = random.nextInt(10000) + 1;
-                    } while (operand2 % 5 == 0 || operand2 % 2 == 0);
-
-                    exercises = addition(operand1, operand2);
+                    exercises = addition(1);
                     break;
                 default:
                     break;
@@ -2283,9 +2171,12 @@ public class exercisesGen {
         return exercises;
     }
 
-    List<Exercise> addition(int x, int y) {
+    List<Exercise> addition(int level) {
         Random random = new Random();
         List<Exercise> exercises = new ArrayList();
+
+        int x = 0;
+        int y = 0;
 
         List<String> problems = Arrays.asList(
                 "Farle le boulanger s'occupe de fournir son village en pain. Il en a déjà fait X, et en refait cuire Y. Combien de pains Farle a t'il fabriqué en tout ?",
@@ -2304,6 +2195,24 @@ public class exercisesGen {
 
         for (int i = 0; i < 7; i++) {
 
+            switch (level){
+                case 0:
+                    x = random.nextInt(80) + 1;
+                    y = random.nextInt(20) + 1;
+                    break;
+                case 1:
+                    x = random.nextInt(10000) + 1;
+                    y = random.nextInt(10000) + 1;
+                    do {
+                        y = random.nextInt(10000) + 1;
+                    } while (y % 5 == 0 || y % 2 == 0);
+                    break;
+                case 2:
+                    x = random.nextInt(100000) + 1;
+                    y = random.nextInt(100000) + 1;
+                    break;
+            }
+
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
 
@@ -2319,9 +2228,13 @@ public class exercisesGen {
         return exercises;
     }
 
-    List<Exercise> soustraire(int x, int y) {
+    List<Exercise> soustraire(int level) {
         Random random = new Random();
         List<Exercise> exercises = new ArrayList();
+
+        int x = 0;
+        int y = 0;
+        int answer = 0;
 
         List<String> problems = Arrays.asList(
                 "Evariste le magicien a X étoiles magiques, mais il en donne Y à son apprenti. Combien d'étoiles magiques lui reste-t-il ?",
@@ -2342,6 +2255,40 @@ public class exercisesGen {
 
         for (int i = 0; i < 7; i++) {
 
+            switch (level){
+                case 0:
+                    x = random.nextInt(80) + 1;
+                    y = random.nextInt(20) + 1;
+                    answer = x - y;
+
+                    do {
+                        x = random.nextInt(80) + 1;
+                        y = random.nextInt(20) + 1;
+                        answer = x - y;
+                    } while (answer < 0);
+                    break;
+                case 1:
+                    x = random.nextInt(10000) + 1;
+                    y = random.nextInt(10000) + 1;
+                    answer = x - y;
+                    do {
+                        x = random.nextInt(10000) + 1;
+                        y = random.nextInt(10000) + 1;
+                        answer = x - y;
+                    } while (answer < 0 || y % 2 == 0 || y % 5 == 0);
+                    break;
+                case 2:
+                    x = random.nextInt(100000) + 1;
+                    y = random.nextInt(100000) + 1;
+                    answer = x - y;
+                    do {
+                        x = random.nextInt(100000) + 1;
+                        y = random.nextInt(100000) + 1;
+                        answer = x - y;
+                    } while (answer < 0);
+                    break;
+            }
+
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
 
@@ -2358,9 +2305,13 @@ public class exercisesGen {
     }
 
 
-    List<Exercise> division(int x, int y) {
+    List<Exercise> division(int level) {
         Random random = new Random();
         List<Exercise> exercises = new ArrayList();
+
+        int x = 0;
+        int y = 0;
+        int answer = 0;
 
         List<String> problems = Arrays.asList(
                 "Alphonse le magicien a X cartes de tarot et veut faire des piles de Y cartes chacune pour ses tours. Combien de piles peut-il faire ?",
@@ -2382,6 +2333,48 @@ public class exercisesGen {
 
         for (int i = 0; i < 7; i++) {
 
+            switch (level){
+                case 0: // Div 2
+                    x = random.nextInt(50) + 10;
+                    y = 2;
+                    answer = x / y;
+                    do {
+                        x = random.nextInt(50) + 10;
+                        answer = x / y;
+                    } while (x % y != 0);
+                    break;
+                case 1: // Div 10
+                    x = random.nextInt(1000) + 100;
+                    y = 10;
+                    int answer = x / y;
+                    do {
+                        x = random.nextInt(1000) + 100;
+                        answer = x / y;
+                    } while (x % y != 0);
+                    break;
+                case 2: // Div 100 et 1000
+                    x = random.nextInt(100000) + 1000;
+                    y = 100;
+                    int rand10 = random.nextInt(1);
+                    if (rand10 == 0) {y = 100;} else {y = 1000;}
+                    int answer = x / y;
+                    do {
+                        x = random.nextInt(100000) + 1000;
+                        answer = operand1 / operand2;
+                    } while (x % y != 0);
+                    break;
+                case 3: // Div entier
+                    x = random.nextInt(50) + 50;
+                    y = random.nextInt(9) + 2;
+                    int answer = x / y;
+                    do {
+                        x = random.nextInt(50) + 1;
+                        y = random.nextInt(9) + 2;
+                        answer = x / y;
+                    } while (x % y != 0);
+                    break;
+            }
+
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y));
 
@@ -2397,67 +2390,106 @@ public class exercisesGen {
         return exercises;
     }
 
-    List<Exercise> priorite(int niveau, int x, int y, int z) {
+    List<Exercise> priorite() {
         Random random = new Random();
         List<Exercise> exercises = new ArrayList();
 
+        int x = 0;
+        int y = 0;
+        int z = 0;
         int answer = 0;
+        int answerTemp = 0;
+        int niveau = 0;
 
         List<String> problems = Arrays.asList();
 
-        switch (niveau){
-            case 0:
-                // ((X - Y + Z) / 2)
-                problems = Arrays.asList(
-                        "Arthur l'apprenti sorcier a X étoiles filantes, il en donne Y à son maître et en trouve Z de plus. Il utilise ensuite la moitié pour une potion. Combien lui reste-t-il d'étoiles filantes ?",
-                        "Fred le fermier a X poules. Il en vend Y à son voisin, en achète Z de plus au marché. Combien a-t-il de poules après avoir donné la moitié à son frère ?",
-                        "Robin le voleur a X pièces d'or. Il en perd Y dans une partie de dés, mais en vole Z de plus au shérif. Combien de pièces d'or lui reste-t-il après avoir partagé la moitié avec ses compagnons ?",
-                        "Lina la jardinière a X graines. Elle en perd Y à cause des oiseaux, mais en trouve Z de plus dans son grenier. Combien de graines lui restent-elles après avoir semé la moitié dans son jardin ?",
-                        "Max le musicien a X partitions. Il en perd Y dans un déménagement, mais en récupère Z de plus dans une brocante. Combien de partitions lui restent-ils après en avoir donné la moitié à son élève ?",
-                        "Olga l'ornithologue a observé X oiseaux. Elle en a manqué Y parce qu'elle dormait, mais en a repéré Z de plus le lendemain. Combien d'oiseaux a-t-elle observés après avoir compté la moitié deux fois par erreur ?",
-                        "Sam le libraire a X livres. Il en perd Y dans un incendie, mais en récupère Z de plus lors d'une vente aux enchères. Combien de livres lui restent-ils après en avoir vendu la moitié lors d'une promotion ?",
-                        "Léo le lion a mangé X antilopes. Il en perd Y à cause des hyènes, mais en chasse Z de plus le lendemain. Combien d'antilopes lui restent-ils après en avoir partagé la moitié avec sa famille ?",
-                        "Marie la mathématicienne a écrit X équations. Elle en perd Y lors d'une panne d'ordinateur, mais en crée Z de plus pendant la nuit. Combien d'équations lui restent-elles après en avoir rayé la moitié comme incorrectes ?",
-                        "Pablo le peintre a créé X œuvres d'art. Il en perd Y lors d'un vol, mais en peint Z de plus au cours de l'année. Combien d'œuvres lui restent-ils après en avoir vendu la moitié à un musée ?",
-                        "Tina la couturière a X boutons. Elle en perd Y en cousant, mais en trouve Z de plus dans un tiroir. Combien de boutons lui restent-ils après en avoir utilisé la moitié pour une nouvelle robe ?"
-                );
-                answer = (int) ((x - y + z) / 2);
-                break;
-            case 1:
-                // ((X / 2 + Y) - Z)
-                problems = Arrays.asList(
-                        "Morgana la sorcière a X ingrédients pour ses potions. Elle utilise la moitié pour une potion de sommeil, trouve Y de plus et en donne Z à sa sœur. Combien lui reste-t-il d'ingrédients ?",
-                        "Farle le boulanger fait X pains tous les jours. Il en vend la moitié, donne Y à sa famille et en fait Z de plus. Combien de pains lui restent-il ?",
-                        "Zéphyr le dragon a X trésors. Il en cache la moitié, perd Y en volant et trouve Z de plus dans une caverne. Combien de trésors a-t-il désormais ?",
-                        "Pétunia la fée a X fleurs. Elle en utilise la moitié pour un sortilège, en donne Y à sa meilleure amie et en cueille Z de plus. Combien de fleurs lui restent-il ?",
-                        "Hector le troll a X pierres. Il en utilise la moitié pour construire un pont, perd Y dans la rivière et trouve Z de plus en creusant. Combien de pierres lui restent-il ?",
-                        "Luna la licorne a X cristaux magiques. Elle en utilise la moitié pour un enchantement, en donne Y à sa mère et en trouve Z de plus dans la forêt. Combien de cristaux lui restent-il ?",
-                        "Goliath le géant a X troncs d'arbres. Il en utilise la moitié pour faire un feu, perd Y dans le vent et en coupe Z de plus dans la forêt. Combien de troncs lui restent-il ?",
-                        "Éole le nain a X gemmes. Il en utilise la moitié pour forger une couronne, en donne Y au roi et en trouve Z de plus dans la mine. Combien de gemmes lui restent-il ?",
-                        "Ombrelle la sirène a X perles. Elle en utilise la moitié pour un collier, en donne Y à sa sœur et en trouve Z de plus dans une huître. Combien de perles lui restent-il ?"
-                );
-                answer = (int) ((x /2 + y) - z);
-                break;
-            case 2:
-                // ((2 * X - Y) + Z)
-                problems = Arrays.asList(
-                        "Fiona la fée a X paillettes magiques. Elle en utilise le double pour un sortilège, en donne Y à son amie la licorne et en trouve Z de plus dans la forêt. Combien de paillettes lui restent-il ?",
-                        "Baloo l'ours a X pots de miel. Il en mange le double pour son petit déjeuner, en donne Y à ses amis les abeilles et en trouve Z de plus dans la forêt. Combien de pots de miel lui restent-il ?",
-                        "Merlin l'apprenti magicien a X parchemins. Il en utilise le double pour ses sortilèges, en donne Y à son maître et en trouve Z de plus dans la bibliothèque. Combien de parchemins lui restent-il ?",
-                        "Le dragon Zephyr a X pierres précieuses. Il en cache le double dans sa caverne, en perd Y lors d'une bataille et en trouve Z de plus lors d'un raid. Combien de pierres précieuses lui restent-il ?",
-                        "Clochette la fée a X gouttes de rosée. Elle en utilise le double pour ses potions, en donne Y à sa sœur et en trouve Z de plus sur les fleurs au petit matin. Combien de gouttes lui restent-il ?",
-                        "Bagheera la panthère a X poissons. Elle en mange le double pour son dîner, en donne Y à ses petits et en pêche Z de plus dans la rivière. Combien de poissons lui restent-il ?",
-                        "Hagrid le demi-géant a X citrouilles. Il en utilise le double pour ses potions, en donne Y à ses élèves et en trouve Z de plus dans son potager. Combien de citrouilles lui restent-il ?",
-                        "Le nain Grumpy a X diamants. Il en cache le double dans sa mine, en donne Y à Blanche-Neige et en trouve Z de plus lors d'une nouvelle fouille. Combien de diamants lui restent-il ?",
-                        "Le sorcier Gandalf a X plumes d'aigle. Il en utilise le double pour écrire ses sortilèges, en donne Y à Frodo et en trouve Z de plus lors de son voyage. Combien de plumes lui restent-il ?"
-                );
-                answer = (int) ((2 * x - y) + z);
-                break;
-            default:
-                break;
-        }
-
         for (int i = 0; i < 7; i++) {
+
+            switch (random.nextInt(3)){
+                case 0:
+                    niveau = 0;
+                    // ((X - Y + Z) / 2)
+                    do {
+                        x = random.nextInt(10) + 1;
+                        y = random.nextInt(10) + 1;
+                        z = random.nextInt(10) + 1;
+                        answerTemp = x - y + z;
+                    } while (answerTemp < 0 || answerTemp%2 != 0);
+                    break;
+                case 1:
+                    niveau = 1;
+                    // ((X / 2 + Y) - Z)
+                    do {
+                        x = random.nextInt(10) + 1;
+                        y = random.nextInt(10) + 1;
+                        z = random.nextInt(10) + 1;
+                        answerTemp = x / 2;
+                    } while (answerTemp + y - z < 0 || answerTemp%2 != 0);
+                    break;
+                case 2:
+                    niveau = 2;
+                    // ((2 * X - Y) + Z)
+                    do {
+                        x = random.nextInt(10) + 1;
+                        y = random.nextInt(10) + 1;
+                        z = random.nextInt(10) + 1;
+                        answerTemp = 2 * x - y;
+                    } while (answerTemp < 0);
+                    break;
+            }
+
+
+            switch (niveau){
+                case 0:
+                    // ((X - Y + Z) / 2)
+                    problems = Arrays.asList(
+                            "Arthur l'apprenti sorcier a X étoiles filantes, il en donne Y à son maître et en trouve Z de plus. Il utilise ensuite la moitié pour une potion. Combien lui reste-t-il d'étoiles filantes ?",
+                            "Fred le fermier a X poules. Il en vend Y à son voisin, en achète Z de plus au marché. Combien a-t-il de poules après avoir donné la moitié à son frère ?",
+                            "Robin le voleur a X pièces d'or. Il en perd Y dans une partie de dés, mais en vole Z de plus au shérif. Combien de pièces d'or lui reste-t-il après avoir partagé la moitié avec ses compagnons ?",
+                            "Lina la jardinière a X graines. Elle en perd Y à cause des oiseaux, mais en trouve Z de plus dans son grenier. Combien de graines lui restent-elles après avoir semé la moitié dans son jardin ?",
+                            "Max le musicien a X partitions. Il en perd Y dans un déménagement, mais en récupère Z de plus dans une brocante. Combien de partitions lui restent-ils après en avoir donné la moitié à son élève ?",
+                            "Olga l'ornithologue a observé X oiseaux. Elle en a manqué Y parce qu'elle dormait, mais en a repéré Z de plus le lendemain. Combien d'oiseaux a-t-elle observés après avoir compté la moitié deux fois par erreur ?",
+                            "Sam le libraire a X livres. Il en perd Y dans un incendie, mais en récupère Z de plus lors d'une vente aux enchères. Combien de livres lui restent-ils après en avoir vendu la moitié lors d'une promotion ?",
+                            "Léo le lion a mangé X antilopes. Il en perd Y à cause des hyènes, mais en chasse Z de plus le lendemain. Combien d'antilopes lui restent-ils après en avoir partagé la moitié avec sa famille ?",
+                            "Marie la mathématicienne a écrit X équations. Elle en perd Y lors d'une panne d'ordinateur, mais en crée Z de plus pendant la nuit. Combien d'équations lui restent-elles après en avoir rayé la moitié comme incorrectes ?",
+                            "Pablo le peintre a créé X œuvres d'art. Il en perd Y lors d'un vol, mais en peint Z de plus au cours de l'année. Combien d'œuvres lui restent-ils après en avoir vendu la moitié à un musée ?",
+                            "Tina la couturière a X boutons. Elle en perd Y en cousant, mais en trouve Z de plus dans un tiroir. Combien de boutons lui restent-ils après en avoir utilisé la moitié pour une nouvelle robe ?"
+                    );
+                    answer = (int) ((x - y + z) / 2);
+                    break;
+                case 1:
+                    // ((X / 2 + Y) - Z)
+                    problems = Arrays.asList(
+                            "Morgana la sorcière a X ingrédients pour ses potions. Elle utilise la moitié pour une potion de sommeil, trouve Y de plus et en donne Z à sa sœur. Combien lui reste-t-il d'ingrédients ?",
+                            "Farle le boulanger fait X pains tous les jours. Il en vend la moitié, donne Y à sa famille et en fait Z de plus. Combien de pains lui restent-il ?",
+                            "Zéphyr le dragon a X trésors. Il en cache la moitié, perd Y en volant et trouve Z de plus dans une caverne. Combien de trésors a-t-il désormais ?",
+                            "Pétunia la fée a X fleurs. Elle en utilise la moitié pour un sortilège, en donne Y à sa meilleure amie et en cueille Z de plus. Combien de fleurs lui restent-il ?",
+                            "Hector le troll a X pierres. Il en utilise la moitié pour construire un pont, perd Y dans la rivière et trouve Z de plus en creusant. Combien de pierres lui restent-il ?",
+                            "Luna la licorne a X cristaux magiques. Elle en utilise la moitié pour un enchantement, en donne Y à sa mère et en trouve Z de plus dans la forêt. Combien de cristaux lui restent-il ?",
+                            "Goliath le géant a X troncs d'arbres. Il en utilise la moitié pour faire un feu, perd Y dans le vent et en coupe Z de plus dans la forêt. Combien de troncs lui restent-il ?",
+                            "Éole le nain a X gemmes. Il en utilise la moitié pour forger une couronne, en donne Y au roi et en trouve Z de plus dans la mine. Combien de gemmes lui restent-il ?",
+                            "Ombrelle la sirène a X perles. Elle en utilise la moitié pour un collier, en donne Y à sa sœur et en trouve Z de plus dans une huître. Combien de perles lui restent-il ?"
+                    );
+                    answer = (int) ((x /2 + y) - z);
+                    break;
+                case 2:
+                    // ((2 * X - Y) + Z)
+                    problems = Arrays.asList(
+                            "Fiona la fée a X paillettes magiques. Elle en utilise le double pour un sortilège, en donne Y à son amie la licorne et en trouve Z de plus dans la forêt. Combien de paillettes lui restent-il ?",
+                            "Baloo l'ours a X pots de miel. Il en mange le double pour son petit déjeuner, en donne Y à ses amis les abeilles et en trouve Z de plus dans la forêt. Combien de pots de miel lui restent-il ?",
+                            "Merlin l'apprenti magicien a X parchemins. Il en utilise le double pour ses sortilèges, en donne Y à son maître et en trouve Z de plus dans la bibliothèque. Combien de parchemins lui restent-il ?",
+                            "Le dragon Zephyr a X pierres précieuses. Il en cache le double dans sa caverne, en perd Y lors d'une bataille et en trouve Z de plus lors d'un raid. Combien de pierres précieuses lui restent-il ?",
+                            "Clochette la fée a X gouttes de rosée. Elle en utilise le double pour ses potions, en donne Y à sa sœur et en trouve Z de plus sur les fleurs au petit matin. Combien de gouttes lui restent-il ?",
+                            "Bagheera la panthère a X poissons. Elle en mange le double pour son dîner, en donne Y à ses petits et en pêche Z de plus dans la rivière. Combien de poissons lui restent-il ?",
+                            "Hagrid le demi-géant a X citrouilles. Il en utilise le double pour ses potions, en donne Y à ses élèves et en trouve Z de plus dans son potager. Combien de citrouilles lui restent-il ?",
+                            "Le nain Grumpy a X diamants. Il en cache le double dans sa mine, en donne Y à Blanche-Neige et en trouve Z de plus lors d'une nouvelle fouille. Combien de diamants lui restent-il ?",
+                            "Le sorcier Gandalf a X plumes d'aigle. Il en utilise le double pour écrire ses sortilèges, en donne Y à Frodo et en trouve Z de plus lors de son voyage. Combien de plumes lui restent-il ?"
+                    );
+                    answer = (int) ((2 * x - y) + z);
+                    break;
+                default:
+                    break;
+            }
 
             String problem = problems.get(random.nextInt(problems.size()));
             problem = problem.replace("X", String.valueOf(x)).replace("Y", String.valueOf(y)).replace("Z", String.valueOf(z));
