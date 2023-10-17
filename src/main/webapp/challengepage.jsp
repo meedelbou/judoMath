@@ -281,17 +281,6 @@
                     <ul class="metismenu" id="menu">
                         <li class="menu-title">JudoMath</li>
                         
-
-                        <li>
-                            <a href="choisirComp"  aria-expanded="false">
-                                <div class="menu-icon">
-                                    <i class="fa-solid fa-person-chalkboard" ></i>
-                                </div>	&nbsp;&nbsp;
-                                <span class="nav-text">S'entraîner</span>
-                            </a>
-                        </li>
-
-                        
                         <li>
                             <a  href="challenges" aria-expanded="false">
                                 <div class="menu-icon">
