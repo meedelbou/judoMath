@@ -325,38 +325,12 @@
                 <div class="deznav-scroll">
                     <ul class="metismenu" id="menu">
                         <li class="menu-title">JudoMath</li>
-                        <li><a href="catalogue">
-                                <div class="menu-icon">
-                                    <i class="fa-solid fa-graduation-cap"></i>  
-                                </div>	&nbsp;&nbsp;
-                                <span class="nav-text">Liste des compétences</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="choisirComp"  aria-expanded="false">
-                                <div class="menu-icon">
-                                    <i class="fa-solid fa-person-chalkboard" ></i>
-                                </div>	&nbsp;&nbsp;
-                                <span class="nav-text">S'entraîner</span>
-                            </a>
-                        </li>
-
                         <li>
                             <a  href="test" aria-expanded="false">
                                 <div class="menu-icon">
                                     <i class="fa-solid fa-list-check"></i>
                                 </div>	&nbsp;&nbsp;
                                 <span class="nav-text">Test de validation</span>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a  href="challenges" aria-expanded="false">
-                                <div class="menu-icon">
-                                    <i class="fa fa-bolt" aria-hidden="true"></i>
-                                </div>	&nbsp;&nbsp;
-                                <span class="nav-text">Challenges</span>
                             </a>
                         </li>
                     </ul>
