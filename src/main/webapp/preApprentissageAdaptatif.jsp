@@ -42,6 +42,12 @@
         <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
         <link href="./css/style.css" rel="stylesheet">
 
+        <style>
+            #animation-container {
+                display: none; /* Cache l'animation par défaut */
+            }
+        </style>
+
     </head>
     <body>
 
@@ -171,6 +177,10 @@
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                                                         <span class="ms-2">Logout </span>
                                                     </a>
+
+                                                    <div id="animation-container">
+                                                        <img id="animation" src="gif_musik.gif" alt="Animation GIF">
+                                                    </div>
                                                     <button id="muteButton">Muet</button>
                                                 </div>
                                             </div>
@@ -1788,6 +1798,15 @@
             audio.play();
             isPlaying = true; // Définissez la variable comme vrai pendant la lecture
         }
+
+    // Affiche l'animation
+    animationContainer.style.display = 'block';
+
+    // Une fois que l'animation a été affichée, écoutez son événement 'load' pour le retirer après son exécution
+    animation.onload = function() {
+        animationContainer.style.display = 'none';
+    };
+
     });
 
 // Écouteur d'événement pour détecter la fin de la lecture
