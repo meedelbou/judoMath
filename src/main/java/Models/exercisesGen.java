@@ -1087,7 +1087,7 @@ public class exercisesGen {
                         // Choix 1 (answer 0 -> op1 < op2) : "Plus petit"
                         // Choix 2 (answer 1 -> op1 > op2) : "Plus grande"
                         Exercise exercise = new Exercise();
-                        exercise.setContent("La comparaison "+operand1 + " < " + operand2 + " est-elle correcte ?");
+                        exercise.setContent("Quelle comparaison est la bonne ?");
                         exercise.setAnswer(answer);
                         exercise.setOptions(options);
                         // AJOUTER LE TEXTE DES REPONSES POSSIBLES
