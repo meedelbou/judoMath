@@ -940,9 +940,11 @@
 
             }
             
-       
 
- <script>
+        </script>
+
+
+<script>
         // Sélectionnez l'élément audio
         var audio = document.getElementById('myAudio');
         var muteButton = document.getElementById('muteButton');
@@ -982,18 +984,6 @@
 
 
     </script>
-     
-
-
-
-
-
-
-
-        </script>
-
-
-
 
 
 
