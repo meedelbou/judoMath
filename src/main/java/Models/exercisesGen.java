@@ -1707,7 +1707,7 @@ public class exercisesGen {
         } else if (name.equals("Encadrer un entier entre deux entiers")) {
             cours = "Encadrer un nombre signifie trouver deux autres nombres, <b>l'un juste en dessous et l'autre juste au-dessus</b>, généralement des nombres ronds ou faciles à manipuler."
                     + "<br/><br/>Exemple : Prenons le nombre 5,432. Pour l'encadrer entre deux grands entiers, nous pourrions choisir 5,000 comme le nombre juste en dessous et 6,000 comme le nombre juste au-dessus."
-                    + "<br/>Ainsi, nous pouvons dire que 5,000 < 5,432 < 6,000. <b>5432 est compris entre 5000 et 6000<b>"
+                    + "<br/>Ainsi, nous pouvons dire que 5,000 < 5,432 < 6,000. <b>5432 est compris entre 5000 et 6000</b>"
                     + "<br/><br/>Cela nous aide à avoir une idée rapide de la position du nombre par rapport à des valeurs plus familières ou plus faciles à manipuler.";
 
             Random random = new Random();
