@@ -299,6 +299,10 @@
         Content body start
     ***********************************-->
             <div class="content-body">
+                <audio id="myAudio" style="display:none">
+                    <source src="">
+                    Votre navigateur ne prend pas en charge l'élément audio.
+                </audio>    
                 <div class="page-titles">
                     <ol class="breadcrumb">
                         <li><h5 class="bc-title">Entraînement</h5></li>
