@@ -1121,7 +1121,7 @@ public class exercisesGen {
                         Exercise exercise = new Exercise();
 
                         int x = random.nextInt(1000) + 10;
-                        List<String> questions = Arrays.asList("Ecrire en lettres le nombre : X", "Ecrire en chiffre le nombre : ");
+                        List<String> questions = Arrays.asList("Ecrire en lettres le nombre : X");
                         int questIndex = random.nextInt(questions.size());
 
                         String question = questions.get(questIndex);
@@ -1150,7 +1150,7 @@ public class exercisesGen {
                         long upperBound = 100000000000L;
 
                         long x = random.nextInt((int) (upperBound - lowerBound + 1)) + lowerBound;
-                        List<String> questions = Arrays.asList("Ecrire en lettres le nombre : X", "Ecrire en chiffre le nombre : X");
+                        List<String> questions = Arrays.asList("Ecrire en lettres le nombre : X");
                         int questIndex = random.nextInt(questions.size());
 
                         String question = questions.get(questIndex);
