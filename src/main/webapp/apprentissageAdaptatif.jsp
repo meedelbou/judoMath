@@ -277,14 +277,7 @@
             <div class="deznav">
                 <div class="deznav-scroll">
                     <ul class="metismenu" id="menu">
-                        <li class="menu-title">JudoMath</li>
-                        <li><a href="catalogue">
-                                <div class="menu-icon">
-                                    <i class="fa-solid fa-graduation-cap"></i>  
-                                </div>	&nbsp;&nbsp;
-                                <span class="nav-text">Liste des compétences</span>
-                            </a>
-                        </li>
+                        <li class="menu-title">JudoMath</li>                       
 
                         <li>
                             <a href="choisirComp"  aria-expanded="false">
@@ -294,24 +287,7 @@
                                 <span class="nav-text">S'entraîner</span>
                             </a>
                         </li>
-
-                        <li>
-                            <a  href="test" aria-expanded="false">
-                                <div class="menu-icon">
-                                    <i class="fa-solid fa-list-check"></i>
-                                </div>	&nbsp;&nbsp;
-                                <span class="nav-text">Test de validation</span>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a  href="challenges" aria-expanded="false">
-                                <div class="menu-icon">
-                                    <i class="fa fa-bolt" aria-hidden="true"></i>
-                                </div>	&nbsp;&nbsp;
-                                <span class="nav-text">Challenges</span>
-                            </a>
-                        </li>
+                                                                       
                     </ul>
                 </div>
             </div>
@@ -1251,7 +1227,41 @@
 
 
 
+<script>
+        // Sélectionnez l'élément audio
+        var audio = document.getElementById('myAudio');
 
+        audio.volume = 0.2;
+        // Vous pouvez utiliser audio.pause() pour mettre en pause la musique.
+        
+        
+        var audioFiles = [
+            'musique/m1.mp3',
+            'musique/m2.mp3',
+            'musique/m3.mp3',
+	    'musique/m4.mp3',
+	    'musique/m5.mp3'
+        ];
+        
+    var isPlaying = false; // Variable pour suivre si la musique est en cours de lecture
+
+    document.addEventListener('click', function() {
+    // Vérifiez si la musique est déjà en cours de lecture
+        if (!isPlaying) {
+            var randomIndex = Math.floor(Math.random() * audioFiles.length);
+            audio.src = audioFiles[randomIndex];
+            audio.play();
+            isPlaying = true; // Définissez la variable comme vrai pendant la lecture
+        }
+    });
+
+// Écouteur d'événement pour détecter la fin de la lecture
+    audio.addEventListener('ended', function() {
+        isPlaying = false; // Une fois la musique terminée, réinitialisez la variable à faux
+    });
+
+
+    </script>
 
 
 
