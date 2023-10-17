@@ -179,7 +179,7 @@
                                                     </a>
 
                                                     <div id="animation-container">
-                                                        <img id="animation" src="gif_musik.gif" alt="Animation GIF">
+                                                        <img id="animation" src="musique/gif_musik.gif" alt="Animation GIF">
                                                     </div>
                                                     <button id="muteButton">Muet</button>
                                                 </div>
