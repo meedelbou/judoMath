@@ -526,7 +526,7 @@ public class exercisesGen {
                 case 2:
 
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10);
+                        int operand1 = random.nextInt(5)+5;
                         int operand2 = 2;
                         int answer = operand1 * operand2;
 
@@ -570,7 +570,7 @@ public class exercisesGen {
                 case 2:
 
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10);
+                        int operand1 = random.nextInt(5)+5;
                         int operand2 = 3;
                         int answer = operand1 * operand2;
 
@@ -614,7 +614,7 @@ public class exercisesGen {
                 case 2:
 
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10);
+                        int operand1 = random.nextInt(5)+5;
                         int operand2 = 4;
                         int answer = operand1 * operand2;
 
@@ -658,7 +658,7 @@ public class exercisesGen {
                 case 2:
 
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10);
+                        int operand1 = random.nextInt(5)+5;
                         int operand2 = 5;
                         int answer = operand1 * operand2;
 
@@ -702,7 +702,7 @@ public class exercisesGen {
                 case 2:
 
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10);
+                        int operand1 = random.nextInt(5)+5;
                         int operand2 = 6;
                         int answer = operand1 * operand2;
 
@@ -746,7 +746,7 @@ public class exercisesGen {
                 case 2:
 
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10);
+                        int operand1 = random.nextInt(5)+5;
                         int operand2 = 7;
                         int answer = operand1 * operand2;
 
@@ -790,7 +790,7 @@ public class exercisesGen {
                 case 2:
 
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10);
+                        int operand1 = random.nextInt(5)+5;
                         int operand2 = 8;
                         int answer = operand1 * operand2;
 
@@ -834,7 +834,7 @@ public class exercisesGen {
                 case 2:
 
                     for (int i = 0; i < 7; i++) {
-                        int operand1 = random.nextInt(10);
+                        int operand1 = random.nextInt(5)+5;
                         int operand2 = 9;
                         int answer = operand1 * operand2;
 
@@ -890,7 +890,7 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    exercises = multi(100000, 100000000, 10);
+                    exercises = multi(10000, 100000, 10);
                     break;
                 default:
                     break;
@@ -933,7 +933,6 @@ public class exercisesGen {
                     }
                     break;
                 case 3:
-                    int x = random.nextInt(10000) + 100;
                     exercises = multi(100, 10000, 20);
                     break;
                 default:
@@ -2119,22 +2118,22 @@ public class exercisesGen {
                 "Les lutins du Père Noël fabriquent Y jouets par heure. Combien de jouets fabriquent-ils en X heures ?",
                 "Dans le Royaume des Chats, chaque chat a Y couronnes. S'il y a X chats, combien de couronnes y a-t-il dans le royaume ?",
                 "Chaque super-héros possède Y super-pouvoirs. Si on compte X super-héros, combien de super-pouvoirs avons-nous en tout ?",
-                "Un train transporte X passagers. Chaque voiture peut contenir Y passagers. Combien de voitures le train doit-il avoir au minimum pour transporter tous les passagers ?",
-                "Un fermier a X pommes qu'il veut vendre au marché. Chaque cagette peut contenir Y pommes. Combien de cagettes le fermier doit-il préparer pour transporter toutes les pommes ?",
-                "Un professeur a X copies à corriger. Il peut corriger Y copies par heure. Combien d'heures le professeur doit-il travailler pour corriger toutes les copies ?",
-                "Un restaurateur doit préparer X assiettes de pâtes. Chaque casserole permet de préparer Y assiettes. Combien de casseroles le restaurateur doit-il utiliser pour préparer toutes les assiettes ?",
-                "Une usine produit X pièces par jour. Chaque palette peut contenir Y pièces. Combien de palettes l'usine doit-elle utiliser pour emballer toutes les pièces produites en une journée ?",
-                "Un marathonien doit parcourir X kilomètres. Chaque bouteille d'eau qu'il porte contient assez d'eau pour Y kilomètres. Combien de bouteilles d'eau le marathonien doit-il porter pour parcourir la distance totale ?",
-                "Une cantine scolaire doit préparer X repas. Chaque four peut cuire Y repas à la fois. De combien de fours la cantine a-t-elle besoin pour préparer tous les repas ?",
-                "Une bibliothèque reçoit X nouveaux livres. Chaque étagère peut contenir Y livres. Combien d'étagères la bibliothèque doit-elle libérer pour accueillir tous les nouveaux livres ?",
-                "Une entreprise souhaite expédier X produits. Chaque carton peut contenir Y produits. Quel est le nombre minimum de cartons que l'entreprise doit utiliser pour expédier tous les produits ?",
-                "Un théâtre veut installer X sièges. Chaque rangée peut contenir Y sièges. Quel est le nombre minimum de rangées que le théâtre doit prévoir pour installer tous les sièges ?",
-                "Un chauffeur de bus doit transporter X étudiants. Chaque bus a une capacité de Y étudiants. Combien de bus le chauffeur doit-il conduire pour transporter tous les étudiants ?",
-                "Une usine d'emballage doit emballer X bonbons. Chaque sachet peut contenir Y bonbons. Combien de sachets l'usine doit-elle utiliser pour emballer tous les bonbons ?",
-                "Une équipe de construction doit placer X briques. Chaque ouvrier peut placer Y briques par jour. Quel est le nombre minimum de jours dont l'équipe a besoin pour placer toutes les briques ?",
-                "Un jardinier veut planter X graines. Chaque pot peut contenir Y graines. Combien de pots le jardinier doit-il utiliser pour planter toutes les graines ?",
-                "Une salle de gym peut accueillir X personnes. Chaque séance de cours collectif peut accueillir Y personnes. Quel est le nombre minimum de séances que la salle de gym doit organiser pour accueillir toutes les personnes ?",
-                "Un cinéma doit accueillir X spectateurs pour une avant-première. Chaque salle peut accueillir Y spectateurs. Combien de salles le cinéma doit-il ouvrir pour accueillir tous les spectateurs pour cette avant-première ?"
+                "Un train transporte X passagers, et chaque voiture peut contenir Y passagers. Combien de passagers le train peut-il transporter au total ?",
+                "Un fermier a X pommes à vendre, et chaque cagette peut contenir Y pommes. Combien de pommes le fermier peut-il mettre en cagettes au total ?",
+                "Un professeur doit corriger X copies, et il peut corriger Y copies par heure. En combien d'heures le professeur peut-il corriger toutes les copies ?",
+                "Un restaurateur doit préparer X assiettes de pâtes, et chaque casserole permet de préparer Y assiettes. Combien d'assiettes de pâtes peut-il préparer en utilisant les casseroles ?",
+                "Une usine produit X pièces par jour, et chaque palette peut contenir Y pièces. Combien de pièces l'usine peut-elle emballer en utilisant des palettes ?",
+                "Un marathonien doit parcourir X kilomètres, et chaque bouteille d'eau contient de l'eau pour Y kilomètres. Combien de kilomètres peut-il parcourir en portant toutes les bouteilles d'eau ?",
+                "Une cantine scolaire doit préparer X repas, et chaque four peut cuire Y repas à la fois. Combien de repas la cantine peut-elle préparer en utilisant les fours ?",
+                "Une bibliothèque reçoit X nouveaux livres, et chaque étagère peut contenir Y livres. Combien de livres la bibliothèque peut-elle accueillir en libérant des étagères ?",
+                "Une entreprise souhaite expédier X produits, et chaque carton peut contenir Y produits. Combien de produits l'entreprise peut-elle expédier en utilisant un minimum de cartons ?",
+                "Un théâtre veut installer X sièges, et chaque rangée peut contenir Y sièges. Combien de sièges le théâtre peut-il installer en prévoyant un minimum de rangées ?",
+                "Un chauffeur de bus doit transporter X étudiants, et chaque bus a une capacité de Y étudiants. Combien de bus le chauffeur doit-il conduire pour transporter tous les étudiants ?",
+                "Une usine d'emballage doit emballer X bonbons, et chaque sachet peut contenir Y bonbons. Combien de sachets l'usine doit-elle utiliser pour emballer tous les bonbons ?",
+                "Une équipe de construction doit placer X briques, et chaque ouvrier peut placer Y briques par jour. En combien de jours l'équipe peut-elle placer toutes les briques ?",
+                "Un jardinier veut planter X graines, et chaque pot peut contenir Y graines. Combien de pots le jardinier doit-il utiliser pour planter toutes les graines ?",
+                "Une salle de gym peut accueillir X personnes, et chaque séance de cours collectif peut accueillir Y personnes. Combien de séances la salle de gym doit-elle organiser pour accueillir toutes les personnes ?",
+                "Un cinéma doit accueillir X spectateurs pour une avant-première, et chaque salle peut accueillir Y spectateurs. Combien de salles le cinéma doit-il ouvrir pour accueillir tous les spectateurs pour cette avant-première ?"
         );
 
         for (int i = 0; i < 7; i++) {
@@ -2266,20 +2265,20 @@ public class exercisesGen {
 
         List<String> problems = Arrays.asList(
                 "Evariste le magicien a X étoiles magiques, mais il en donne Y à son apprenti. Combien d'étoiles magiques lui reste-t-il ?",
-                "Le forgeron nain Burin possède X lingots d'or, mais il en utilise Y pour fabriquer une couronne royale. Combien de lingots d'or lui restent-ils ?",
-                "Mélusine la sirène a cueilli X coquillages mais en perd Y sur le chemin de retour. Combien de coquillages lui restent-ils ?",
-                "Papyrus le hibou sage a commencé l'année avec X livres dans sa bibliothèque, mais en a prêté Y à ses amis. Combien de livres lui restent-ils ?",
-                "Clémentine la fée a X fioles de poussière d'étoile. Elle en utilise Y pour enchanter des rêves. Combien de fioles lui restent-ils ?",
-                "Le petit troll Gaston a X bonbons, mais en mange Y en regardant son dessin animé préféré. Combien de bonbons lui restent-ils ?",
-                "Le pirate Barbe-Grise compte X pièces dans son coffre au trésor, mais doit en donner Y à son équipage. Combien de pièces lui restent-ils ?",
-                "Mirette la géante a X fleurs dans son jardin, mais un vent fort en emporte Y. Combien de fleurs lui restent-ils ?",
-                "L'archer elfe Lorian a commencé la journée avec X flèches, mais en a utilisé Y pour la chasse. Combien de flèches lui restent-ils ?",
-                "Azur la licorne a X cristaux magiques, mais en offre Y à sa meilleure amie, l'elfe Luna. Combien de cristaux lui restent-ils ?",
-                "Le dragon Drako a X pierres précieuses dans sa caverne, mais en perd Y en volant trop vite. Combien de pierres précieuses lui restent-ils ?",
-                "Grizelda la sorcière a X ingrédients pour ses potions, mais en utilise Y pour une potion de sommeil. Combien d'ingrédients lui restent-ils ?",
-                "L'épouvantail Émile a commencé l'automne avec X feuilles sur sa tête, mais le vent en a emporté Y. Combien de feuilles lui restent-ils ?",
-                "Le chevalier Roland a X pommes à partager avec ses amis, mais en donne Y à son cheval. Combien de pommes lui restent-ils ?",
-                "Le nain Minus a X pépites de diamant, mais doit en donner Y au roi pour payer ses taxes. Combien de pépites de diamant lui restent-ils ?");
+                "Le forgeron nain Burin possède X lingots d'or, mais il en utilise Y pour fabriquer une couronne royale. Combien de lingots d'or lui reste-t-il ?",
+                "Mélusine la sirène a cueilli X coquillages mais en perd Y sur le chemin de retour. Combien de coquillages lui reste-t-il ?",
+                "Papyrus le hibou sage a commencé l'année avec X livres dans sa bibliothèque, mais en a prêté Y à ses amis. Combien de livres lui reste-t-il ?",
+                "Clémentine la fée a X fioles de poussière d'étoile. Elle en utilise Y pour enchanter des rêves. Combien de fioles lui reste-t-il ?",
+                "Le petit troll Gaston a X bonbons, mais en mange Y en regardant son dessin animé préféré. Combien de bonbons lui reste-t-il ?",
+                "Le pirate Barbe-Grise compte X pièces dans son coffre au trésor, mais doit en donner Y à son équipage. Combien de pièces lui reste-t-il ?",
+                "Mirette la géante a X fleurs dans son jardin, mais un vent fort en emporte Y. Combien de fleurs lui reste-t-il ?",
+                "L'archer elfe Lorian a commencé la journée avec X flèches, mais en a utilisé Y pour la chasse. Combien de flèches lui reste-t-il ?",
+                "Azur la licorne a X cristaux magiques, mais en offre Y à sa meilleure amie, l'elfe Luna. Combien de cristaux lui reste-t-il ?",
+                "Le dragon Drako a X pierres précieuses dans sa caverne, mais en perd Y en volant trop vite. Combien de pierres précieuses lui reste-t-il ?",
+                "Grizelda la sorcière a X ingrédients pour ses potions, mais en utilise Y pour une potion de sommeil. Combien d'ingrédients lui reste-t-il ?",
+                "L'épouvantail Émile a commencé l'automne avec X feuilles sur sa tête, mais le vent en a emporté Y. Combien de feuilles lui reste-t-il ?",
+                "Le chevalier Roland a X pommes à partager avec ses amis, mais en donne Y à son cheval. Combien de pommes lui reste-t-il ?",
+                "Le nain Minus a X pépites de diamant, mais doit en donner Y au roi pour payer ses taxes. Combien de pépites de diamant lui reste-t-il ?");
 
         for (int i = 0; i < 7; i++) {
 
