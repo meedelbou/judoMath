@@ -51,7 +51,7 @@ public class challengesGen {
                     op1 = random.nextInt(99)+1;                   
                     op2 = 100;
                     answer = op2 - op1;                            
-                    nbrAlea = (random.nextInt(10)+1) * 10**(random.nextInt(5)+2);        
+                    nbrAlea = (random.nextInt(10)+1) * Math.pow(10, (random.nextInt(5) + 2));        
                     nbrTemp = nbrAlea - answer;                 
                     exercise.setContent("Combien faut-il ajouter à " + nbrTemp + " pour obtenir " + nbrAlea + " ?");
                     typeExo = 2;
@@ -147,13 +147,13 @@ public class challengesGen {
                 break;
                     case 3: // comparaison entier   
                     if (intTransit < answer){
-                        option = intTransit - (random.nextInt(10)+1)**(random.nextInt(4)+1);
+                        option = intTransit - (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1));
                     } else {
-                        option = intTransit + (random.nextInt(10)+1)**(random.nextInt(4)+1);
+                        option = intTransit + (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1));
                     }
                 break;
                     case 4: // comparaison entier   
-                    option = intTransit - (random.nextInt(10)+1)**(random.nextInt(4)+1);
+                    option = intTransit - (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1));
                 break;
                 default:
                     option = answer + random.nextInt(1) + 666;
