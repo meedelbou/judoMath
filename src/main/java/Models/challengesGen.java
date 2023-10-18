@@ -53,7 +53,7 @@ public class challengesGen {
                     op1 = random.nextInt(99)+1;                   
                     op2 = 100;
                     answer = op2 - op1;                            
-                    nbrAlea = (random.nextInt(10)+1) * Math.pow(10, (random.nextInt(5) + 2));        
+                    nbrAlea = (int) ((random.nextInt(10)+1) * Math.pow(10, (random.nextInt(5) + 2)));        
                     nbrTemp = nbrAlea - answer;                 
                     exercise.setContent("Combien faut-il ajouter à " + nbrTemp + " pour obtenir " + nbrAlea + " ?");
                     typeExo = 2;
@@ -95,10 +95,10 @@ public class challengesGen {
                     }                   
                     if (op1 < op2){
                         answer = (int) ((op2 - op1)/2 + op1);
-                        intTemp = (int) ((op1 - op2)/2 + op1);
+                        intTransit = (int) ((op1 - op2)/2 + op1);
                     } else {
                        answer = (int) ((op1 - op2)/2 + op2);
-                        intTemp = (int) ((op2 - op1)/2 + op2);
+                        intTransit = (int) ((op2 - op1)/2 + op2);
                     }                
                     exercise.setContent("Quelle valeur est comprise entre " + op1 + " et " + op2 + " ?");
                     typeExo = 4;
