@@ -149,13 +149,16 @@ public class challengesGen {
                 break;
                     case 3: // comparaison entier   
                     if (intTransit < answer){
-                        option = intTransit - (int) (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
+                        int transInt = (int) (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
+                        option = intTransit - transInt;
                     } else {
-                        option = intTransit + (int) ((random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
+                        int transInt = (int) (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
+                        option = intTransit + transInt;
                     }
                 break;
-                    case 4: // comparaison entier   
-                    option = intTransit - (int) ((random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
+                case 4: // comparaison entier   
+                    int transInt = (int) (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
+                    option = intTransit - transInt;
                 break;
                 default:
                     option = answer + random.nextInt(1) + 666;
