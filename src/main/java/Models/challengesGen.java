@@ -95,8 +95,8 @@ public class challengesGen {
                         answer = (int) ((op2 - op1)/2 + op1);
                         intTemp = (int) ((op1 - op2)/2 + op1);
                     } else {
-                       answer = (int) ((op2 - op1)/2 + op2);
-                        intTemp = (int) ((op1 - op2)/2 + op2);
+                       answer = (int) ((op1 - op2)/2 + op2);
+                        intTemp = (int) ((op2 - op1)/2 + op2);
                                             
                     exercise.setContent("Quelle valeur est comprise entre " + op1 + " et " + op2 + " ?");
                     typeExo = 4;
@@ -156,7 +156,7 @@ public class challengesGen {
                     option = intTransit - (random.nextInt(10)+1)**(random.nextInt(4)+1);
                 break;
                 default:
-                    option = answer + random.nextInt(5) - 200;
+                    option = answer + random.nextInt(1) + 666;
                 break;
             }
             if (!options.contains(Integer.toString(option))) {
