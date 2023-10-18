@@ -83,8 +83,8 @@ public class challengesGen {
                 break;
                 case "Encadrer un entier entre deux entiers" :  
                     op1 = random.nextInt(100000 - 10000) + 10000;
-                    limB = (int) (op1 - 0.00001 * op1);
-                    limH = (int) (op1 + 0.00001 * op1);
+                    limB = (int) (op1 - 0.0001 * op1);
+                    limH = (int) (op1 + 0.0001 * op1);
                     switch (random.nextInt(2)) {
                         case 0:
                             op2 = random.nextInt(limH - limB) + limB;
@@ -104,28 +104,23 @@ public class challengesGen {
                     typeExo = 4;
                 break;
                 case "Additionner deux entiers simples" :
-                   int range = 100;
-                    intTransit = range;
+                    addition(10);              
+                    int result =  op1 + op2;
+                    answer = result - op1;
                     
-                    int op1Last = random.nextInt(range)+1;
-                    int op2Last = range - op1Last;
-                    int op1Mid = random.nextInt(range)+1;
-                    int op2Mid = range - op1Mid - 1;
-                    int op1First = random.nextInt(range)+1;
-                    int op2First = range - op1First - 1;
-
-                    String strNombre1 = String.valueOf(op1Last);
-                    String strNombre2 = String.valueOf(op2Last);
-                    String strNombre3 = String.valueOf(op1Mid);
-                    String strNombre4 = String.valueOf(op2Mid);
-                    String strNombre5 = String.valueOf(op1First);
-                    String strNombre6 = String.valueOf(op2First);
-
-                    String op1String = strNombre1 + strNombre3 + strNombre5;
-                    String op2String = strNombre2 + strNombre4 + strNombre6;
-
-                    op1 = Integer.parseInt(op1String);
-                    op2 = Integer.parseInt(op2String);
+                    exercise.setContent("Combien faut-il ajouter à " + op1 + " pour obtenir " + result + " ?");
+                    typeExo = 5;
+                break;
+                case "Additionner un entier à un entier particulier" :
+                    addition(100);              
+                    int result =  op1 + op2;
+                    answer = result - op1;
+                    
+                    exercise.setContent("Combien faut-il ajouter à " + op1 + " pour obtenir " + result + " ?");
+                    typeExo = 5;
+                break;
+                case "Additionner deux entiers" :
+                    addition(1000);                    
                     int result =  op1 + op2;
                     answer = result - op1;
                     
@@ -185,7 +180,7 @@ public class challengesGen {
                         option = intTransit + transInt;
                     }
                 break;
-                case 4: // comparaison entier   
+                case 4: // encadrement entier   
                     int transInt = (int) ((random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
                     option = intTransit - transInt;
                 break;
@@ -232,5 +227,27 @@ public class challengesGen {
 
         return options;
     }
+    void addition (int range){
+        intTransit = range;
+        
+        int op1Last = random.nextInt(range)+1;
+        int op2Last = range - op1Last;
+        int op1Mid = random.nextInt(range)+1;
+        int op2Mid = range - op1Mid - 1;
+        int op1First = random.nextInt(range)+1;
+        int op2First = range - op1First - 1;
 
+        String strNombre1 = String.valueOf(op1Last);
+        String strNombre2 = String.valueOf(op2Last);
+        String strNombre3 = String.valueOf(op1Mid);
+        String strNombre4 = String.valueOf(op2Mid);
+        String strNombre5 = String.valueOf(op1First);
+        String strNombre6 = String.valueOf(op2First);
+
+        String op1String = strNombre1 + strNombre3 + strNombre5;
+        String op2String = strNombre2 + strNombre4 + strNombre6;
+
+        op1 = Integer.parseInt(op1String);
+        op2 = Integer.parseInt(op2String);
+    }
 }
