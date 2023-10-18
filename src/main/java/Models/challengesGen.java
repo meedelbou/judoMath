@@ -22,18 +22,18 @@ public class challengesGen {
     public challengesGen() {
     }
 
+    int op1 = 0;
+    int op2 = 0;
+    int answer = 0;
     int intTransit = 0;
-
+    Random random = new Random();
+    
     public List<Exercise> genChallenge(String skill) {
-        List<Exercise> exercises = new ArrayList();
-        Random random = new Random();
+        List<Exercise> exercises = new ArrayList();        
 
         for (int i = 0; i < 7; i++) {
-            Exercise exercise = new Exercise();
-            int answer = 0;
+            Exercise exercise = new Exercise();            
             int typeExo = 0;
-            int op1 = 0;
-            int op2 = 0;
             int nbrAlea = 0;
             int nbrTemp = 0;
             int limB = 0;
@@ -228,7 +228,7 @@ public class challengesGen {
 
         return options;
     }
-    void addition (int range){
+    public void addition (int range){
         intTransit = range;
         
         int op1Last = random.nextInt(range)+1;
