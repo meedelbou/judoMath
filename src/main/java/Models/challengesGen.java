@@ -105,6 +105,8 @@ public class challengesGen {
                 break;
                 case "Additionner deux entiers simples" :
                    int range = 100;
+                    intTransit = range;
+                    
                     int op1Last = random.nextInt(range)+1;
                     int op2Last = range - op1Last;
                     int op1Mid = random.nextInt(range)+1;
@@ -128,7 +130,7 @@ public class challengesGen {
                     answer = result - op1;
                     
                     exercise.setContent("Combien faut-il ajouter à " + op1 + " pour obtenir " + result + " ?");
-                    typeExo = 0;
+                    typeExo = 5;
                 break;
                 case "Connaitre les critères de division par 2" :
                     do {
@@ -193,23 +195,23 @@ public class challengesGen {
                     switch(alea){
                         case 0: // 10
                             if (signe == 0){
-                                option = answer + 10;
+                                option = answer + intTransit/10;
                             } else {
-                                option = answer - 10;
+                                option = answer - intTransit/10;
                             }                           
                             break;
                         case 1: // 100
                              if (signe == 0){
-                                option = answer + 100;
+                                option = answer + intTransit/100;
                             } else {
-                                option = answer - 100;
+                                option = answer - intTransit/100;
                             }      
                             break;
                         case 2: // 110
                              if (signe == 0){
-                                option = answer + 110;
+                                option = answer + intTransit/110;
                             } else {
-                                option = answer - 110;
+                                option = answer - intTransit/110;
                             }      
                             break;                            
                     }
