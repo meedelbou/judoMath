@@ -38,6 +38,7 @@ public class challengesGen {
             int nbrTemp = 0;
             int limB = 0;
             int limH = 0;
+            int result = 0;
             
             switch (skill){
                 case "Additionner un entier à un autre pour obtenir 10" :
@@ -105,7 +106,7 @@ public class challengesGen {
                 break;
                 case "Additionner deux entiers simples" :
                     addition(10);              
-                    int result =  op1 + op2;
+                    result =  op1 + op2;
                     answer = result - op1;
                     
                     exercise.setContent("Combien faut-il ajouter à " + op1 + " pour obtenir " + result + " ?");
@@ -113,7 +114,7 @@ public class challengesGen {
                 break;
                 case "Additionner un entier à un entier particulier" :
                     addition(100);              
-                    int result =  op1 + op2;
+                    result =  op1 + op2;
                     answer = result - op1;
                     
                     exercise.setContent("Combien faut-il ajouter à " + op1 + " pour obtenir " + result + " ?");
@@ -121,7 +122,7 @@ public class challengesGen {
                 break;
                 case "Additionner deux entiers" :
                     addition(1000);                    
-                    int result =  op1 + op2;
+                    result =  op1 + op2;
                     answer = result - op1;
                     
                     exercise.setContent("Combien faut-il ajouter à " + op1 + " pour obtenir " + result + " ?");
