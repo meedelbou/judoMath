@@ -360,16 +360,7 @@
                                         <div class="card-body text-center   text-primary" style="min-height:60%">
                                             <div style="min-height:65%"> 
                                                 <h3 class="my-2"> <%= skill2.getName()%></h3>
-
-                                            </div>
-                                            <div style="max-height:35%" >
-                                                <div >  <%= skill2.getProgress()%>%
-                                                    <div class="progress" >
-                                                        <div class="progress-bar bg-green" style=" height:6px; border-radius:4px; width: <%= skill2.getProgress()%>%" role="progressbar"></div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                         <div class="card-footer" style="text-align:center" style="max-height:40%">
                                             <a id="challenges<%=k%>" class="btn my-2 btn-success btn-lg px-4" href="#">Commencer</a>
