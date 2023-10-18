@@ -192,26 +192,29 @@ public class challengesGen {
                     int signe = random.nextInt(2);
                     switch(alea){
                         case 0: // 10
-                            if (signe = 0){
+                            if (signe == 0){
                                 option = answer + 10;
                             } else {
                                 option = answer - 10;
                             }                           
                             break;
                         case 1: // 100
-                             if (signe = 0){
+                             if (signe == 0){
                                 option = answer + 100;
                             } else {
                                 option = answer - 100;
                             }      
                             break;
                         case 2: // 110
-                             if (signe = 0){
+                             if (signe == 0){
                                 option = answer + 110;
                             } else {
                                 option = answer - 110;
                             }      
                             break;                            
+                    }
+                    if (random.nextInt(3) == 2) {
+                        option = option + (random.nextInt(10)-9);
                     }
                 break;
                 default:
