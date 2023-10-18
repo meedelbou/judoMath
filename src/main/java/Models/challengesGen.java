@@ -36,6 +36,8 @@ public class challengesGen {
             int op2 = 0;
             int nbrAlea = 0;
             int nbrTemp = 0;
+            int limB = 0;
+            int limH = 0;
             
             switch (skill){
                 case "Additionner un entier à un autre pour obtenir 10" :
@@ -58,8 +60,8 @@ public class challengesGen {
                 break;
                  case "Comparer deux entiers" :  
                     op1 = random.nextInt(100000000 - 100000) + 100000;
-                    int limB = (int) (op1 - 0.00001 * op1);
-                    int limH = (int) (op1 + 0.00001 * op1);
+                    limB = (int) (op1 - 0.00001 * op1);
+                    limH = (int) (op1 + 0.00001 * op1);
                     switch (random.nextInt(2)) {
                         case 0:
                             op2 = random.nextInt(limH - limB) + limB;
@@ -79,10 +81,10 @@ public class challengesGen {
                     }
                     typeExo = 3;
                 break;
-                    case "Encadrer un entier entre deux entiers" :  
+                case "Encadrer un entier entre deux entiers" :  
                     op1 = random.nextInt(100000 - 10000) + 10000;
-                    int limB = (int) (op1 - 0.00001 * op1);
-                    int limH = (int) (op1 + 0.00001 * op1);
+                    limB = (int) (op1 - 0.00001 * op1);
+                    limH = (int) (op1 + 0.00001 * op1);
                     switch (random.nextInt(2)) {
                         case 0:
                             op2 = random.nextInt(limH - limB) + limB;
@@ -147,13 +149,13 @@ public class challengesGen {
                 break;
                     case 3: // comparaison entier   
                     if (intTransit < answer){
-                        option = intTransit - (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1));
+                        option = intTransit - (int) (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
                     } else {
-                        option = intTransit + (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1));
+                        option = intTransit + (int) ((random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
                     }
                 break;
                     case 4: // comparaison entier   
-                    option = intTransit - (random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1));
+                    option = intTransit - (int) ((random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
                 break;
                 default:
                     option = answer + random.nextInt(1) + 666;
