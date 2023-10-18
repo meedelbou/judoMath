@@ -103,6 +103,33 @@ public class challengesGen {
                     exercise.setContent("Quelle valeur est comprise entre " + op1 + " et " + op2 + " ?");
                     typeExo = 4;
                 break;
+                case "Additionner deux entiers simples" :
+                   int range = 100;
+                    int op1Last = random.nextInt(range)+1;
+                    int op2Last = range - op1Last;
+                    int op1Mid = random.nextInt(range)+1;
+                    int op2Mid = range - op1Mid - 1;
+                    int op1First = random.nextInt(range)+1;
+                    int op2First = range - op1First - 1;
+
+                    String strNombre1 = String.valueOf(op1Last);
+                    String strNombre2 = String.valueOf(op2Last);
+                    String strNombre3 = String.valueOf(op1Mid);
+                    String strNombre4 = String.valueOf(op2Mid);
+                    String strNombre5 = String.valueOf(op1First);
+                    String strNombre6 = String.valueOf(op2First);
+
+                    String op1String = strNombre1 + strNombre3 + strNombre5;
+                    String op2String = strNombre2 + strNombre4 + strNombre6;
+
+                    op1 = Integer.parseInt(op1String);
+                    op2 = Integer.parseInt(op2String);
+                    int result =  op1 + op2;
+                    answer = result - op1;
+                    
+                    exercise.setContent("Combien faut-il ajouter à " + op1 + " pour obtenir " + result + " ?");
+                    typeExo = 0;
+                break;
                 case "Connaitre les critères de division par 2" :
                     do {
                         answer = random.nextInt(80) + 20;
@@ -159,6 +186,33 @@ public class challengesGen {
                 case 4: // comparaison entier   
                     int transInt = (int) ((random.nextInt(10)+1)*Math.pow((random.nextInt(10)+1), (random.nextInt(3) + 1)));
                     option = intTransit - transInt;
+                break;
+                 case 5: // addition simple   
+                    int alea = random.nextInt(3);
+                    int signe = random.nextInt(2);
+                    switch(alea){
+                        case 0: // 10
+                            if (signe = 0){
+                                option = answer + 10;
+                            } else {
+                                option = answer - 10;
+                            }                           
+                            break;
+                        case 1: // 100
+                             if (signe = 0){
+                                option = answer + 100;
+                            } else {
+                                option = answer - 100;
+                            }      
+                            break;
+                        case 2: // 110
+                             if (signe = 0){
+                                option = answer + 110;
+                            } else {
+                                option = answer - 110;
+                            }      
+                            break;                            
+                    }
                 break;
                 default:
                     option = answer + random.nextInt(1) + 666;
