@@ -171,7 +171,7 @@
                                                                 </div>
                                                                 
                                                                 <div class="form-group mt-3" id="teacherInput" style="display: none;">
-                                                                    <input name="emailEnseignant" class="form-control" placeholder="Identifiant de votre enseignant" type="email">
+                                                                    <input name="emailEnseignant" class="form-control" placeholder="Identifiant de votre enseignant" type="text">
                                                                 </div>
                                                                 
                                                                 </br>
