@@ -312,13 +312,17 @@
 
                                 <h3  style="display:inline" class="badge badge-sm badge-secondary"><%= user.getExperiencePoints()%> XP</h3>
                             </div>
+
                             <div class="badge badge-rounded badge-outline-light" style="padding:1.5% ; background-color: white">
-
-                                <h3 style="display:inline; position: relative; top:3px" >Ceinture  </h3>
-
-                                <h3  style="display:inline" class="badge badge-sm badge-secondary">Aucune</h3>
+                                <h3 style="display:inline; position: relative; top:3px" >Ceinture  </h3>                         
+                                
+                                <img
+                                  id = "img_ceinture"
+                                  src=""
+                                  height="38px"
+                                />
+                                
                             </div>
-
                         </div>
                     </div>
                     <br>
@@ -1814,6 +1818,48 @@
 
     </script>
 
+<script>
+    
+    // Récupérez les données de compétence de l'utilisateur depuis votre TripleStore
+    var userCompetences = {
+      "Additionner un entier à un autre pour obtenir 10": {
+        progress: 100,
+      },
+      "Additionner un entier à un autre pour obtenir 100": {
+        progress: 100,
+      },
+      // Ajoutez d'autres compétences ici...
+    };
+    
+    var imageElement = document.getElementById('img_ceinture');
+    const cheminCeinture = "images/ceintures/ceinture_";
+    var couleurCeinture = "blanche";
+    const svg = ".svg";
+
+    function updateImageBasedOnCompetences() {
+        
+      // Vérifiez la compétence "Additionner un entier à un autre pour obtenir 100"
+      if (userCompetences["Additionner un entier à un autre pour obtenir 100"].progress === 100) {
+        // L'utilisateur a validé cette compétence, changez l'image en conséquence
+        couleurCeinture = "jaune";
+        
+      } else if (userCompetences["Additionner un entier à un autre pour obtenir 10"].progress === 100) {
+        // L'utilisateur a validé la compétence "Additionner un entier à un autre pour obtenir 10"
+        couleurCeinture = "blanche";
+        
+      } else {
+        // Si aucune compétence n'est validée, utilisez l'image par défaut
+        couleurCeinture = "blanche";
+      }
+      
+      imageElement.src = cheminCeinture + couleurCeinture + svg;
+    }
+    
+    // Appelez la fonction pour mettre à jour l'image au chargement de la page ou lorsque nécessaire
+    updateImageBasedOnCompetences();
+    
+    
+</script>
 
 
     </body>
