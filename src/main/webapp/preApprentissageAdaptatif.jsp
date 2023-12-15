@@ -555,7 +555,7 @@
                                                     <div class="col-lg-3 col-md-6 mb-4">
                                                         <div class="card">
                                                             <div class="card-body text-center   text-primary" style="min-height:60%;position:relative">
-                                                                <div style="min-height:65%;margin-bottom: 20%;"> 
+                                                                <div class="validated-skill" style="min-height:65%;margin-bottom: 20%;"> 
                                                                     <h3 class="my-2"> <%= skill2.getName()%></h3>
 
                                                                 </div>
@@ -1819,46 +1819,36 @@
     </script>
 
 <script>
-    
-    // Récupérez les données de compétence de l'utilisateur depuis votre TripleStore
-    var userCompetences = {
-      "Additionner un entier à un autre pour obtenir 10": {
-        progress: 100,
-      },
-      "Additionner un entier à un autre pour obtenir 100": {
-        progress: 100,
-      },
-      // Ajoutez d'autres compétences ici...
-    };
-    
-    var imageElement = document.getElementById('img_ceinture');
-    const cheminCeinture = "images/ceintures/ceinture_";
-    var couleurCeinture = "blanche";
-    const svg = ".svg";
 
-    function updateImageBasedOnCompetences() {
-        
-      // Vérifiez la compétence "Additionner un entier à un autre pour obtenir 100"
-      if (userCompetences["Additionner un entier à un autre pour obtenir 100"].progress === 100) {
-        // L'utilisateur a validé cette compétence, changez l'image en conséquence
-        couleurCeinture = "jaune";
-        
-      } else if (userCompetences["Additionner un entier à un autre pour obtenir 10"].progress === 100) {
-        // L'utilisateur a validé la compétence "Additionner un entier à un autre pour obtenir 10"
-        couleurCeinture = "blanche";
-        
-      } else {
-        // Si aucune compétence n'est validée, utilisez l'image par défaut
-        couleurCeinture = "blanche";
-      }
-      
-      imageElement.src = cheminCeinture + couleurCeinture + svg;
+function updateBeltColor() {
+    
+    var validatedSkillsElements = document.querySelectorAll('.validated-skill');
+    var validatedSkills = Array.from(validatedSkillsElements).map(el => el.textContent.trim());
+    var beltColor = "blanche"; // Couleur par défaut
+
+    // Définissez les compétences requises pour chaque ceinture
+    var requirementsForYellowBelt = ["Additionner un entier à un autre pour obtenir 100"];
+    var requirementsForOrangeBelt = ["Compétence 3", "Compétence 4", "Compétence 5"];
+
+    // Vérifiez si toutes les compétences requises pour la ceinture jaune sont validées
+    var hasAllSkillsForYellow = requirementsForYellowBelt.every(skill => validatedSkills.includes(skill));
+    var hasAllSkillsForOrange = requirementsForOrangeBelt.every(skill => validatedSkills.includes(skill));
+
+    // Attribuez la couleur de la ceinture en fonction des compétences validées
+    if (hasAllSkillsForOrange) {
+        beltColor = "orange";
+    } else if (hasAllSkillsForYellow) {
+        beltColor = "jaune";
     }
-    
-    // Appelez la fonction pour mettre à jour l'image au chargement de la page ou lorsque nécessaire
-    updateImageBasedOnCompetences();
-    
-    
+
+    // Mettez à jour l'image de la ceinture
+    var beltImage = document.getElementById('img_ceinture');
+    beltImage.src = "images/ceintures/ceinture_" + beltColor + ".svg";
+}
+
+// Appel de la fonction au chargement de la page ou lorsqu'il est nécessaire de mettre à jour la ceinture
+updateBeltColor();
+
 </script>
 
 
