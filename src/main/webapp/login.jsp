@@ -163,7 +163,7 @@
                                                                     <input name="prenom" required class="form-control" placeholder="Prénom" type="text">
                                                                 </div>
                                                                 <div class="form-group mt-3">
-                                                                    <input name="email" required class="form-control" placeholder=" Identifiant'" type="text">
+                                                                    <input name="email" required class="form-control" placeholder="Identifiant" type="text">
                                                                 </div>
 
                                                                 <div class="form-group mt-3">
