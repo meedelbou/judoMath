@@ -1840,7 +1840,7 @@ function updateBeltColor() {
     } else if (hasAllSkillsForYellow) {
         beltColor = "jaune";
     } else {
-        belfColor = "blanche";
+        beltColor = "blanche";
     }
 
     // Mettez à jour l'image de la ceinture
