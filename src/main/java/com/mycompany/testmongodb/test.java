@@ -177,7 +177,7 @@ public class test extends HttpServlet {
                     xpPoints = 300;
                     prog = 60;
                 }
-                String messageDeReussite = "Bravo vous avez reussi le test et validé palier : " + palier + " du competence " + competenceAValider;
+                String messageDeReussite = "Bravo ! Tu as réussi le test et validé le palier " + palier + " de la compétence : " + competenceAValider;
                 palier++;
                 student.get(competenceAValider, Document.class).append("palier", palier);
                 student.get(competenceAValider, Document.class).append("essais", 0);
@@ -209,7 +209,7 @@ public class test extends HttpServlet {
                 xpPoints = 500;
                 prog = 100;
 
-                String messageDeReussite = "Bravo vous avez reussi le test et validé la competence";
+                String messageDeReussite = "Bravo ! Tu as réussi le test et validé la competence";
                 session.setAttribute("passed", messageDeReussite);
 
             }
@@ -224,7 +224,7 @@ public class test extends HttpServlet {
 
         } else {
             Integer essais = student.get(competenceAValider, Document.class).getInteger("essais");
-            String messageDechec = "Veuillez s'entrainer à nouveau";
+            String messageDechec = "Dommage, entraîne-toi à nouveau";
             essais = 0;
             student.get(competenceAValider, Document.class).append("essais", 0);
             collection.replaceOne(studentQuery, student);
