@@ -1839,6 +1839,8 @@ function updateBeltColor() {
         beltColor = "orange";
     } else if (hasAllSkillsForYellow) {
         beltColor = "jaune";
+    } else {
+        belfColor = "blanche";
     }
 
     // Mettez à jour l'image de la ceinture
