@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var imgFileName;
 
     switch (userText) {
-        case "Texte 1":
-            imgFileName = "photo1.jpg";
+        case "clemeleve":
+            imgFileName = "xana.jpg";
             break;
         case "Texte 2":
             imgFileName = "photo2.jpg";
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             imgFileName = "photo5.jpg";
             break;
         default:
-            imgFileName = "default.jpg"; // Nom de fichier par défaut
+            imgFileName = "pikachu.jpg"; // Nom de fichier par défaut
             break;
     }
 
