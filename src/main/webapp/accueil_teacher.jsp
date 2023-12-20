@@ -103,12 +103,12 @@
 
                                                     %>
 
-                                                    <img src="images/tab/1.jpg>" alt="">
+                                                    <img src="images/tab/1.jpg>" alt="" id="img_user">
                                                 </div>
                                                 
                                                <div class="header-info">
                                                     <h6>${user.prenom} ${user.nom}</h6>
-                                                    <p>${user.email}</p>
+                                                    <p id="userLog">${user.email}</p>
                                                 </div>                                          
 
                                             </div>
@@ -363,6 +363,9 @@
         <!--**********************************
             Scripts
         ***********************************-->
+
+        <script src="./js/photo_user.js"></script>
+
         <!-- Required vendors -->
         <script src="./vendor/global/global.min.js"></script>
         <script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
