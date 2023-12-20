@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var userLog = document.getElementById('userLog');
     var userText = userLog.textContent.trim();
 
-    var basePath = "./images/";  // Préfixe pour le chemin des images
+    var basePath = "./images/userImgs/";  // Préfixe pour le chemin des images
     var imgFileName;
 
     switch (userText) {
