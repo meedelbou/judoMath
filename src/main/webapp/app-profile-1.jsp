@@ -328,7 +328,7 @@
 
                                                     <h3 class="mb-1">
 
-                                                        <img class="mb-1" src="images/wb.png" width="60" height="25">
+                                                        <img id="img_ceinture" src="" width="60" height="25">
                                                     </h3>
                                                     <span><strong>Ceinture</strong></span>
                                                 </div>
@@ -446,7 +446,7 @@
                                                 <% for (skill comp
                                                             : student.getSkillsInProgress()) {
                                                         if (comp.getProgress().equals(100)) {%>
-                                                <a href="javascript:void(0);" class="btn btn-success light btn-xs mb-1" style="margin:0.50%"><%= comp.getName()%></a>
+                                                <a href="javascript:void(0);" class="btn btn-success light btn-xs mb-1 validated-skill" style="margin:0.50%"><%= comp.getName()%></a>
                                                 <%}
                                                     }%> <br><br><br>
                                                 <h4 class="text-primary mb-2">Compétences en cours</h4> <br>
@@ -2553,7 +2553,61 @@
 
 
 
+<script>
 
+function updateBeltColor() {
+    
+    var validatedSkillsElements = document.querySelectorAll('.validated-skill');
+    var validatedSkills = Array.from(validatedSkillsElements).map(el => el.textContent.trim());
+    var beltColor = "blanche"; // Couleur par défaut
+
+    console.log(validatedSkills);
+    
+    // Définissez les compétences requises pour chaque ceinture
+    var requirementsForWhiteBelt = ["Additionner un entier à un autre pour obtenir 10", "Connaitre les critères de division par 2", "Connaitre la table des 2", "Multiplier un entier par 10", "Comparer deux entiers", "Décomposer un entier"];
+    var requirementsForYellowBelt = ["Connaitre les critères de division par 3", "Connaitre la table des 3", "Multiplier un entier par 100 et par 1000", "Encadrer un entier entre deux entiers"];
+    var requirementsForOrangeBelt = ["Connaitre les critères de division par 5", "Connaitre la table des 4", "Connaitre la table des 5", "Additionner un entier à un autre pour obtenir 100", "Additionner deux entiers simples"];
+    var requirementsForGreenBelt = ["Connaitre les critères de division par 9", "Connaitre la table des 6", "Connaitre la table des 9", "Diviser un entier par 10", "Soustraire deux entiers simple"];
+    var requirementsForBlueBelt = ["Connaitre la table des 7", "Multiplier un entier par 20", "Diviser un entier par 100 et par 1000", "Additionner un entier à un entier particulier"];
+    var requirementsForBrownBelt = ["Connaitre la table des 8", "Connaitre les critères de division par 2", "Additionner deux entiers", "Soustraire un entier à un entier particulier"];
+    var requirementsForBlackBelt = ["Multiplier deux entiers", "Diviser deux entiers", "Soustraire deux entiers", "Comparer deux grands entiers", "Maitriser les priorités opératoires"];
+
+
+    // Vérifiez si toutes les compétences requises pour chaque ceinture sont validées
+    var hasAllSkillsForWhite = requirementsForWhiteBelt.every(skill => validatedSkills.includes(skill));
+    var hasAllSkillsForYellow = requirementsForYellowBelt.every(skill => validatedSkills.includes(skill));
+    var hasAllSkillsForOrange = requirementsForOrangeBelt.every(skill => validatedSkills.includes(skill));
+    var hasAllSkillsForGreen = requirementsForGreenBelt.every(skill => validatedSkills.includes(skill));
+    var hasAllSkillsForBlue = requirementsForBlueBelt.every(skill => validatedSkills.includes(skill));
+    var hasAllSkillsForBrown = requirementsForBrownBelt.every(skill => validatedSkills.includes(skill));
+    var hasAllSkillsForBlack = requirementsForBlackBelt.every(skill => validatedSkills.includes(skill));
+
+    // Attribuez la couleur de la ceinture en fonction des compétences validées
+    if (hasAllSkillsForBlack) {
+        beltColor = "noire";
+    } else if (hasAllSkillsForBrown) {
+        beltColor = "marron";
+    } else if (hasAllSkillsForBlue) {
+        beltColor = "bleue";
+    } else if (hasAllSkillsForGreen) {
+        beltColor = "verte";
+    } else if (hasAllSkillsForOrange) {
+        beltColor = "orange";
+    } else if (hasAllSkillsForYellow) {
+        beltColor = "jaune";
+    } else {
+        beltColor = "blanche";
+    }
+
+    // Mettez à jour l'image de la ceinture
+    var beltImage = document.getElementById('img_ceinture');
+    beltImage.src = "images/ceintures/ceinture_" + beltColor + ".svg";
+}
+
+// Appel de la fonction au chargement de la page ou lorsqu'il est nécessaire de mettre à jour la ceinture
+updateBeltColor();
+
+</script>
 
 
 
