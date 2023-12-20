@@ -118,7 +118,7 @@
 
                                                     %>
 
-                                                    <img src="data:image/png;base64,<%=base64Im%>" alt="">
+                                                    <img src="data:image/png;base64,<%=base64Im%>" alt="" id="img_user">
                                                 </div>
                                                 <div class="header-info">
                                                     <h6>${user.prenom} ${user.nom}</h6>
