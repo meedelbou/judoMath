@@ -538,7 +538,7 @@
 
 
                                                                 <div class="sweetalert">
-                                                                    <button class="btn btn-success btn" type="button"    data-bs-toggle="modal" data-bs-target="#exampleModalpopover" id="unlock" onclick="recommendCompetences();">Dévérouiller les compétences !</button>
+                                                                    <button class="btn btn-success btn" type="button"    data-bs-toggle="modal" data-bs-target="#exampleModalpopover" id="unlock" onclick="recommendCompetences();">Déverouiller les compétences !</button>
                                                                 </div>
                                                                 <div class="modal fade" id="exampleModalpopover">
                                                                     <div class="modal-dialog modal-dialog-centered" role="document">
