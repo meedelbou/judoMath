@@ -28,10 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var imgSrc = basePath + imgFileName; // Construire le chemin complet de l'image
 
-    var imageElement = document.getElementById('img_user');
-    if (imageElement) {
-        imageElement.src = imgSrc;
-    } else {
-        console.error("L'élément d'image avec l'ID 'img_user' n'a pas été trouvé.");
+    var imageElements = document.getElementsByClassName('img_user');
+    
+    for (var i = 0; i < imageElements.length; i++) {
+        imageElements[i].src = imgSrc;
     }
 });
