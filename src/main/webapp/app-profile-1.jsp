@@ -1335,22 +1335,22 @@
                             init: function () {
                                 setChartWidth();
                                 donutChart();
-                                lineChart();
-                                lineChart2();
+                                //lineChart();
+                                //lineChart2();
                                 barChart();
-                                barStalkChart();
-                                areaChart();
+                                //barStalkChart();
+                                //areaChart();
                                 areaChart2();
                             },
                             resize: function () {
                                 screenWidth = $(window).width();
                                 setChartWidth();
                                 donutChart();
-                                lineChart();
-                                lineChart2();
+                                //lineChart();
+                                //lineChart2();
                                 barChart();
-                                barStalkChart();
-                                areaChart();
+                                //barStalkChart();
+                                //areaChart();
                                 areaChart2();
                             }
                         }
@@ -2104,7 +2104,7 @@
                                     type: 'radar',
                                     data: {
                                         defaultFontFamily: 'Poppins',
-                                        labels: ["Entiers", "D�cimaux", "Fractions", "Conversion", "Proportionnalit�"],
+                                        labels: ["Entiers", "Décimaux", "Fractions", "Conversion", "Proportionnalité"],
                                         datasets: [
                                             {
                                                 label: "",
