@@ -90,7 +90,7 @@
                             <div class="header-left"></div>
                             <ul class="navbar-nav header-right">
     
-                                <li class="nav-item align-items-center header-border"><a href="logout" class="btn btn-primary btn-sm">Logout</a></li>	
+                                <li class="nav-item align-items-center header-border"><a href="logout" class="btn btn-primary btn-sm">Quitter</a></li>	
                                 <li class="nav-item ps-3">
                                     <div class="dropdown header-profile2">
                                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
