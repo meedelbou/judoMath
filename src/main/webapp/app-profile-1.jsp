@@ -150,8 +150,8 @@
                                                     <img src="images/userImgs/prof.jpg" alt="" class="">
                                                 </div>
                                                 <div class="header-info">
-                                                    <h6></h6>
-                                                    <p></p>
+                                                    <h6>${user.prenom} ${user.nom}</h6>
+                                                    <p>${user.email}</p>
                                                 </div>
 
                                             </div>
@@ -303,7 +303,7 @@
                                                 </div>
                                                 <h3 class="mt-4 mb-1">${student.nom} ${student.prenom}</h3>
 
-                                                <span class="badge light border-0 status-span" data-email="<%= student.getEmail()%>"></span>
+                                                <span class="badge light border-0 status-span userLog" data-email="<%= student.getEmail()%>"><%= student.getEmail()%></span>
 
                                             </div>
                                         </div>
