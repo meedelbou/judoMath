@@ -103,12 +103,12 @@
 
                                                     %>
 
-                                                    <img src="images/tab/1.jpg>" alt="" id="img_user">
+                                                    <img src="images/tab/1.jpg>" alt="" class="img_user">
                                                 </div>
                                                 
                                                <div class="header-info">
                                                     <h6>${user.prenom} ${user.nom}</h6>
-                                                    <p id="userLog">${user.email}</p>
+                                                    <p class="userLog">${user.email}</p>
                                                 </div>                                          
 
                                             </div>
@@ -281,9 +281,9 @@
                                                     <td>
                                                         <div class="products">
                                                             <% if (!base64Image.equals("")) {%>
-                                                            <img src="data:image/jpeg;base64,<%=base64Image%>" class="avatar avatar-md" alt="">
+                                                            <img src="data:image/jpeg;base64,<%=base64Image%>" class="avatar avatar-md img_user" alt="">
                                                             <% } else {%>
-                                                            <img src="images/contacts/pic1.jpg" class="avatar avatar-md" alt="">
+                                                            <img src="images/contacts/pic1.jpg" class="avatar avatar-md img_user" alt="">
 
 
                                                             <% }%>
@@ -293,7 +293,7 @@
                                                             </div>	
                                                         </div>
                                                     </td>
-                                                    <td ><span><%=etudiant.getEmail()%> </span></td>
+                                                    <td ><span class="userLog"><%=etudiant.getEmail()%> </span></td>
                                                     <td style="text-align:center"><%=etudiant.getExperiencePoints()%></strong></td>
                                                     <td style="text-align:center">
                                                         <span><%= etudiant.getNumberOfVisits()%></span>
