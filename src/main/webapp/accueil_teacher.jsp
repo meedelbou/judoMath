@@ -103,7 +103,7 @@
 
                                                     %>
 
-                                                    <img src="images/tab/1.jpg>" alt="" class="img_user">
+                                                    <img src="images/tab/1.jpg>" alt="" class="userImg">
                                                 </div>
                                                 
                                                <div class="header-info">
@@ -283,7 +283,7 @@
                                                             <% if (!base64Image.equals("")) {%>
                                                             <img src="data:image/jpeg;base64,<%=base64Image%>" class="avatar avatar-md img_user" alt="">
                                                             <% } else {%>
-                                                            <img src="images/contacts/pic1.jpg" class="avatar avatar-md img_user" alt="">
+                                                            <img src="images/contacts/pic1.jpg" class="avatar avatar-md userImg" alt="">
 
 
                                                             <% }%>
