@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         var imgSrc = basePath + imgFileName;
-        var imageElements = document.getElementsByClassName('img_user');
+        var imageElements = document.getElementsByClassName('userImg');
         for (var j = 0; j < imageElements.length; j++) {
             imageElements[j].src = imgSrc;
         }
