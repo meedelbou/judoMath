@@ -118,11 +118,11 @@
 
                                                     %>
 
-                                                    <img src="data:image/png;base64,<%=base64Im%>" alt="" id="img_user">
+                                                    <img src="data:image/png;base64,<%=base64Im%>" alt="" class="userImg">
                                                 </div>
                                                 <div class="header-info">
                                                     <h6>${user.prenom} ${user.nom}</h6>
-                                                    <p id="userLog">${user.email}</p>
+                                                    <p class="userLog">${user.email}</p>
                                                 </div>
 
                                             </div>
@@ -131,7 +131,7 @@
                                             <div class="card border-0 mb-0">
                                                 <div class="card-header py-2">
                                                     <div class="products">
-                                                        <img src="data:image/png;base64,<%=base64Im%>" class="avatar avatar-md" alt="" id="img_user">
+                                                        <img src="data:image/png;base64,<%=base64Im%>" class="avatar avatar-md userImg" alt="">
                                                         <div>
                                                             <h6>${user.prenom} ${user.nom}</h6>
                                                             <span>${user.role}</span>	
@@ -281,7 +281,7 @@
                                             if (!base64Image.equals("")) {%>
                                         <img src="data:image/jpeg;base64,<%=base64Image%>" style="display:inline ; height:15%; width: 15%;  " class="avatar avatar-md"  alt="" >
                                         <% } else {%>
-                                        <img src="images/contacts/pic1.jpg" class="avatar avatar-md" alt="" id="img_user" style="display:inline; height:15%; width: 15%;">
+                                        <img src="images/contacts/pic1.jpg" class="avatar avatar-md userImg" alt="" style="display:inline; height:15%; width: 15%;">
 
 
                                         <% }%>
