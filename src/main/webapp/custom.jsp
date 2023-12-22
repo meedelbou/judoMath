@@ -1,1 +1,0 @@
-hello <a href="logout" >logout</a>
