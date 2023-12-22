@@ -718,7 +718,7 @@
                     var dlabChartlist = function () {
                         return {
                             init: function () {
-                                console.log("initialized");
+                                // console.log("initialized");
                                 datasets.forEach(function (dataset) {
                                     if (dataset.chart) {
                                         dataset.chart.update({
@@ -737,9 +737,9 @@
                             },
                             load: function () {
                                 datasets.forEach(function (dataset) {
-                                    console.log("loaded");
+                                    // console.log("loaded");
                                     if ($(dataset.divId).is(':visible')) {
-                                        console.log("clickeekfhdjh");
+                                        // console.log("echec");
                                         if (dataset.chart) {
                                             dataset.chart.update({
                                                 labels: ['Palier 1', 'Palier 2', 'Palier 3'],
@@ -757,7 +757,7 @@
                                 });
                             },
                             resize: function () {
-                                console.log("resized");
+                                // console.log("resized");
                                 datasets.forEach(function (dataset) {
                                     if (dataset.chart) {
                                         dataset.chart.update({
@@ -836,19 +836,19 @@
 
 
                     window.addEventListener('resize', function () {
-                        console.log("resized window eventListner");
+                        // console.log("resized window eventListner");
                         setTimeout(function () {
                             dlabChartlist.resize();
                         }, 10);
                     });
                     jQuery(window).on('load', function () {
-                        console.log("loadedWindow");
+                        // console.log("loadedWindow");
                         setTimeout(function () {
                             dlabChartlist.resize();
                         }, 10);
                     });
                     jQuery(window).on('resize', function () {
-                        console.log("resized window");
+                        // console.log("resized window");
                         setTimeout(function () {
                             dlabChartlist.resize();
                         }, 10);
@@ -1383,8 +1383,8 @@
                 <% }%>
 
                 // Display the final list in the console
-                console.log(names);
-                console.log(timeSpent);
+                // console.log(names);
+                // console.log(timeSpent);
             </script>
 
             <script>
@@ -2564,7 +2564,7 @@ function updateBeltColor() {
     var validatedSkills = Array.from(validatedSkillsElements).map(el => el.textContent.trim());
     var beltColor = "blanche"; // Couleur par défaut
 
-    console.log(validatedSkills);
+    // console.log(validatedSkills);
     
     // Définissez les compétences requises pour chaque ceinture
     var requirementsForWhiteBelt = ["Additionner un entier à un autre pour obtenir 10", "Connaitre les critères de division par 2", "Connaitre la table des 2", "Multiplier un entier par 10", "Comparer deux entiers", "Décomposer un entier"];
