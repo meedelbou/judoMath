@@ -103,12 +103,12 @@
 
                                                     %>
 
-                                                    <img src="images/tab/1.jpg>" alt="" class="userImg">
+                                                    <img src="images/userImgs/prof.jpg>" alt="" class="">
                                                 </div>
                                                 
                                                <div class="header-info">
                                                     <h6>${user.prenom} ${user.nom}</h6>
-                                                    <p class="userLog">${user.email}</p>
+                                                    <p>${user.email}</p>
                                                 </div>                                          
 
                                             </div>
@@ -281,9 +281,9 @@
                                                     <td>
                                                         <div class="products">
                                                             <% if (!base64Image.equals("")) {%>
-                                                            <img src="data:image/jpeg;base64,<%=base64Image%>" class="avatar avatar-md img_user" alt="">
+                                                            <img src="data:image/jpeg;base64,<%=base64Image%>" class="avatar avatar-md userImg" alt="">
                                                             <% } else {%>
-                                                            <img src="images/contacts/pic1.jpg" class="avatar avatar-md userImg" alt="">
+                                                            <img src="" class="avatar avatar-md userImg" alt="">
 
 
                                                             <% }%>
