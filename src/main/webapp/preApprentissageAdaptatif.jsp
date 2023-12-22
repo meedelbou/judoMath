@@ -131,7 +131,7 @@
                                             <div class="card border-0 mb-0">
                                                 <div class="card-header py-2">
                                                     <div class="products">
-                                                        <img src="data:image/png;base64,<%=base64Im%>" class="avatar avatar-md" alt="">
+                                                        <img src="data:image/png;base64,<%=base64Im%>" class="avatar avatar-md" alt="" id="img_user">
                                                         <div>
                                                             <h6>${user.prenom} ${user.nom}</h6>
                                                             <span>${user.role}</span>	
@@ -281,7 +281,7 @@
                                             if (!base64Image.equals("")) {%>
                                         <img src="data:image/jpeg;base64,<%=base64Image%>" style="display:inline ; height:15%; width: 15%;  " class="avatar avatar-md"  alt="" >
                                         <% } else {%>
-                                        <img src="images/contacts/pic1.jpg" class="avatar avatar-md" alt="" style="display:inline; height:15%; width: 15%;">
+                                        <img src="images/contacts/pic1.jpg" class="avatar avatar-md" alt="" id="img_user" style="display:inline; height:15%; width: 15%;">
 
 
                                         <% }%>
@@ -567,7 +567,9 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
+                                                            <div class="card-footer" style="text-align:center" style="max-height:40%">
+                                                                <a id="continueLearningLink3<%=k%>" class="btn my-2 btn-success btn-lg px-4" href="#">S'entraîner à nouveau</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <%
