@@ -1,4 +1,4 @@
-<%-- 
+m<%-- 
     Document   : login
     Created on : 4 juin 2023, 21:29:18
     Author     : medel
@@ -137,7 +137,7 @@
                                                                         <div class="p-5">
 
                                                                             <div class="author-media">
-                                                                                <img src="images/tab/1.jpg" id="blah" alt="">
+                                                                                <img src="images/userImgs/pikachu.jpg" id="blah" alt="">
                                                                                 <div class="upload-link" title="" data-toggle="tooltip" data-placement="right" data-original-title="update">
                                                                                     <input type="file" class="update-flie" name="profilImage" onchange="readURL(this);"  accept="images/*">
                                                                                     <i class="fa fa-camera"></i>
