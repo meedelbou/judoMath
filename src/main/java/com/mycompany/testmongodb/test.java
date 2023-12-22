@@ -209,7 +209,7 @@ public class test extends HttpServlet {
                 xpPoints = 500;
                 prog = 100;
 
-                String messageDeReussite = "Bravo ! Tu as réussi le test et validé la competence";
+                String messageDeReussite = "Bravo ! Tu as réussi le test et validé la compétence !! :)";
                 session.setAttribute("passed", messageDeReussite);
 
             }
