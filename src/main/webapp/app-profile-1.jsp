@@ -147,7 +147,7 @@
                                             <div class="header-info2 d-flex align-items-center">
                                                 <div class="header-media">
 
-                                                    <img src="images/tab/1.jpg" alt="">
+                                                    <img src="images/tab/1.jpg" alt="" class="userImg">
                                                 </div>
                                                 <div class="header-info">
                                                     <h6></h6>
@@ -295,7 +295,7 @@
                                                                 "")) {%>
                                                     <img src="data:image/jpeg;base64,<%=base64Image%>"  width="100" class="img-fluid rounded-circle" alt="">
                                                     <% } else {%>
-                                                    <img src="images/profile/profile.png" width="100" class="img-fluid rounded-circle" alt="">
+                                                    <img src="images/profile/profile.png" width="100" class="img-fluid rounded-circle userImg" alt="">
 
 
                                                     <% }%>
@@ -303,7 +303,7 @@
                                                 </div>
                                                 <h3 class="mt-4 mb-1">${student.nom} ${student.prenom}</h3>
 
-                                                <span class="badge light border-0 status-span" data-email="<%= student.getEmail()%>"></span>
+                                                <span class="badge light border-0 status-span userLog" data-email="<%= student.getEmail()%>"></span>
 
                                             </div>
                                         </div>
