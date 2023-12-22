@@ -140,14 +140,14 @@
                             <div class="header-left"></div>
                             <ul class="navbar-nav header-right">
 
-                                <li class="nav-item align-items-center header-border"><a href="logout" class="btn btn-primary btn-sm">Logout</a></li>	
+                                <li class="nav-item align-items-center header-border"><a href="logout" class="btn btn-primary btn-sm">Quitter</a></li>	
                                 <li class="nav-item ps-3">
                                     <div class="dropdown header-profile2">
                                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <div class="header-info2 d-flex align-items-center">
                                                 <div class="header-media">
 
-                                                    <img src="images/tab/1.jpg" alt="" class="userImg">
+                                                    <img src="images/userImgs/prof.jpg" alt="" class="">
                                                 </div>
                                                 <div class="header-info">
                                                     <h6></h6>
@@ -295,7 +295,7 @@
                                                                 "")) {%>
                                                     <img src="data:image/jpeg;base64,<%=base64Image%>"  width="100" class="img-fluid rounded-circle" alt="">
                                                     <% } else {%>
-                                                    <img src="images/profile/profile.png" width="100" class="img-fluid rounded-circle userImg" alt="">
+                                                    <img src="" width="100" class="img-fluid rounded-circle userImg" alt="">
 
 
                                                     <% }%>
@@ -303,7 +303,7 @@
                                                 </div>
                                                 <h3 class="mt-4 mb-1">${student.nom} ${student.prenom}</h3>
 
-                                                <span class="badge light border-0 status-span userLog" data-email="<%= student.getEmail()%>"></span>
+                                                <span class="badge light border-0 status-span" data-email="<%= student.getEmail()%>"></span>
 
                                             </div>
                                         </div>
@@ -345,10 +345,10 @@
                                             <h4 class="text-primary mb-4">Informations Personnelles </h4>
                                             <div class="row mb-2">
                                                 <div class="col-sm-5 col-5">
-                                                    <h5 class="f-w-500">Email <span class="pull-end">:</span>
+                                                    <h5 class="f-w-500">Identifiant <span class="pull-end">:</span>
                                                     </h5>
                                                 </div>
-                                                <div class="col-sm-7 col-7"><span><%=  student.getEmail()%></span>
+                                                <div class="col-sm-7 col-7"><span class="userLog"><%=  student.getEmail()%></span>
                                                 </div>
                                             </div>
                                             <div class="row mb-2">
@@ -637,6 +637,9 @@
                 Scripts
             ***********************************-->
             <!-- Required vendors -->
+
+            <script src="./js/photo_user.js"></script>
+
             <script src="./vendor/global/global.min.js"></script>
             <script src="./vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
             <script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
