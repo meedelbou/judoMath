@@ -402,7 +402,7 @@
                         type: 'POST',
                         data: {emailEnseignant: em, grantAccessAll: true},
                         success: function (response) {
-                            console.log('Checkbox state updated successfully.');
+                            // console.log('Checkbox state updated successfully.');
                         },
                         error: function (xhr, status, error) {
                             console.log('Error updating checkbox state: ' + error);
@@ -423,7 +423,7 @@
                             type: 'POST',
                             data: {isChecked: isChecked, emailStudent: email},
                             success: function (response) {
-                                console.log('Checkbox state updated successfully.');
+                                // console.log('Checkbox state updated successfully.');
                             },
                             error: function (xhr, status, error) {
                                 console.log('Error updating checkbox state: ' + error);
